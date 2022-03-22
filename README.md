@@ -8,9 +8,9 @@ Desenvolvimento de banco de dados SQL oracle de um base militar ficticia
 - Prestador_de_serviço - weslley
 - Serviço
 - Executa_Serviço
-- Arsenal
-- Arma
-- Quadrante
+- Arsenal - Pedro
+- Arma - Pedro
+- Quadrante - Pedro
 - Militar - João
 - Base_Militar - João
 - Telefone_da_base - João
