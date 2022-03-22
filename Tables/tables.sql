@@ -18,3 +18,8 @@ Create Table telefone_da_pessoa ( --multivalorado
     constraint telefone_da_pessoa_fkey Foreign key (cpf_pessoa) References pessoa (cpf),
     constraint telefone_da_pessoa_const unique (numero_telefone)
 );
+Create Table prestador_de_serviço(
+    cpf number(11),
+    especialidade varchar2,
+    constraint prestador_de_serviço_pkey primary key(cpf)
+);
