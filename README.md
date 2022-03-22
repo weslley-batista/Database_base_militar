@@ -8,8 +8,8 @@ Desenvolvimento de banco de dados SQL oracle de um base militar ficticia
 - Prestador_de_serviço - weslley
 - Serviço
 - Executa_Serviço
-- Arsenal
-- Arma
+- Arsenal - Pedro
+- Arma - Pedro
 - Quadrante
 - Militar - João
 - Base_Militar - João
@@ -20,4 +20,4 @@ Desenvolvimento de banco de dados SQL oracle de um base militar ficticia
 - Militar_comandado
 - Visitante
 - Comunicação_entre_bases
-- Fornecer_armamento
+- Fornecer_armamento - Pedro
