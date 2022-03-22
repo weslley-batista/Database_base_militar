@@ -15,5 +15,6 @@ Create Table endereco_da_pessoa ( --composto
 Create Table telefone_da_pessoa ( --multivalorado
     cpf_pessoa number(11),
     numero_telefone number,
-    constraint telefone_da_pessoa_fkey Foreign key (cpf_pessoa) References pessoa (cpf)
+    constraint telefone_da_pessoa_fkey Foreign key (cpf_pessoa) References pessoa (cpf),
+    constraint telefone_da_pessoa_const unique (numero_telefone)
 );
