@@ -2,10 +2,10 @@
 Desenvolvimento de banco de dados SQL oracle de um base militar ficticia
 
 ### Responsavel por cada tabela
-- Pessoa - weslley
-- Telefone_da_pessoa - weslley
-- Endereço_da_pessoa - weslley
-- Prestador_de_serviço - weslley
+- Pessoa - weslley ```Feito```
+- Telefone_da_pessoa - weslley ```Feito```
+- Endereço_da_pessoa - weslley ```Feito```
+- Prestador_de_serviço - weslley ```Feito```
 - Serviço
 - Executa_Serviço
 - Arsenal - Pedro
