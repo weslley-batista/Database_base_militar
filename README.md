@@ -6,11 +6,11 @@ Desenvolvimento de banco de dados SQL oracle de um base militar ficticia
 - Telefone_da_pessoa - weslley ```Feito```
 - Endereço_da_pessoa - weslley ```Feito```
 - Prestador_de_serviço - weslley ```Feito```
-- Serviço
-- Executa_Serviço
+- Serviço - julio
+- Executa_Serviço - julio
 - Arsenal - Pedro
 - Arma - Pedro
-- Quadrante
+- Quadrante - julio
 - Militar - João
 - Base_Militar - João
 - Telefone_da_base - João
@@ -18,6 +18,6 @@ Desenvolvimento de banco de dados SQL oracle de um base militar ficticia
 - Endereço_da_base - João
 - Endereço_do_militar - João
 - Militar_comandado
-- Visitante
+- Visitante - 
 - Comunicação_entre_bases
 - Fornecer_armamento - Pedro
