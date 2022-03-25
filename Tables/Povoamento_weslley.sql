@@ -16,7 +16,7 @@ INSERT INTO pessoa (nome,cpf) VALUES ('João Miguel','730.774.348-57'); -- Perna
 INSERT INTO pessoa (nome,cpf) VALUES ('Heloísa','407.436.138-80'); -- São Paulo
 INSERT INTO pessoa (nome,cpf) VALUES ('Isabela','923.676.914-44'); -- Pernambuco, Rio Grande do Norte, Paraíba e Alagoas
 
--- Inserindo endereco_da_pessoa  '', , '', ''
+-- Inserindo endereco_da_pessoa
 
 INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('474.020.744-39','Travessa Miguel Bento', 709,'Nossa Senhora das Graças','55642-631');
 INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('384.627.718-54', 'Rua Adriano Jesus da Costa', 879, 'Morrinhos', '11495-021');
@@ -52,21 +52,15 @@ INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('730.774.348
 INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('407.436.138-80', '(55) 2684-0686');
 INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('923.676.914-44', '(53) 2566-7151');
 
-
 -- Inserindo prestador_de_serviço
 
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ();
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ();
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ();
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ();
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ();
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ();
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ();
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ();
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ();
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ();
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ();
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ();
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ();
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ();
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ();
+INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('439.509.231-44', 'Coaching'); -- Dado repetido propositalmente
+INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('050.365.042-08', 'Instruções de etiqueta');    
+INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('028.271.834-63', 'Limpeza de bolsa de gordura');
+INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('219.548.474-83', 'Entrega de alimentos');
+INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('575.283.272-12', 'Maneabilidade de produtos quimicos');
+INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('335.206.930-11', 'Exposição de arte');
+INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('247.298.232-14', 'Cortes de cabelos');
+INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('877.119.269-79', 'Renovação de vacinas');
+INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('439.509.231-44', 'Coaching'); -- Dado repetido propositalmente
+INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('243.832.546-16', 'Tecnologia militar');
