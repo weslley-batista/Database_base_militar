@@ -1,5 +1,5 @@
 Create Table arsenal ( -- entidade
-    id int auto_increment,
+    Create Sequence id increment by 1 start with 1,
     categoria_armazem varchar (255) NOT NULL,
     data_de_manutenção date NOT NULL,
     capacidade_máxima int NOT NULL,
