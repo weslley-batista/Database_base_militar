@@ -1,5 +1,5 @@
 Create Table arsenal ( -- entidade
-    id int NOT NULL auto_increment,
+    id int auto_increment,
     categoria_armazem varchar (255) NOT NULL,
     data_de_manutenção date NOT NULL,
     capacidade_máxima int NOT NULL,
@@ -7,7 +7,6 @@ Create Table arsenal ( -- entidade
     constraint id_pkey primary key (id),
     constraint nome_base_militar_fkey foreign key (nome_base_militar) references base_militar (nome)
 );
-auto_increment = 1;
 
 Create Table arma ( -- entidade
     numero_de_registro number (255) NOT NULL,
