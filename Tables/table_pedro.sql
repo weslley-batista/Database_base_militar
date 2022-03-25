@@ -8,13 +8,13 @@ Create Table arsenal ( -- entidade
 );
 
 Create Table arma ( -- entidade
-    id number (10),
+    numero_de_registro number (10),
     id_arsenal number (6),
     calibre varchar2 (4), -- .556
     fabricação varchar2 (n),
     nome_do_armamento varchar2 (n),
     horario_e_data datetime2 (fsp)
-    constraint numero_de_registro_pkey primary key (id), -- verificar
+    constraint numero_de_registro_pkey primary key (numero_de_registro), -- verificar
     constraint id_arsenal_fkey foreign key (id_arsenal) references arsenal (id)
     constraint horario_e_data_fkey foreign key (horario_e_data) references fornecer_armamento (horario_e_data) -- verificar
 );
