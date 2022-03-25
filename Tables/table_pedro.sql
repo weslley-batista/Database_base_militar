@@ -25,6 +25,6 @@ Create Table fornecer_armamento ( -- relacionamento triplo temporal
     registro_arma number (10),
     id_arsenal number (6),
     constraint cpf_militar_fkey foreign key (cpf_militar) references militar (cpf),
-    constraint registro_arma_fkey foreign key (registro_arma) references arma (numero_de_registro_pkey),
+    constraint registro_arma_fkey foreign key (registro_arma) references arma (numero_de_registro_pkey), -- verificar
     constraint id_arsenal_fkey foreign key (id_arsenal) references arsenal (id),
 );
