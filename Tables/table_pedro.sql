@@ -1,11 +1,13 @@
 Create Table arsenal ( -- entidade
-    id int identity(1,1) primary key,
+    id int NOT NULL auto_increment,
     categoria_armazem varchar2 (10),
     data_de_manutenção date,
     capacidade_máxima number (100),
-    nome_base_militar varchar2 (n)
+    nome_base_militar varchar2 (n),
+    constraint id_pkey primary key (id),
     constraint nome_base_militar_fkey foreign key (nome_base_militar) references base_militar (nome)
 );
+auto_increment = 1;
 
 Create Table arma ( -- entidade
     numero_de_registro number (10),
@@ -26,5 +28,5 @@ Create Table fornecer_armamento ( -- relacionamento triplo temporal
     id_arsenal number (6),
     constraint cpf_militar_fkey foreign key (cpf_militar) references militar (cpf),
     constraint registro_arma_fkey foreign key (registro_arma) references arma (numero_de_registro_pkey), -- verificar
-    constraint id_arsenal_fkey foreign key (id_arsenal) references arsenal (id),
+    constraint id_arsenal_fkey foreign key (id_arsenal) references arsenal (id_pkey),
 );
