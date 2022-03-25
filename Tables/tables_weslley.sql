@@ -9,7 +9,7 @@ Create Table endereco_da_pessoa ( --composto
     rua varchar2,
     numero number,
     complemento varchar2,
-    cep number,
+    cep varchar2,
     constraint endereco_da_pessoa_fkey Foreign key (cpf_pessoa) References pessoa (cpf)
 );
 Create Table telefone_da_pessoa ( --multivalorado
