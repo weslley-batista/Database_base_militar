@@ -23,4 +23,3 @@ CREATE TABLE prestador_de_serviço(
     especialidade varchar2 (255),
     constraint prestador_de_serviço_pkey primary key(cpf)
 );
-
