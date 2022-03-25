@@ -1,6 +1,6 @@
 Create Table arsenal ( -- entidade
-    id number (6),
-    categoria_armazem varchar2 (n),
+    id int identity(1,1) primary key,
+    categoria_armazem varchar2 (10),
     data_de_manutenção date,
     capacidade_máxima number (100),
     nome_base_militar varchar2 (n)
@@ -11,8 +11,8 @@ Create Table arma ( -- entidade
     numero_de_registro number (10),
     id_arsenal number (6),
     calibre varchar2 (4), -- .556
-    fabricação varchar2 (n),
-    nome_do_armamento varchar2 (n),
+    fabricação varchar2 (10),
+    nome_do_armamento varchar2 (10),
     horario_e_data datetime2 (fsp)
     constraint numero_de_registro_pkey primary key (numero_de_registro), -- verificar
     constraint id_arsenal_fkey foreign key (id_arsenal) references arsenal (id)
@@ -21,7 +21,7 @@ Create Table arma ( -- entidade
 
 Create Table fornecer_armamento ( -- relacionamento triplo temporal
     horario_e_data datetime2 (fsp),
-    cpf_militar number(11),
+    cpf_militar varchar2(14), -- 000.000.000-00
     registro_arma number (10),
     id_arsenal number (6),
     constraint cpf_militar_fkey foreign key (cpf_militar) references militar (cpf),
