@@ -11,7 +11,7 @@ Create Table Arsenal ( -- entidade
     Data_de_manutenção DATE NOT NULL,
     Capacidade_máxima NUMBER NOT NULL,
     Nome_base_militar VARCHAR2 NOT NULL,
-    CONSTRAINT Id_pkey PRIMARY KEY (id),
+    CONSTRAINT Id_pkey PRIMARY KEY (Id),
     CONSTRAINT Nome_base_militar_fkey FOREIGN KEY (Nome_base_militar) REFERENCES Base_militar (Nome)
 );
 
