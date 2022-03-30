@@ -1,13 +1,13 @@
 -- Inserindo arsenal
 
-INSERT INTO Arsenal (Id, Categoria_armazem, Data_de_manutenção, Capacidade_máxima, Nome_base_militar) 
-    VALUES (Id.NEXTVAL,'Fuzil',to_date('10/05/2022', 'dd/mm/yy'), 100, 'Arsenal_Fuzil 01');
-INSERT INTO Arsenal (Id, Categoria_armazem, Data_de_manutenção, Capacidade_máxima, Nome_base_militar) 
-    VALUES (Id.NEXTVAL,'Pistola', to_date('01/01/2023', 'dd/mm/yy'), 20, 'Arsenal_Pistola 01');
-INSERT INTO Arsenal (Id, Categoria_armazem, Data_de_manutenção, Capacidade_máxima, Nome_base_militar) 
-    VALUES (Id.NEXTVAL,'Pistola',to_date('03/01/2023', 'dd/mm/yy'), 20, 'Arsenal_Pistola 02');
-INSERT INTO Arsenal (Id, Categoria_armazem, Data_de_manutenção, Capacidade_máxima, Nome_base_militar) 
-    VALUES (Id.NEXTVAL,'Sub-Metralhadoras',to_date('20/07/2022', 'dd/mm/yy'), 80, 'Arsenal_Sub_Metralhadora 01');
+INSERT INTO Arsenal (Id, Categoria_armazem, Data_de_manutencao, Capacidade_maxima, Nome_base_militar) 
+    VALUES (Id.NEXTVAL,'Fuzil',to_date('10/05/2022', 'dd/mm/yy'), 100, 'NOME BASE'); -- Necessário inserir a BASE MILITAR
+INSERT INTO Arsenal (Id, Categoria_armazem, Data_de_manutencao, Capacidade_maxima, Nome_base_militar) 
+    VALUES (Id.NEXTVAL,'Pistola', to_date('01/01/2023', 'dd/mm/yy'), 20, 'NOME BASE'); -- Necessário inserir a BASE MILITAR
+INSERT INTO Arsenal (Id, Categoria_armazem, Data_de_manutencao, Capacidade_maxima, Nome_base_militar) 
+    VALUES (Id.NEXTVAL,'Pistola',to_date('03/01/2023', 'dd/mm/yy'), 20, 'NOME BASE'); -- Necessário inserir a BASE MILITAR
+INSERT INTO Arsenal (Id, Categoria_armazem, Data_de_manutencao, Capacidade_maxima, Nome_base_militar) 
+    VALUES (Id.NEXTVAL,'Sub-Metralhadoras',to_date('20/07/2022', 'dd/mm/yy'), 80, 'NOME BASE'); -- Necessário inserir a BASE MILITAR
 
 -- inserindo fornecerArmamento
 
@@ -23,12 +23,12 @@ INSERT INTO Fornecer_armamento (Horario_e_data, Cpf_militar, Registro_arma, Id_a
 
 -- inserindo arma
 
-INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricação, Nome_do_armamento, Horario_e_data) 
+INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento, Horario_e_data) 
     VALUES ('01010202', 1,'.556 Nato','Brasil','Carabina Taurus T4 A1 14,5',timestamp '2022-04-20 15:00:00');
-INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricação, Nome_do_armamento, Horario_e_data) 
+INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento, Horario_e_data) 
     VALUES ('01013333', 2,'.380 Auto','Estados Unidos','Pistola Smith & Wesson Semiautomática',timestamp '2022-04-20 15:00:00');
-INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricação, Nome_do_armamento, Horario_e_data) 
+INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento, Horario_e_data) 
     VALUES ('01014444', 3,'.22LR','Áustria','Glock 44',timestamp '2022-04-25 07:30:00');
-INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricação, Nome_do_armamento, Horario_e_data) 
+INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento, Horario_e_data) 
     VALUES ('01014444', 4,'9mm','Alemanha','MP5A3',timestamp '2022-05-01 09:30:00');
 
