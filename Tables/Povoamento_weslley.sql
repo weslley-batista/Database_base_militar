@@ -26,6 +26,8 @@ INSERT INTO pessoa (nome,cpf) VALUES ('Zoé Caldeira','247.298.232-14');
 INSERT INTO pessoa (nome,cpf) VALUES ('Cláudio Brites','877.119.269-79');
 INSERT INTO pessoa (nome,cpf) VALUES ('Liany Veloso','147.114.791-82');
 INSERT INTO pessoa (nome,cpf) VALUES ('Ary Veloso','243.832.546-16');
+INSERT INTO pessoa (nome,cpf) VALUES ('Raquel Laura','892.653.058-27');
+INSERT INTO pessoa (nome,cpf) VALUES ('Rosa Flávia','328.267.558-54');
 
 -- Inserindo endereco_da_pessoa
 
@@ -54,6 +56,8 @@ INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUE
 INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('877.119.269-79','Rua Primeiro de Maio', 752, 'José Pinheiro','58407-410');
 INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('147.114.791-82','Quadra QE 5 Conjunto E', 421, 'Guará I','71020-055');
 INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('243.832.546-16','Rua Tenente Guimarães', 934, 'Liberdade','69309-109');
+INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('892.653.058-27','Avenida Bráulio', 357, 'Curuzu','40366-340');
+INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('328.267.558-54','Rua Padre Silvestre', 794, 'Trapiche da Barra','57010-490');
 
 -- Inserindo telefone_da_pessoa
 
