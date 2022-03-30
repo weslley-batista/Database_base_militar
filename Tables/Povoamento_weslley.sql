@@ -76,6 +76,18 @@ INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('060.718.346
 INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('730.774.348-57', '(69) 3882-3517');
 INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('407.436.138-80', '(55) 2684-0686');
 INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('923.676.914-44', '(53) 2566-7151');
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('439.509.231-44', '(97) 2859-1149');
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('050.365.042-08', '(63) 3611-7344');
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('028.271.834-63', '(62) 2646-0232');
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('219.548.474-83', '(92) 2261-7614');
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('575.283.272-12', '(96) 3719-2939');
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('335.206.930-11', '(92) 3663-2237');
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('247.298.232-14', '(69) 3413-8348');
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('877.119.269-79', '(38) 2917-7776');
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('147.114.791-82', '(65) 3631-3307');
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('243.832.546-16', '(81) 2486-2634');
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('892.653.058-27', '(87) 3127-7145');
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('328.267.558-54', '(88) 3838-8276');
 
 -- Inserindo prestador_de_serviço
 
