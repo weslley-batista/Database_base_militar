@@ -1,22 +1,25 @@
+Create Sequence id_servico_seq
+    INCREMENT BY 1 START WITH 1;
+
 Create Table servico ( --entidade   
-    id number (11), -- verificar identy( auto completar id serviço)
-    nome varchar2,
-    descricao varchar2,    
-    constraint servico_pkey primary key(id)
+    Id_servico NUMBER (11), 
+    Nome VARCHAR2,
+    Descricao VARCHAR2,    
+    CONSTRAINT servico_pkey PRIMARY KEY(id)
 );
 
 Create Table executa_servico ( 
-    prestador_de_servico number(11), --verificar se isso eh uma pessoa tbm
-    servico number,
-    cpf_militar number(11)
-    constraint prestador_de_servico_fkey Foreign key (prestador_de_servico) References prestador_de_serviço (cpf),
-    constraint servico_fkey Foreign key (servico) References servico (id),
-    constraint cpf_militar_fkey Foreign key (cpf_militar) References militar (cpf)-- verificar essa linha    
+    Prestador_de_servico NUMBER(11), 
+    Servico NUMBER,
+    Cpf_militar NUMBER
+    CONSTRAINT prestador_de_servico_fkey FOREIGN KEY (prestador_de_servico) REFERENCES prestador_de_serviço (cpf),
+    CONSTRAINT servico_fkey FOREIGN key (servico) REFERENCES servico (id),
+    CONSTRAINT cpf_militar_fkey FOREIGN KEY (cpf_militar) REFERENCES militar (cpf)
 );
 
-Create Table Quadrante ( --entidade   
-    coordenadas varchar2, -- 
-    terreno varchar2,    
-    constraint coordenadas_pkey primary key(coordenadas)
-    -- verificar se deveria ser unique
+Create Table Quadrante ( 
+    Coordenadas VARCHAR2, 
+    Terreno VARCHAR2,    
+    CONSTRAINT coordenadas_pkey PRIMARY KEY(coordenadas)
+    
 );
