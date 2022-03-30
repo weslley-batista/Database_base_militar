@@ -11,12 +11,12 @@ Desenvolvimento de banco de dados SQL oracle de um base militar ficticia
 - Arsenal - Pedro ```Feito```
 - Arma - Pedro ```Feito```
 - Quadrante - julio
-- Militar - João
-- Base_Militar - João
-- Telefone_da_base - João
-- Endereço - João
-- Endereço_da_base - João
-- Endereço_do_militar - João
+- Militar - João ```Feito```
+- Condecorações - João ```Feito```
+- Base_Militar - João ```Feito```
+- Telefone_da_base - João ```Feito```
+- Endereço_da_base - João ```Feito```
+- Endereço_do_militar - João ```Feito```
 - Militar_comandado
 - Visitante - 
 - Comunicação_entre_bases
