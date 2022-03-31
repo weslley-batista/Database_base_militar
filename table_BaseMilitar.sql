@@ -38,7 +38,7 @@ Create Sequence id_servico_seq
     INCREMENT BY 1 START WITH 1;
 
 Create Table servico ( --entidade   
-    Id_servico NUMBER (11), 
+    id_servico_seq NUMBER (11), 
     Nome VARCHAR2,
     Descricao VARCHAR2,    
     CONSTRAINT servico_pkey PRIMARY KEY(Id_servico)
