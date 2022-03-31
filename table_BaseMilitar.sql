@@ -40,7 +40,7 @@ Create Table servico ( --entidade
     Id_servico NUMBER (11), 
     Nome VARCHAR2,
     Descricao VARCHAR2,    
-    CONSTRAINT servico_pkey PRIMARY KEY(id)
+    CONSTRAINT servico_pkey PRIMARY KEY(Id_servico)
 );
 
 Create Table executa_servico ( 
