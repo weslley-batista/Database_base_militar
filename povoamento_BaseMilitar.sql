@@ -216,7 +216,7 @@ INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, qua
 INSERT INTO Visitante(nome , cpf_militar) VALUES ('luffy', '474.020.744-39');
 INSERT INTO Visitante(nome , cpf_militar) VALUES ('zoro', '219.548.474-83');
 INSERT INTO Visitante(nome , cpf_militar) VALUES ('sanji', '632.481.319-34');
-INSERT INTO Visitante(nome , cpf_militar) VALUES ('usopp', '977.827.224-704');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('usopp', '977.827.224-74');
 INSERT INTO Visitante(nome , cpf_militar) VALUES ('nami', '134.177.826-60');
 INSERT INTO Visitante(nome , cpf_militar) VALUES ('chopper', '413.372.547-62');
 INSERT INTO Visitante(nome , cpf_militar) VALUES ('robin', '606.862.377-73');
