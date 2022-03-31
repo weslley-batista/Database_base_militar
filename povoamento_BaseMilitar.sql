@@ -266,8 +266,8 @@ INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_a
 
 -- inserindo fornecerArmamento
 
-INSERT INTO Fornecer_armamento (Horario_e_data, Cpf_militar, Registro_arma, Id_arsenal) 
-    VALUES (timestamp '2022-04-20 15:00:00','384.627.718-54','01010202', 1);
+-- INSERT INTO Fornecer_armamento (Horario_e_data, Cpf_militar, Registro_arma, Id_arsenal) 
+--     VALUES (timestamp '2022-04-20 15:00:00','384.627.718-54','01010202', 1);
 INSERT INTO Fornecer_armamento (Horario_e_data, Cpf_militar, Registro_arma, Id_arsenal) 
     VALUES (timestamp '2022-04-20 15:00:00','308.175.745-22','01013333', 2);
 INSERT INTO Fornecer_armamento (Horario_e_data, Cpf_militar, Registro_arma, Id_arsenal)
