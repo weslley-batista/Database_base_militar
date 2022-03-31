@@ -4,7 +4,7 @@ CREATE TABLE Pessoa ( --entidade
     CONSTRAINT Pessoa_pkey PRIMARY KEY(CPF)
 );
 
-Create Table militar (
+CREATE TABLE militar (
     cpf VARCHAR2(14),
     patente NUMBER NOT NULL,
     CONSTRAINT militar_pkey PRIMARY KEY (cpf),
@@ -24,7 +24,7 @@ CREATE TABLE Telefone_da_pessoa ( --multivalorado
     Cpf_pessoa VARCHAR2 (14),
     Numero_telefone VARCHAR2 (15),
     CONSTRAINT Telefone_da_pessoa_fkey FOREIGN KEY (Cpf_pessoa) REFERENCES Pessoa (CPF),
-    CONSTRAINT Telefone_da_pessoa_const unique (Numero_telefone)
+    CONSTRAINT Telefone_da_pessoa_const UNIQUE (Numero_telefone)
 );
 
 CREATE TABLE Prestador_de_servico(
@@ -37,43 +37,43 @@ CREATE TABLE Prestador_de_servico(
 CREATE SEQUENCE id_servico_seq
     INCREMENT BY 1 START WITH 1;
 
-Create Table servico ( --entidade   
+CREATE TABLE servico ( --entidade   
     id_servico_seq NUMBER, 
     Nome VARCHAR2(300),
     Descricao VARCHAR2(300),    
     CONSTRAINT servico_pkey PRIMARY KEY(id_servico_seq)
 );
 
-Create Table executa_servico (
+CREATE TABLE executa_servico (
     Prestador_de_servico VARCHAR2(14),
     Servico NUMBER,
-    Cpf_militar varchar2(14),
+    Cpf_militar VARCHAR2(14),
     CONSTRAINT executa_servico_fkey1 FOREIGN KEY (Prestador_de_servico) REFERENCES Prestador_de_servico(cpf),
     CONSTRAINT executa_servico_fkey2 FOREIGN key (Servico) REFERENCES servico (id_servico_seq),
     CONSTRAINT executa_servico_fkey3 FOREIGN KEY (Cpf_militar) REFERENCES militar (cpf)
 );
 
-Create Table Quadrante ( 
+CREATE TABLE Quadrante ( 
     Coordenadas VARCHAR2(300), 
     Terreno VARCHAR2(300),    
     CONSTRAINT Quadrante_pkey PRIMARY KEY(coordenadas)
     
 );
 
-Create Table condecoracoes (
+CREATE TABLE condecoracoes (
     cpf VARCHAR2(14),
     condecoracao VARCHAR2(30),
     CONSTRAINT condecoracoes_pkey PRIMARY KEY (cpf),
     CONSTRAINT condecoracoes_fkey FOREIGN KEY (cpf) REFERENCES militar(cpf)
 );
 
-Create Table base_militar (
+CREATE TABLE base_militar (
     nome VARCHAR2(30),
     especialidade VARCHAR2(30) NOT NULL,
     CONSTRAINT base_militar_pkey PRIMARY KEY (nome)
 );
 
-Create Table telefone_base (
+CREATE TABLE telefone_base (
     nome_base VARCHAR2(30),
     ddd NUMBER NOT NULL,
     numero NUMBER NOT NULL,
@@ -81,7 +81,7 @@ Create Table telefone_base (
     CONSTRAINT telefone_base_fkey FOREIGN KEY (nome_base) REFERENCES base_militar(nome)
 );
 
-Create Table endereco_base (
+CREATE TABLE endereco_base (
     nome_base VARCHAR2(30),
     cep NUMBER NOT NULL,
     rua VARCHAR2(30) NOT NULL,
