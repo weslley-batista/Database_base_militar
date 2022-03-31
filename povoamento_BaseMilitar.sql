@@ -29,6 +29,18 @@ INSERT INTO pessoa (nome,cpf) VALUES ('Ary Veloso','243.832.546-16');
 INSERT INTO pessoa (nome,cpf) VALUES ('Raquel Laura','892.653.058-27');
 INSERT INTO pessoa (nome,cpf) VALUES ('Rosa Flávia','328.267.558-54');
 
+-- Inserindo Militar
+INSERT INTO militar(cpf, patente) VALUES ('474.020.744-39', 2);
+INSERT INTO militar(cpf, patente) VALUES ('384.627.718-54', 4);
+INSERT INTO militar(cpf, patente) VALUES ('632.481.319-34', 1);
+INSERT INTO militar(cpf, patente) VALUES ('977.827.224-70', 3);
+INSERT INTO militar(cpf, patente) VALUES ('134.177.826-60', 2);
+INSERT INTO militar(cpf, patente) VALUES ('308.175.745-22', 3);
+INSERT INTO militar(cpf, patente) VALUES ('413.372.547-62', 1);
+INSERT INTO militar(cpf, patente) VALUES ('606.862.377-73', 5);
+INSERT INTO militar(cpf, patente) VALUES ('644.718.711-88', 2);
+INSERT INTO militar(cpf, patente) VALUES ('415.332.550-32', 1);
+
 -- Inserindo endereco_da_pessoa
 
 INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('474.020.744-39','Travessa Miguel Bento', 709,'Nossa Senhora das Graças','55642-631');
@@ -101,3 +113,161 @@ INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('413.372.547-62',
 INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('606.862.377-73', 'Renovação de vacinas');
 INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('644.718.711-88', 'Coaching');
 INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('415.332.550-32', 'Tecnologia militar');
+
+-- Inserindo serviço
+INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq, 'Treinamento', 'Treinamentos de Coaching, Instruções gerais');
+INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq, 'Limpeza', 'Serviço de limpeza geral');
+INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq, 'Entregas', 'Entregas de mantimentos, peças, etc.');
+INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq, 'Quimico', 'Serviços Quimico em geral');
+INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq, 'Exposição', 'Exposições externas');
+INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq, 'Esteticas e Cuidados', 'Serviços de cabelo, unhas encravadas, cuidados em geral');
+INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq, 'Saúde', 'Serviços de saude, vacina, dentista, operações, coleta de sangue, etc');
+INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq, 'Tecnologia', 'Serviços de Tecnologia');
+
+-- Inserindo Executa serviço - quandos as 3 tabelas tiverem com os dados
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,); 
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
+
+-- Inserindo Quadrantes
+INSERT INTO Quadrante (Coordenadas, Terreno) VALUES ('50° 0’36.30″N, 110° 6’46.82″W','Montanhoso');
+INSERT INTO Quadrante (Coordenadas, Terreno) VALUES ('40°27’28.56″N, 93°23’34.42″E','Deserto');
+INSERT INTO Quadrante (Coordenadas, Terreno) VALUES ('29°32’7.65″N, 30°40’7.88″E','Deserto');
+INSERT INTO Quadrante (Coordenadas, Terreno) VALUES ('19°32’56.62″S, 69°58’4.21″W','Aguatico');
+INSERT INTO Quadrante (Coordenadas, Terreno) VALUES ('19°12’12.51″S, 70° 0’29.37″W','Arenoso');
+INSERT INTO Quadrante (Coordenadas, Terreno) VALUES ('13° 9’49.69″S, 72°32’42.65″W','Floresta');
+INSERT INTO Quadrante (Coordenadas, Terreno) VALUES ('20°40’58.64″N, 88°34’5.50″W','Semi arido');
+INSERT INTO Quadrante (Coordenadas, Terreno) VALUES ('19°56’56.88″S, 69°38’1.87″W','Arenoso');
+INSERT INTO Quadrante (Coordenadas, Terreno) VALUES ('50°48’49.00″N, 2°28’28.99″W','Floresta');
+
+-- Inserindo Condecoracoes
+INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('474.020.744-39', 'Limpador de latrinas');
+INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('384.627.718-54', 'Heroi de guerra');
+INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('632.481.319-34', NULL);
+INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('977.827.224-70', 'Auxilio essencial');
+INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('134.177.826-60', 'Dorminhoco');
+INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('308.175.745-22', 'Ciber sombra');
+INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('413.372.547-62', NULL);
+INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('606.862.377-73', 'Grande senhor do mundo');
+INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('644.718.711-88', 'Cortador de grama');
+INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('415.332.550-32', NULL);
+
+-- Inserindo Bases Militares
+INSERT INTO base_militar(nome, especialidade) VALUES('BAAN', 'Combate');
+INSERT INTO base_militar(nome, especialidade) VALUES('BACO', 'Cavalaria');
+INSERT INTO base_militar(nome, especialidade) VALUES('BAFZ', 'Apoio');
+INSERT INTO base_militar(nome, especialidade) VALUES('BANT', 'Observacao');
+INSERT INTO base_militar(nome, especialidade) VALUES('BARF', 'Aviacao');
+INSERT INTO base_militar(nome, especialidade) VALUES('BAST', 'Reparo');
+INSERT INTO base_militar(nome, especialidade) VALUES('BAAF', 'Paraquedismo');
+INSERT INTO base_militar(nome, especialidade) VALUES('AREA51', 'ETs');
+INSERT INTO base_militar(nome, especialidade) VALUES('BIM', 'Veiculos');
+INSERT INTO base_militar(nome, especialidade) VALUES('BC', 'Comunicacoes');
+
+--Inserindo Telefones de bases
+INSERT INTO telefone_base(nome_base, ddd, numero) VALUES('BAAN', 62, 33297000);
+INSERT INTO telefone_base(nome_base, ddd, numero) VALUES('BACO', 53, 31406000);
+INSERT INTO telefone_base(nome_base, ddd, numero) VALUES('BAFZ', 85, 32163000);
+INSERT INTO telefone_base(nome_base, ddd, numero) VALUES('BANT', 84, 36447100);
+INSERT INTO telefone_base(nome_base, ddd, numero) VALUES('BARF', 81, 21297000);
+INSERT INTO telefone_base(nome_base, ddd, numero) VALUES('BAST', 11, 33417113);
+INSERT INTO telefone_base(nome_base, ddd, numero) VALUES('BAAF', 21, 21572500);
+INSERT INTO telefone_base(nome_base, ddd, numero) VALUES('AREA51', 02, 89120456);
+INSERT INTO telefone_base(nome_base, ddd, numero) VALUES('BIM', 81, 32510355);
+INSERT INTO telefone_base(nome_base, ddd, numero) VALUES('BC', 81, 34552252);
+
+--Inseriindo Endereco das bases
+INSERT INTO endereco_base(nome_base, cep, rua, numero, complemento) VALUES('BAAN', 75024970, 'BR-414', NULL, 'Km 4');
+INSERT INTO endereco_base(nome_base, cep, rua, numero, complemento) VALUES('BACO', 92110390, 'R. Augusto Severo', 1700, NULL);
+INSERT INTO endereco_base(nome_base, cep, rua, numero, complemento) VALUES('BAFZ', 60415513, 'Av. Borges de Melo', 205, NULL);
+INSERT INTO endereco_base(nome_base, cep, rua, numero, complemento) VALUES('BANT', 59148900, 'Estrada da BANT', NULL, NULL);
+INSERT INTO endereco_base(nome_base, cep, rua, numero, complemento) VALUES('BARF', 51250020, 'Av. Maria Irene', NULL, NULL);
+INSERT INTO endereco_base(nome_base, cep, rua, numero, complemento) VALUES('BAST', 11450010, 'Av. Presidente Castelo Branco', NULL, NULL);
+INSERT INTO endereco_base(nome_base, cep, rua, numero, complemento) VALUES('BAAF', 21740002, 'Av. Marechal Fontenele', 1000, NULL);
+INSERT INTO endereco_base(nome_base, cep, rua, numero, complemento) VALUES('AREA51', 22141234, 'EUA', NULL, NULL);
+INSERT INTO endereco_base(nome_base, cep, rua, numero, complemento) VALUES('BIM', 54160350, 'Av. General Manoel Rabelo', 1950, NULL);
+INSERT INTO endereco_base(nome_base, cep, rua, numero, complemento) VALUES('BC', 50930000, 'BR-101', NULL, 'Km 73');
+
+-- Inserindo Militar Comandado
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('00000000001', '00000000002','5444',  1);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('00000000001', '00000000003','5444',  1);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('00000000001', '00000000004','5444',  1);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('00000000001', '00000000005','5444',  1);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('00000000006', '00000000007','5443',  2);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('00000000006', '00000000008','5443',  2);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('00000000006', '00000000009','5443',  2);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('00000000006', '00000000010','5443',  2);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('00000000006', '00000000011','5443',  2);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('00000000006', '00000000012','5443',  2);
+
+-- Inserindo Visistante
+
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('luffy', 'cpf 1');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('zoro', 'cpf 2');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('sanji', 'cpf 3');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('usopp', 'cpf 4');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('nami', 'cpf 5');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('chopper', 'cpf 6');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('robin', 'cpf 7');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('franky', 'cpf 8');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('brook', 'cpf 9');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('robin', 'cpf 10');
+
+-- Inserindo Comunicação entre bases
+
+INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('base 1', 'base 2');
+INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('base 2', 'base 3');
+INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('base 3', 'base 4');
+INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('base 4', 'base 5');
+INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('base 5', 'base 6');
+INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('base 6', 'base 7');
+INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('base 7', 'base 8');
+INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('base 8', 'base 9');
+INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('base 9', 'base 10');
+INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('base 10', 'base 11');
+
+-- Inserindo arsenal
+
+INSERT INTO Arsenal (Id, Categoria_armazem, Data_de_manutencao, Capacidade_maxima, Nome_base_militar) 
+    VALUES (Id.NEXTVAL,'Fuzil',to_date('10/05/2022', 'dd/mm/yy'), 100, 'BAAN');
+INSERT INTO Arsenal (Id, Categoria_armazem, Data_de_manutencao, Capacidade_maxima, Nome_base_militar) 
+    VALUES (Id.NEXTVAL,'Pistola', to_date('01/01/2023', 'dd/mm/yy'), 20, 'BAFZ');
+INSERT INTO Arsenal (Id, Categoria_armazem, Data_de_manutencao, Capacidade_maxima, Nome_base_militar) 
+    VALUES (Id.NEXTVAL,'Pistola',to_date('03/01/2023', 'dd/mm/yy'), 20, 'BACO');
+INSERT INTO Arsenal (Id, Categoria_armazem, Data_de_manutencao, Capacidade_maxima, Nome_base_militar) 
+    VALUES (Id.NEXTVAL,'Sub-Metralhadoras',to_date('20/07/2022', 'dd/mm/yy'), 80, 'BAFZ');
+INSERT INTO Arsenal (Id, Categoria_armazem, Data_de_manutencao, Capacidade_maxima, Nome_base_militar) 
+    VALUES (Id.NEXTVAL,'Fuzil de Precisao',to_date('20/07/2022', 'dd/mm/yy'), 10, 'BAFZ');
+
+-- inserindo arma
+
+INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento) 
+    VALUES ('01010202', 1,'.556 Nato','Brasil','Carabina Taurus T4 A1 14,5');
+INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento) 
+    VALUES ('01013333', 2,'.380 Auto','Estados Unidos','Pistola Smith & Wesson Semiautomática');
+INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento) 
+    VALUES ('01014444', 3,'.22LR','Áustria','Glock 44');
+INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento) 
+    VALUES ('01010101', 4,'9mm','Alemanha','MP5A3');
+INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento) 
+    VALUES ('01015555', 5,'.50 BMG','Estados Unidos','Barrett M82');
+
+-- inserindo fornecerArmamento
+
+INSERT INTO Fornecer_armamento (Horario_e_data, Cpf_militar, Registro_arma, Id_arsenal) 
+    VALUES (timestamp '2022-04-20 15:00:00','384.627.718-54','01010202', 1);
+INSERT INTO Fornecer_armamento (Horario_e_data, Cpf_militar, Registro_arma, Id_arsenal) 
+    VALUES (timestamp '2022-04-20 15:00:00','308.175.745-22','01013333', 2);
+INSERT INTO Fornecer_armamento (Horario_e_data, Cpf_militar, Registro_arma, Id_arsenal)
+    VALUES (timestamp '2022-04-25 07:30:00','474.020.744-39','01014444', 3);
+INSERT INTO Fornecer_armamento (Horario_e_data, Cpf_militar, Registro_arma, Id_arsenal)
+    VALUES (timestamp '2022-05-01 09:30:00','415.332.550-32','01010101', 4);
+INSERT INTO Fornecer_armamento (Horario_e_data, Cpf_militar, Registro_arma, Id_arsenal) 
+    VALUES (timestamp '2022-04-20 15:30:00','384.627.718-54','01015555', 5);

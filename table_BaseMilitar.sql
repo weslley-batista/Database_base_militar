@@ -59,8 +59,6 @@ Create Table Quadrante (
     
 );
 
-
-
 Create Table condecoracoes (
     cpf VARCHAR2(14),
     condecoracao VARCHAR2(30),
