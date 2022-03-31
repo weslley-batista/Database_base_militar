@@ -47,10 +47,10 @@ Create Table servico ( --entidade
 Create Table executa_servico ( 
     Prestador_de_servico VARCHAR2(14),
     Servico NUMBER,
-    Cpf_militar varchar2(14)
-    CONSTRAINT executa_servico_fkey FOREIGN KEY (prestador_de_servico) REFERENCES Prestador_de_serviço(cpf),
-    CONSTRAINT executa_servico_fkey FOREIGN key (servico) REFERENCES servico (id_servico_seq),
-    CONSTRAINT executa_servico_fkey FOREIGN KEY (cpf_militar) REFERENCES militar (cpf)
+    Cpf_militar varchar2(14),
+    CONSTRAINT executa_servico_fkey1 FOREIGN KEY (prestador_de_servico) REFERENCES Prestador_de_serviço(cpf),
+    CONSTRAINT executa_servico_fkey2 FOREIGN key (servico) REFERENCES servico (id_servico_seq),
+    CONSTRAINT executa_servico_fkey3 FOREIGN KEY (cpf_militar) REFERENCES militar (cpf)
 );
 
 Create Table Quadrante ( 
@@ -139,7 +139,7 @@ CREATE TABLE Arma ( -- entidade
     Fabricacao VARCHAR2(50) NOT NULL,
     Nome_do_armamento VARCHAR2(60) NOT NULL,
     CONSTRAINT Arma_pkey PRIMARY KEY (Numero_de_registro),
-    CONSTRAINT Arma_fkey FOREIGN KEY (Id_arsenal) REFERENCES Arsenal (Id),
+    CONSTRAINT Arma_fkey FOREIGN KEY (Id_arsenal) REFERENCES Arsenal (Id)
 );
 
 CREATE TABLE Fornecer_armamento ( -- relacionamento triplo temporal
@@ -147,9 +147,9 @@ CREATE TABLE Fornecer_armamento ( -- relacionamento triplo temporal
     Cpf_militar VARCHAR2 (14) NOT NULL, -- 000.000.000-00
     Registro_arma VARCHAR2(9) NOT NULL,
     Id_arsenal NUMBER NOT NULL,
-    CONSTRAINT Fornecer_armamento_fkey FOREIGN KEY (Cpf_militar) REFERENCES Militar (Cpf),
-    CONSTRAINT Fornecer_armamento_fkey FOREIGN KEY (Registro_arma) REFERENCES Arma (Numero_de_registro),
-    CONSTRAINT Fornecer_armamento_fkey FOREIGN KEY (Id_arsenal) REFERENCES Arsenal (Id)
+    CONSTRAINT Fornecer_armamento_fkey1 FOREIGN KEY (Cpf_militar) REFERENCES Militar (Cpf),
+    CONSTRAINT Fornecer_armamento_fkey2 FOREIGN KEY (Registro_arma) REFERENCES Arma (Numero_de_registro),
+    CONSTRAINT Fornecer_armamento_fkey3 FOREIGN KEY (Id_arsenal) REFERENCES Arsenal (Id)
 );
 
 
