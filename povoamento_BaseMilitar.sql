@@ -118,14 +118,14 @@ INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('219.548.474-83',
 INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('575.283.272-12', 'Tecnologia militar');
 
 -- Inserindo serviço
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Treinamento', 'Treinamentos de Coaching, Instruções gerais');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Limpeza', 'Serviço de limpeza geral');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Entregas', 'Entregas de mantimentos, peças, etc.');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Quimico', 'Serviços Quimico em geral');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Exposição', 'Exposições externas');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Esteticas e Cuidados', 'Serviços de cabelo, unhas encravadas, cuidados em geral');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Saúde', 'Serviços de saude, vacina, dentista, operações, coleta de sangue, etc');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Tecnologia', 'Serviços de Tecnologia');
+INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Treinamento', 'Treinamentos de Coaching, Instruções gerais');
+INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Limpeza', 'Serviço de limpeza geral');
+INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Entregas', 'Entregas de mantimentos, peças, etc.');
+INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Quimico', 'Serviços Quimico em geral');
+INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Exposição', 'Exposições externas');
+INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Esteticas e Cuidados', 'Serviços de cabelo, unhas encravadas, cuidados em geral');
+INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Saúde', 'Serviços de saude, vacina, dentista, operações, coleta de sangue, etc');
+INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Tecnologia', 'Serviços de Tecnologia');
 
 -- Inserindo Executa serviço - quandos as 3 tabelas tiverem com os dados
 INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
@@ -254,15 +254,15 @@ INSERT INTO Arsenal (Id, Categoria_armazem, Data_de_manutencao, Capacidade_maxim
 -- inserindo arma
 
 INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento) 
-    VALUES ('01010202', 1,'.556 Nato','Brasil','Carabina Taurus T4 A1 14,5');
+    VALUES ('ABC010202', 1,'.556 Nato','Brasil','Carabina Taurus T4 A1 14,5');
 INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento) 
-    VALUES ('01013333', 2,'.380 Auto','Estados Unidos','Pistola Smith & Wesson Semiautomática');
+    VALUES ('KLG013333', 2,'.380 Auto','Estados Unidos','Pistola Smith & Wesson Semiautomática');
 INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento) 
-    VALUES ('01014444', 3,'.22LR','Áustria','Glock 44');
+    VALUES ('LPF014444', 3,'.22LR','Áustria','Glock 44');
 INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento) 
-    VALUES ('01010101', 4,'9mm','Alemanha','MP5A3');
+    VALUES ('RGW010101', 4,'9mm','Alemanha','MP5A3');
 INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento) 
-    VALUES ('01015555', 5,'.50 BMG','Estados Unidos','Barrett M82');
+    VALUES ('ZDL015555', 5,'.50 BMG','Estados Unidos','Barrett M82');
 
 -- inserindo fornecerArmamento
 
