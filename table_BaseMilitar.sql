@@ -27,7 +27,7 @@ CREATE TABLE Telefone_da_pessoa ( --multivalorado
     CONSTRAINT Telefone_da_pessoa_const unique (Numero_telefone)
 );
 
-CREATE TABLE Prestador_de_serviço(
+CREATE TABLE Prestador_de_servico(
     CPF VARCHAR2 (14),
     Especialidade VARCHAR2 (255),
     CONSTRAINT Prestador_de_servico_pkey PRIMARY KEY(CPF),
