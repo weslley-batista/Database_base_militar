@@ -143,7 +143,6 @@ CREATE TABLE Fornecer_armamento ( -- relacionamento triplo temporal
     Cpf_militar VARCHAR2 (14) NOT NULL, -- 000.000.000-00
     Registro_arma VARCHAR2(9) NOT NULL,
     Id_arsenal NUMBER NOT NULL,
-    CONSTRAINT Fornecer_armamento_pkey PRIMARY KEY (Cpf_militar, Registro_arma, Id_arsenal),
     CONSTRAINT Fornecer_armamento_fkey1 FOREIGN KEY (Cpf_militar) REFERENCES Militar (Cpf),
     CONSTRAINT Fornecer_armamento_fkey2 FOREIGN KEY (Registro_arma) REFERENCES Arma (Numero_de_registro),
     CONSTRAINT Fornecer_armamento_fkey3 FOREIGN KEY (Id_arsenal) REFERENCES Arsenal (Id)
