@@ -52,6 +52,7 @@ INSERT INTO militar(cpf, patente) VALUES ('415.332.550-32', 1);
 INSERT INTO militar(cpf, patente) VALUES ('247.298.232-14', 5);
 INSERT INTO militar(cpf, patente) VALUES ('335.206.930-11', 5);
 
+-- MIlitares livres 
 INSERT INTO militar(cpf, patente) VALUES ('877.119.269-79', 1);
 INSERT INTO militar(cpf, patente) VALUES ('147.114.791-82', 1);
 INSERT INTO militar(cpf, patente) VALUES ('243.832.546-16', 1);
@@ -147,16 +148,16 @@ INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NET
 INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Tecnologia', 'Serviços de Tecnologia');
 
 -- Inserindo Executa serviço - quandos as 3 tabelas tiverem com os dados
-INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
-INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
-INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
-INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
-INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
-INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
-INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
-INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
-INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
-INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('266.873.194-18',1,);
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('060.718.346-27',2,);
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('730.774.348-57',3,);
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('407.436.138-80',4,);
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('923.676.914-44',5,);
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('439.509.231-44',6,);
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('050.365.042-08',7,);
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('028.271.834-63',8,);
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('219.548.474-83',9,);
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('575.283.272-12',10,);
 
 -- Inserindo Quadrantes
 INSERT INTO Quadrante (Coordenadas, Terreno) VALUES ('50° 0’36.30″N, 110° 6’46.82″W','Montanhoso');
