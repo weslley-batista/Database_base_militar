@@ -125,7 +125,10 @@ CREATE TABLE Arsenal ( -- entidade
     Capacidade_maxima NUMBER NOT NULL,
     Nome_base_militar VARCHAR2(300) NOT NULL,
     CONSTRAINT Arsenal_pkey PRIMARY KEY (Id),
-    CONSTRAINT Arsenal_fkey FOREIGN KEY (Nome_base_militar) REFERENCES Base_militar (Nome)
+    CONSTRAINT Arsenal_fkey FOREIGN KEY (Nome_base_militar) REFERENCES Base_militar (Nome),
+    CONSTRAINT Arsenal_check CHECK (Id>0),
+    CONSTRAINT Arsenal_check CHECK (Capacidade_maxima != 0),
+
 );
 
 CREATE TABLE Arma ( -- entidade
