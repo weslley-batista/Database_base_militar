@@ -254,15 +254,15 @@ INSERT INTO Arsenal (Id, Categoria_armazem, Data_de_manutencao, Capacidade_maxim
 -- inserindo arma
 
 INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento) 
-    VALUES ('01010202', 1,'.556 Nato','Brasil','Carabina Taurus T4 A1 14,5');
+    VALUES ('ABC010202', 1,'.556 Nato','Brasil','Carabina Taurus T4 A1 14,5');
 INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento) 
-    VALUES ('01013333', 2,'.380 Auto','Estados Unidos','Pistola Smith & Wesson Semiautomática');
+    VALUES ('KLG013333', 2,'.380 Auto','Estados Unidos','Pistola Smith & Wesson Semiautomática');
 INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento) 
-    VALUES ('01014444', 3,'.22LR','Áustria','Glock 44');
+    VALUES ('LPF014444', 3,'.22LR','Áustria','Glock 44');
 INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento) 
-    VALUES ('01010101', 4,'9mm','Alemanha','MP5A3');
+    VALUES ('RGW010101', 4,'9mm','Alemanha','MP5A3');
 INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento) 
-    VALUES ('01015555', 5,'.50 BMG','Estados Unidos','Barrett M82');
+    VALUES ('ZDL015555', 5,'.50 BMG','Estados Unidos','Barrett M82');
 
 -- inserindo fornecerArmamento
 
