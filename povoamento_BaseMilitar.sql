@@ -52,7 +52,7 @@ INSERT INTO militar(cpf, patente) VALUES ('415.332.550-32', 1);
 INSERT INTO militar(cpf, patente) VALUES ('247.298.232-14', 5);
 INSERT INTO militar(cpf, patente) VALUES ('335.206.930-11', 5);
 
--- MIlitares livres 
+-- MIlitares livres (supervisão)
 INSERT INTO militar(cpf, patente) VALUES ('877.119.269-79', 1);
 INSERT INTO militar(cpf, patente) VALUES ('147.114.791-82', 1);
 INSERT INTO militar(cpf, patente) VALUES ('243.832.546-16', 1);
@@ -126,38 +126,40 @@ INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('328.267.558
 
 -- Inserindo prestador_de_servico
 
-INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('266.873.194-18', 'Coaching');
-INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('060.718.346-27', 'Instruções de etiqueta');    
-INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('730.774.348-57', 'Limpeza de bolsa de gordura');
-INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('407.436.138-80', 'Entrega de alimentos');
-INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('923.676.914-44', 'Maneabilidade de produtos quimicos');
-INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('439.509.231-44', 'Exposição de arte');
-INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('050.365.042-08', 'Cortes de cabelos');
-INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('028.271.834-63', 'Renovação de vacinas');
-INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('219.548.474-83', 'Coaching');
-INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('575.283.272-12', 'Tecnologia militar');
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('266.873.194-18', 'Coaching'); --
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('060.718.346-27', 'Dedetização'); --
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('730.774.348-57', 'Limpeza de bolsa de gordura'); --
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('407.436.138-80', 'Entrega de alimentos'); --
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('923.676.914-44', 'Maneabilidade de produtos quimicos');--
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('439.509.231-44', 'Exposição de arte'); --
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('050.365.042-08', 'Cortes de cabelos'); --
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('028.271.834-63', 'Renovação de vacinas'); --
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('219.548.474-83', 'Trabalhos em altura');
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('575.283.272-12', 'Tecnologia militar');--
 
 -- Inserindo serviço
 INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Treinamento', 'Treinamentos de Coaching, Instruções gerais');
+INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Limpeza', 'exterminio de insetos indesejados');
 INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Limpeza', 'Serviço de limpeza geral');
 INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Entregas', 'Entregas de mantimentos, peças, etc.');
 INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Quimico', 'Serviços Quimico em geral');
 INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Exposição', 'Exposições externas');
 INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Esteticas e Cuidados', 'Serviços de cabelo, unhas encravadas, cuidados em geral');
 INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Saúde', 'Serviços de saude, vacina, dentista, operações, coleta de sangue, etc');
+INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Manutenção', 'Reparos e pinturas em locais de dificil acesso');
 INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Tecnologia', 'Serviços de Tecnologia');
 
 -- Inserindo Executa serviço - quandos as 3 tabelas tiverem com os dados
-INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('266.873.194-18',1,);
-INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('060.718.346-27',2,);
-INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('730.774.348-57',3,);
-INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('407.436.138-80',4,);
-INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('923.676.914-44',5,);
-INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('439.509.231-44',6,);
-INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('050.365.042-08',7,);
-INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('028.271.834-63',8,);
-INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('219.548.474-83',9,);
-INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('575.283.272-12',10,);
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('266.873.194-18',1,'877.119.269-79');
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('060.718.346-27',2,'147.114.791-82');
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('730.774.348-57',3,'243.832.546-16');
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('407.436.138-80',4,'892.653.058-27');
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('923.676.914-44',5,'328.267.558-54');
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('439.509.231-44',6,'367.109.270-71');
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('050.365.042-08',7,'980.354.916-02');
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('028.271.834-63',8,'423.752.036-91');
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('219.548.474-83',9,'356.680.380-17');
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES ('575.283.272-12',10,'717.919.369-17');
 
 -- Inserindo Quadrantes
 INSERT INTO Quadrante (Coordenadas, Terreno) VALUES ('50° 0’36.30″N, 110° 6’46.82″W','Montanhoso');
