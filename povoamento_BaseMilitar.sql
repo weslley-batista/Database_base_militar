@@ -10,7 +10,7 @@ INSERT INTO pessoa (nome,cpf) VALUES ('Davi','413.372.547-62');
 INSERT INTO pessoa (nome,cpf) VALUES ('Laura','606.862.377-73');
 INSERT INTO pessoa (nome,cpf) VALUES ('Gabriel','644.718.711-88');
 INSERT INTO pessoa (nome,cpf) VALUES ('Valentina','415.332.550-32');
---Prestadores de serviço acima ⬆
+-- militares acima ⬆
 INSERT INTO pessoa (nome,cpf) VALUES ('Bernardo','266.873.194-18');
 INSERT INTO pessoa (nome,cpf) VALUES ('Samuel','060.718.346-27');
 INSERT INTO pessoa (nome,cpf) VALUES ('João Miguel','730.774.348-57');
@@ -21,6 +21,7 @@ INSERT INTO pessoa (nome,cpf) VALUES ('Edir Carneiro','050.365.042-08');
 INSERT INTO pessoa (nome,cpf) VALUES ('Lola Lisboa','028.271.834-63');
 INSERT INTO pessoa (nome,cpf) VALUES ('Artyom Carmona','219.548.474-83');
 INSERT INTO pessoa (nome,cpf) VALUES ('Carla Guerra','575.283.272-12');
+-- Prestadores de serviço acima ⬆
 INSERT INTO pessoa (nome,cpf) VALUES ('Evandro Malta','335.206.930-11');
 INSERT INTO pessoa (nome,cpf) VALUES ('Zoé Caldeira','247.298.232-14');
 INSERT INTO pessoa (nome,cpf) VALUES ('Cláudio Brites','877.119.269-79');
@@ -103,16 +104,16 @@ INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('328.267.558
 
 -- Inserindo prestador_de_serviço
 
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('474.020.744-39', 'Coaching');
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('84.627.718-54', 'Instruções de etiqueta');    
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('632.481.319-34', 'Limpeza de bolsa de gordura');
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('977.827.224-70', 'Entrega de alimentos');
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('134.177.826-60', 'Maneabilidade de produtos quimicos');
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('308.175.745-22', 'Exposição de arte');
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('413.372.547-62', 'Cortes de cabelos');
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('606.862.377-73', 'Renovação de vacinas');
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('644.718.711-88', 'Coaching');
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('415.332.550-32', 'Tecnologia militar');
+INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('266.873.194-18', 'Coaching');
+INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('060.718.346-27', 'Instruções de etiqueta');    
+INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('730.774.348-57', 'Limpeza de bolsa de gordura');
+INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('407.436.138-80', 'Entrega de alimentos');
+INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('923.676.914-44', 'Maneabilidade de produtos quimicos');
+INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('439.509.231-44', 'Exposição de arte');
+INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('050.365.042-08', 'Cortes de cabelos');
+INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('028.271.834-63', 'Renovação de vacinas');
+INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('219.548.474-83', 'Coaching');
+INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('575.283.272-12', 'Tecnologia militar');
 
 -- Inserindo serviço
 INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq, 'Treinamento', 'Treinamentos de Coaching, Instruções gerais');
