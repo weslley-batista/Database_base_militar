@@ -30,8 +30,8 @@ CREATE TABLE Telefone_da_pessoa ( --multivalorado
 CREATE TABLE Prestador_de_serviço(
     CPF VARCHAR2 (14),
     Especialidade VARCHAR2 (255),
-    CONSTRAINT Prestador_de_serviço_pkey PRIMARY KEY(CPF),
-    CONSTRAINT Prestador_de_serviço_fkey FOREIGN KEY (CPF) REFERENCES Pessoa (CPF)
+    CONSTRAINT Prestador_de_servico_pkey PRIMARY KEY(CPF),
+    CONSTRAINT Prestador_de_servico_fkey FOREIGN KEY (CPF) REFERENCES Pessoa (CPF)
 );
 
 Create Sequence id_servico_seq
@@ -48,7 +48,7 @@ Create Table executa_servico (
     Prestador_de_servico VARCHAR2(14),
     Servico NUMBER,
     Cpf_militar varchar2(14),
-    CONSTRAINT executa_servico_fkey1 FOREIGN KEY (prestador_de_servico) REFERENCES Prestador_de_serviço(cpf),
+    CONSTRAINT executa_servico_fkey1 FOREIGN KEY (prestador_de_servico) REFERENCES Prestador_de_servico(cpf),
     CONSTRAINT executa_servico_fkey2 FOREIGN key (servico) REFERENCES servico (id_servico_seq),
     CONSTRAINT executa_servico_fkey3 FOREIGN KEY (cpf_militar) REFERENCES militar (cpf)
 );
@@ -101,9 +101,6 @@ CREATE TABLE Militar_comandado(
     CONSTRAINT militar_comandado_fk3 FOREIGN KEY (quadrante_coordenadas) REFERENCES Quadrante(coordenadas)
 );
 
-
-
-
 CREATE TABLE Visitante(
     nome VARCHAR2(100) NOT NULL,
     cpf_militar VARCHAR2(11) NOT NULL,
@@ -111,12 +108,11 @@ CREATE TABLE Visitante(
     CONSTRAINT Visitante_fk FOREIGN KEY (cpf_militar) REFERENCES Militar(cpf)
 );
 
-
 CREATE TABLE Comunicacao_entre_bases(
-    base_inicia_cominicação VARCHAR2(100) NOT NULL,
-    base_recebe_comunicação VARCHAR2(100) NOT NULL,
-    CONSTRAINT Comunicação_entre_bases_fk1 FOREIGN KEY (base_inicia_cominicação) REFERENCES Base_militar(nome),
-    CONSTRAINT Comunicação_entre_bases_fk2 FOREIGN KEY (base_recebe_comunicação) REFERENCES Base_militar(nome)
+    base_inicia_cominicacao VARCHAR2(100) NOT NULL,
+    base_recebe_comunicacao VARCHAR2(100) NOT NULL,
+    CONSTRAINT Comunicação_entre_bases_fk1 FOREIGN KEY (base_inicia_cominicacao) REFERENCES Base_militar(nome),
+    CONSTRAINT Comunicação_entre_bases_fk2 FOREIGN KEY (base_recebe_comunicacao) REFERENCES Base_militar(nome)
 );
 
 CREATE SEQUENCE Id
@@ -151,5 +147,3 @@ CREATE TABLE Fornecer_armamento ( -- relacionamento triplo temporal
     CONSTRAINT Fornecer_armamento_fkey2 FOREIGN KEY (Registro_arma) REFERENCES Arma (Numero_de_registro),
     CONSTRAINT Fornecer_armamento_fkey3 FOREIGN KEY (Id_arsenal) REFERENCES Arsenal (Id)
 );
-
-
