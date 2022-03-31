@@ -38,18 +38,18 @@ Create Sequence id_servico_seq
     INCREMENT BY 1 START WITH 1;
 
 Create Table servico ( --entidade   
-    id_servico_seq NUMBER (11), 
-    Nome VARCHAR2,
-    Descricao VARCHAR2,    
+    id_servico_seq NUMBER, 
+    Nome VARCHAR2(300),
+    Descricao VARCHAR2(300),    
     CONSTRAINT servico_pkey PRIMARY KEY(Id_servico)
 );
 
 Create Table executa_servico ( 
-    Prestador_de_servico NUMBER(14),
+    Prestador_de_servico VARCHAR2(14),
     Servico NUMBER,
     Cpf_militar varchar2(14)
     CONSTRAINT executa_servico_fkey FOREIGN KEY (prestador_de_servico) REFERENCES Prestador_de_serviço(cpf),
-    CONSTRAINT executa_servico_fkey FOREIGN key (servico) REFERENCES servico (Id_servico),
+    CONSTRAINT executa_servico_fkey FOREIGN key (servico) REFERENCES servico (id_servico_seq),
     CONSTRAINT executa_servico_fkey FOREIGN KEY (cpf_militar) REFERENCES militar (cpf)
 );
 
