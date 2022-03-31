@@ -13,16 +13,16 @@ INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, qua
 -----------------------------------------------------------------
 
 
-INSERT INTO Visitante(nome , cpf_militar) VALUES ('luffy', 'cpf 1');
-INSERT INTO Visitante(nome , cpf_militar) VALUES ('zoro', 'cpf 2');
-INSERT INTO Visitante(nome , cpf_militar) VALUES ('sanji', 'cpf 3');
-INSERT INTO Visitante(nome , cpf_militar) VALUES ('usopp', 'cpf 4');
-INSERT INTO Visitante(nome , cpf_militar) VALUES ('nami', 'cpf 5');
-INSERT INTO Visitante(nome , cpf_militar) VALUES ('chopper', 'cpf 6');
-INSERT INTO Visitante(nome , cpf_militar) VALUES ('robin', 'cpf 7');
-INSERT INTO Visitante(nome , cpf_militar) VALUES ('franky', 'cpf 8');
-INSERT INTO Visitante(nome , cpf_militar) VALUES ('brook', 'cpf 9');
-INSERT INTO Visitante(nome , cpf_militar) VALUES ('robin', 'cpf 10');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('luffy', '474.020.744-39');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('zoro', '219.548.474-83');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('sanji', '632.481.319-34');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('usopp', '977.827.224-704');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('nami', '134.177.826-60');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('chopper', '413.372.547-62');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('robin', '606.862.377-73');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('franky', '335.206.930-11');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('brook', '644.718.711-88');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('jinbe', '415.332.550-32');
 
 -----------------------------------------------------------------
 
