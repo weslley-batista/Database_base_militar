@@ -91,8 +91,8 @@ Create Table endereco_base (
 );
 
 CREATE TABLE Militar_comandado(
-    militar_comandante_cpf VARCHAR2(11) NOT NULL,
-    militar_comandado_cpf VARCHAR2(11) NOT NULL,
+    militar_comandante_cpf VARCHAR2(14) NOT NULL,
+    militar_comandado_cpf VARCHAR2(14) NOT NULL,
     quadrante_coordenadas VARCHAR2(11),
     numero_agrupamento INTEGER NOT NULL,
     CONSTRAINT militar_comandado_pk PRIMARY KEY (militar_comandante_cpf,militar_comandado_cpf),
@@ -103,7 +103,8 @@ CREATE TABLE Militar_comandado(
 CREATE TABLE Visitante(
     nome VARCHAR2(100) NOT NULL,
     cpf_militar VARCHAR2(11) NOT NULL,
-    CONSTRAINT Visitante_pk PRIMARY KEY (nome,cpf_militar)
+    CONSTRAINT Visitante_pk PRIMARY KEY (nome,cpf_militar),
+    CONSTRAINT visitante_FK FOREIGN KEY (cpf_militar) REFERENCES Pessoa (CPF)
 );
 
 CREATE TABLE Comunicação_entre_bases(
