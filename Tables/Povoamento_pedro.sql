@@ -27,14 +27,14 @@ INSERT INTO Fornecer_armamento (Horario_e_data, Cpf_militar, Registro_arma, Id_a
 
 -- inserindo arma
 
-INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento, Horario_e_data) 
-    VALUES ('01010202', 1,'.556 Nato','Brasil','Carabina Taurus T4 A1 14,5',timestamp '2022-04-20 15:00:00');
-INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento, Horario_e_data) 
-    VALUES ('01013333', 2,'.380 Auto','Estados Unidos','Pistola Smith & Wesson Semiautomática',timestamp '2022-04-20 15:00:00');
-INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento, Horario_e_data) 
-    VALUES ('01014444', 3,'.22LR','Áustria','Glock 44',timestamp '2022-04-25 07:30:00');
-INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento, Horario_e_data) 
-    VALUES ('01010101', 4,'9mm','Alemanha','MP5A3',timestamp '2022-05-01 09:30:00');
-INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento, Horario_e_data) 
-    VALUES ('01015555', 5,'.50 BMG','Estados Unidos','Barrett M82',timestamp '2022-05-15 15:30:00');
+INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento) 
+    VALUES ('01010202', 1,'.556 Nato','Brasil','Carabina Taurus T4 A1 14,5');
+INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento) 
+    VALUES ('01013333', 2,'.380 Auto','Estados Unidos','Pistola Smith & Wesson Semiautomática');
+INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento) 
+    VALUES ('01014444', 3,'.22LR','Áustria','Glock 44');
+INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento) 
+    VALUES ('01010101', 4,'9mm','Alemanha','MP5A3');
+INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento) 
+    VALUES ('01015555', 5,'.50 BMG','Estados Unidos','Barrett M82');
 

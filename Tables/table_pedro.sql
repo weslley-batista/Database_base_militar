@@ -21,10 +21,8 @@ CREATE TABLE Arma ( -- entidade
     Calibre VARCHAR2 NOT NULL, -- .556
     Fabricacao VARCHAR2 NOT NULL,
     Nome_do_armamento VARCHAR2 NOT NULL,
-    Horario_e_data TIMESTAMP NOT NULL,
     CONSTRAINT Numero_de_registro_pkey PRIMARY KEY (Numero_de_registro),
     CONSTRAINT Id_arsenal_fkey FOREIGN KEY (Id_arsenal) REFERENCES Arsenal (Id),
-    CONSTRAINT Horario_e_data_fkey FOREIGN KEY (Horario_e_data) REFERENCES Fornecer_armamento (Horario_e_data)
 );
 
 CREATE TABLE Fornecer_armamento ( -- relacionamento triplo temporal
