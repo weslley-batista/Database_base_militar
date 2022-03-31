@@ -124,20 +124,20 @@ CREATE SEQUENCE Id
     
 CREATE TABLE Arsenal ( -- entidade
     Id NUMBER NOT NULL,
-    Categoria_armazem VARCHAR2 NOT NULL,
+    Categoria_armazem VARCHAR2(300) NOT NULL,
     Data_de_manutencao DATE NOT NULL,
     Capacidade_maxima NUMBER NOT NULL,
-    Nome_base_militar VARCHAR2 NOT NULL,
+    Nome_base_militar VARCHAR2(300) NOT NULL,
     CONSTRAINT Arsenal_pkey PRIMARY KEY (Id),
     CONSTRAINT Arsenal_fkey FOREIGN KEY (Nome_base_militar) REFERENCES Base_militar (Nome)
 );
 
 CREATE TABLE Arma ( -- entidade
-    Numero_de_registro BIGINT NOT NULL,
+    Numero_de_registro VARCHAR2(9) NOT NULL,
     Id_arsenal NUMBER NOT NULL, -- 
-    Calibre VARCHAR2 NOT NULL, -- .556
-    Fabricacao VARCHAR2 NOT NULL,
-    Nome_do_armamento VARCHAR2 NOT NULL,
+    Calibre VARCHAR2(10) NOT NULL, -- .556
+    Fabricacao VARCHAR2(50) NOT NULL,
+    Nome_do_armamento VARCHAR2(60) NOT NULL,
     CONSTRAINT Arma_pkey PRIMARY KEY (Numero_de_registro),
     CONSTRAINT Arma_fkey FOREIGN KEY (Id_arsenal) REFERENCES Arsenal (Id),
 );
@@ -145,7 +145,7 @@ CREATE TABLE Arma ( -- entidade
 CREATE TABLE Fornecer_armamento ( -- relacionamento triplo temporal
     Horario_e_data TIMESTAMP NOT NULL,
     Cpf_militar VARCHAR2 (14) NOT NULL, -- 000.000.000-00
-    Registro_arma VARCHAR2 NOT NULL,
+    Registro_arma VARCHAR2(9) NOT NULL,
     Id_arsenal NUMBER NOT NULL,
     CONSTRAINT Fornecer_armamento_fkey FOREIGN KEY (Cpf_militar) REFERENCES Militar (Cpf),
     CONSTRAINT Fornecer_armamento_fkey FOREIGN KEY (Registro_arma) REFERENCES Arma (Numero_de_registro),
