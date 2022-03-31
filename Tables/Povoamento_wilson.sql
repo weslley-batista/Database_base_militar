@@ -27,17 +27,6 @@ INSERT INTO Visitante(nome , cpf_militar) VALUES ('jinbe', '415.332.550-32');
 -----------------------------------------------------------------
 
 
-INSERT INTO base_militar(nome, especialidade) VALUES('BAAN', 'Combate');
-INSERT INTO base_militar(nome, especialidade) VALUES('BACO', 'Cavalaria');
-INSERT INTO base_militar(nome, especialidade) VALUES('BAFZ', 'Apoio');
-INSERT INTO base_militar(nome, especialidade) VALUES('BANT', 'Observacao');
-INSERT INTO base_militar(nome, especialidade) VALUES('BARF', 'Aviacao');
-INSERT INTO base_militar(nome, especialidade) VALUES('BAST', 'Reparo');
-INSERT INTO base_militar(nome, especialidade) VALUES('BAAF', 'Paraquedismo');
-INSERT INTO base_militar(nome, especialidade) VALUES('AREA51', 'ETs');
-INSERT INTO base_militar(nome, especialidade) VALUES('BIM', 'Veiculos');
-INSERT INTO base_militar(nome, especialidade) VALUES('BC', 'Comunicacoes');
-
 INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BAAN', 'BACO');
 INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BACO', 'BAFZ');
 INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BAAN', 'BAFZ');
