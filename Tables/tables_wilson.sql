@@ -3,8 +3,9 @@ CREATE TABLE Militar_comandado(
     militar_comandado_cpf VARCHAR2(14) NOT NULL,
     quadrante_coordenadas VARCHAR2(100),
     numero_agrupamento INTEGER NOT NULL,
-    CONSTRAINT militar_comandado_pk PRIMARY KEY (militar_comandante_cpf,militar_comandado_cpf),
-    CONSTRAINT militar_comandado_fk FOREIGN KEY (quadrante_coordenadas) REFERENCES Quadrante(coordenadas)
+    CONSTRAINT militar_comandado_fk1 FOREIGN KEY (militar_comandante_cpf) REFERENCES Militar(cpf),
+    CONSTRAINT militar_comandado_fk2 FOREIGN KEY (militar_comandado_cpf) REFERENCES Militar(cpf),
+    CONSTRAINT militar_comandado_fk3 FOREIGN KEY (quadrante_coordenadas) REFERENCES Quadrante(coordenadas)
 );
 
 
