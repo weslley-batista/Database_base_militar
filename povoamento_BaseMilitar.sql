@@ -30,6 +30,13 @@ INSERT INTO pessoa (nome,cpf) VALUES ('Liany Veloso','147.114.791-82');
 INSERT INTO pessoa (nome,cpf) VALUES ('Ary Veloso','243.832.546-16');
 INSERT INTO pessoa (nome,cpf) VALUES ('Raquel Laura','892.653.058-27');
 INSERT INTO pessoa (nome,cpf) VALUES ('Rosa Flávia','328.267.558-54');
+INSERT INTO pessoa (nome,cpf) VALUES ('Henrique Farias','367.109.270-71');
+INSERT INTO pessoa (nome,cpf) VALUES ('Pedro Silveira','980.354.916-02');
+INSERT INTO pessoa (nome,cpf) VALUES ('Guilherme Britto','423.752.036-91');
+INSERT INTO pessoa (nome,cpf) VALUES ('Bruna Pereira','356.680.380-17');
+INSERT INTO pessoa (nome,cpf) VALUES ('Ednaldo Pereira','717.919.369-17');
+
+
 
 -- Inserindo Militar
 INSERT INTO militar(cpf, patente) VALUES ('474.020.744-39', 2);
@@ -44,6 +51,17 @@ INSERT INTO militar(cpf, patente) VALUES ('644.718.711-88', 2);
 INSERT INTO militar(cpf, patente) VALUES ('415.332.550-32', 1);
 INSERT INTO militar(cpf, patente) VALUES ('247.298.232-14', 5);
 INSERT INTO militar(cpf, patente) VALUES ('335.206.930-11', 5);
+
+INSERT INTO militar(cpf, patente) VALUES ('877.119.269-79', 1);
+INSERT INTO militar(cpf, patente) VALUES ('147.114.791-82', 1);
+INSERT INTO militar(cpf, patente) VALUES ('243.832.546-16', 1);
+INSERT INTO militar(cpf, patente) VALUES ('892.653.058-27', 1);
+INSERT INTO militar(cpf, patente) VALUES ('328.267.558-54', 1);
+INSERT INTO militar(cpf, patente) VALUES ('367.109.270-71', 1);
+INSERT INTO militar(cpf, patente) VALUES ('980.354.916-02', 1);
+INSERT INTO militar(cpf, patente) VALUES ('423.752.036-91', 1);
+INSERT INTO militar(cpf, patente) VALUES ('356.680.380-17', 1);
+INSERT INTO militar(cpf, patente) VALUES ('717.919.369-17', 1);
 
 -- Inserindo endereco_da_pessoa
 
