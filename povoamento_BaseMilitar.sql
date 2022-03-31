@@ -10,6 +10,8 @@ INSERT INTO pessoa (nome,cpf) VALUES ('Davi','413.372.547-62');
 INSERT INTO pessoa (nome,cpf) VALUES ('Laura','606.862.377-73');
 INSERT INTO pessoa (nome,cpf) VALUES ('Gabriel','644.718.711-88');
 INSERT INTO pessoa (nome,cpf) VALUES ('Valentina','415.332.550-32');
+INSERT INTO pessoa (nome,cpf) VALUES ('Evandro Malta','335.206.930-11');
+INSERT INTO pessoa (nome,cpf) VALUES ('Zoé Caldeira','247.298.232-14');
 -- militares acima ⬆
 INSERT INTO pessoa (nome,cpf) VALUES ('Bernardo','266.873.194-18');
 INSERT INTO pessoa (nome,cpf) VALUES ('Samuel','060.718.346-27');
@@ -22,8 +24,7 @@ INSERT INTO pessoa (nome,cpf) VALUES ('Lola Lisboa','028.271.834-63');
 INSERT INTO pessoa (nome,cpf) VALUES ('Artyom Carmona','219.548.474-83');
 INSERT INTO pessoa (nome,cpf) VALUES ('Carla Guerra','575.283.272-12');
 -- Prestadores de serviço acima ⬆
-INSERT INTO pessoa (nome,cpf) VALUES ('Evandro Malta','335.206.930-11');
-INSERT INTO pessoa (nome,cpf) VALUES ('Zoé Caldeira','247.298.232-14');
+
 INSERT INTO pessoa (nome,cpf) VALUES ('Cláudio Brites','877.119.269-79');
 INSERT INTO pessoa (nome,cpf) VALUES ('Liany Veloso','147.114.791-82');
 INSERT INTO pessoa (nome,cpf) VALUES ('Ary Veloso','243.832.546-16');
@@ -41,7 +42,7 @@ INSERT INTO militar(cpf, patente) VALUES ('413.372.547-62', 1);
 INSERT INTO militar(cpf, patente) VALUES ('606.862.377-73', 5);
 INSERT INTO militar(cpf, patente) VALUES ('644.718.711-88', 2);
 INSERT INTO militar(cpf, patente) VALUES ('415.332.550-32', 1);
-INSERT INTO militar(cpf, patente) VALUES ('219.548.474-83', 5);
+INSERT INTO militar(cpf, patente) VALUES ('247.298.232-14', 5);
 INSERT INTO militar(cpf, patente) VALUES ('335.206.930-11', 5);
 
 -- Inserindo endereco_da_pessoa
