@@ -1,12 +1,12 @@
 -- Inserindo serviço
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq, 'Treinamento', 'Treinamentos de Coaching, Instruções gerais');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq, 'Limpeza', 'Serviço de limpeza geral');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq, 'Entregas', 'Entregas de mantimentos, peças, etc.');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq, 'Quimico', 'Serviços Quimico em geral');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq, 'Exposição', 'Exposições externas');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq, 'Esteticas e Cuidados', 'Serviços de cabelo, unhas encravadas, cuidados em geral');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq, 'Saúde', 'Serviços de saude, vacina, dentista, operações, coleta de sangue, etc');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq, 'Tecnologia', 'Serviços de Tecnologia');
+INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Treinamento', 'Treinamentos de Coaching, Instruções gerais');
+INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Limpeza', 'Serviço de limpeza geral');
+INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Entregas', 'Entregas de mantimentos, peças, etc.');
+INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Quimico', 'Serviços Quimico em geral');
+INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Exposição', 'Exposições externas');
+INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Esteticas e Cuidados', 'Serviços de cabelo, unhas encravadas, cuidados em geral');
+INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Saúde', 'Serviços de saude, vacina, dentista, operações, coleta de sangue, etc')
+INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Tecnologia', 'Serviços de Tecnologia')
 
 
 -- Inserindo Quadrantes
