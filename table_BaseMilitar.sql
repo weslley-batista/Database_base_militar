@@ -30,7 +30,8 @@ CREATE TABLE Telefone_da_pessoa ( --multivalorado
 CREATE TABLE Prestador_de_serviço(
     CPF VARCHAR2 (14),
     Especialidade VARCHAR2 (255),
-    CONSTRAINT Prestador_de_serviço_pkey PRIMARY KEY(CPF)
+    CONSTRAINT Prestador_de_serviço_pkey PRIMARY KEY(CPF),
+    CONSTRAINT Prestador_de_serviço_Fk FOREIGN KEY (CPF) REFERENCES Pessoa (CPF)
 );
 
 Create Sequence id_servico_seq
@@ -44,7 +45,7 @@ Create Table servico ( --entidade
 );
 
 Create Table executa_servico ( 
-    Prestador_de_servico NUMBER(14), 
+    Prestador_de_servico NUMBER(14),
     Servico NUMBER,
     Cpf_militar varchar2(14)
     CONSTRAINT prestador_de_servico_fkey FOREIGN KEY (prestador_de_servico) REFERENCES Prestador_de_serviço(cpf),
@@ -96,7 +97,7 @@ CREATE TABLE Militar_comandado(
     quadrante_coordenadas VARCHAR2(11),
     numero_agrupamento INTEGER NOT NULL,
     CONSTRAINT militar_comandado_pk PRIMARY KEY (militar_comandante_cpf,militar_comandado_cpf),
-    CONSTRAINT militar_comandado_fk FOREIGN KEY (militar_comandado_fk, militar_comandante_cpf) REFERENCES Pessoa (CPF),
+    CONSTRAINT militar_comandado_fk FOREIGN KEY (militar_comandado_fk, militar_comandante_cpf) REFERENCES militar (cpf),
     CONSTRAINT militar_comandado_fk FOREIGN KEY (quadrante_coordenadas) REFERENCES Quadrante(coordenadas)
 );
 
@@ -104,7 +105,7 @@ CREATE TABLE Visitante(
     nome VARCHAR2(100) NOT NULL,
     cpf_militar VARCHAR2(11) NOT NULL,
     CONSTRAINT Visitante_pk PRIMARY KEY (nome,cpf_militar),
-    CONSTRAINT visitante_FK FOREIGN KEY (cpf_militar) REFERENCES Pessoa (CPF)
+    CONSTRAINT visitante_FK FOREIGN KEY (cpf_militar) REFERENCES militar (CPF)
 );
 
 CREATE TABLE Comunicação_entre_bases(
