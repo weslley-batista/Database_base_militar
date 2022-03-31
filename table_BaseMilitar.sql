@@ -34,7 +34,7 @@ CREATE TABLE Prestador_de_servico(
     CONSTRAINT Prestador_de_servico_fkey FOREIGN KEY (CPF) REFERENCES Pessoa (CPF)
 );
 
-Create Sequence id_servico_seq
+CREATE SEQUENCE id_servico_seq
     INCREMENT BY 1 START WITH 1;
 
 Create Table servico ( --entidade   
