@@ -9,6 +9,7 @@ INSERT INTO pessoa (nome,cpf) VALUES ('Laura','606.862.377-73');
 INSERT INTO pessoa (nome,cpf) VALUES ('Gabriel','644.718.711-88');
 INSERT INTO pessoa (nome,cpf) VALUES ('Valentina','415.332.550-32');
 
+
 -- Inserindo Militar
 INSERT INTO militar(cpf, patente) VALUES ('474.020.744-39', 2);
 INSERT INTO militar(cpf, patente) VALUES ('384.627.718-54', 4);
@@ -20,6 +21,8 @@ INSERT INTO militar(cpf, patente) VALUES ('413.372.547-62', 1);
 INSERT INTO militar(cpf, patente) VALUES ('606.862.377-73', 5);
 INSERT INTO militar(cpf, patente) VALUES ('644.718.711-88', 2);
 INSERT INTO militar(cpf, patente) VALUES ('415.332.550-32', 1);
+INSERT INTO militar(cpf, patente) VALUES ('219.548.474-83', 5);
+INSERT INTO militar(cpf, patente) VALUES ('335.206.930-11', 5);
 
 -- Inserindo Condecoracoes
 INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('474.020.744-39', 'Limpador de latrinas');
