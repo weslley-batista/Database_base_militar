@@ -93,11 +93,11 @@ INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUE
 INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('243.832.546-16','Rua Tenente Guimarães', 934, 'Liberdade','69309-109');
 INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('892.653.058-27','Avenida Bráulio', 357, 'Curuzu','40366-340');
 INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('328.267.558-54','Rua Padre Silvestre', 794, 'Trapiche da Barra','57010-490');
-INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('367.109.270-71','Rua Pardal', 53,'Jardim das Aves','13903-421')
-INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('980.354.916-02','Avenida Contorno', 23,'Vila Couto Magalhães','77825-010')
-INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('423.752.036-91','Rua Estrela de Davi', 686,'Residencial Ana Caroline','69076-000')
-INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('356.680.380-17','Quadra 801 Sul Alameda 2', 47,'Plano Diretor Sul','66558-456')
-INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('717.919.369-17','Rua B 11', 128,'Japiim','78513-669')
+INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('367.109.270-71','Rua Pardal', 53,'Jardim das Aves','13903-421');
+INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('980.354.916-02','Avenida Contorno', 23,'Vila Couto Magalhães','77825-010');
+INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('423.752.036-91','Rua Estrela de Davi', 686,'Residencial Ana Caroline','69076-000');
+INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('356.680.380-17','Quadra 801 Sul Alameda 2', 47,'Plano Diretor Sul','66558-456');
+INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('717.919.369-17','Rua B 11', 128,'Japiim','78513-669');
 
 -- Inserindo telefone_da_pessoa
 
@@ -128,25 +128,25 @@ INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('147.114.791
 INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('243.832.546-16', '(81) 2486-2634');
 INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('892.653.058-27', '(87) 3127-7145');
 INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('328.267.558-54', '(88) 3838-8276');
-INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('367.109.270-71', '(63) 98957-1197')
-INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('980.354.916-02', '(47) 98544-2018')
-INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('423.752.036-91', '(63) 98575-0151')
-INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('356.680.380-17', '(47) 98537-6880')
-INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('717.919.369-17', '(82) 99309-5880')
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('367.109.270-71', '(63) 98957-1197');
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('980.354.916-02', '(47) 98544-2018');
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('423.752.036-91', '(63) 98575-0151');
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('356.680.380-17', '(47) 98537-6880');
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('717.919.369-17', '(82) 99309-5880');
 
 
 -- Inserindo prestador_de_servico
 
-INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('266.873.194-18', 'Coaching'); --
-INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('060.718.346-27', 'Dedetização'); --
-INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('730.774.348-57', 'Limpeza de bolsa de gordura'); --
-INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('407.436.138-80', 'Entrega de alimentos'); --
-INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('923.676.914-44', 'Maneabilidade de produtos quimicos');--
-INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('439.509.231-44', 'Exposição de arte'); --
-INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('050.365.042-08', 'Cortes de cabelos'); --
-INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('028.271.834-63', 'Renovação de vacinas'); --
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('266.873.194-18', 'Coaching');
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('060.718.346-27', 'Dedetização');
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('730.774.348-57', 'Limpeza de bolsa de gordura');
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('407.436.138-80', 'Entrega de alimentos');
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('923.676.914-44', 'Maneabilidade de produtos quimicos');
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('439.509.231-44', 'Exposição de arte');
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('050.365.042-08', 'Cortes de cabelos');
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('028.271.834-63', 'Renovação de vacinas');
 INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('219.548.474-83', 'Trabalhos em altura');
-INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('575.283.272-12', 'Tecnologia militar');--
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('575.283.272-12', 'Tecnologia militar');
 
 -- Inserindo serviço
 INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Treinamento', 'Treinamentos de Coaching, Instruções gerais');
