@@ -36,5 +36,5 @@ INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_a
 INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento, Horario_e_data) 
     VALUES ('01010101', 4,'9mm','Alemanha','MP5A3',timestamp '2022-05-01 09:30:00');
 INSERT INTO Arma (Numero_de_registro, Id_arsenal, Calibre, Fabricacao, Nome_do_armamento, Horario_e_data) 
-    VALUES ('01015555', 5,'.50 BMG','Estados Unidos','Barrett M82',timestamp '2022-05-15 10:30:00');
+    VALUES ('01015555', 5,'.50 BMG','Estados Unidos','Barrett M82',timestamp '2022-05-15 15:30:00');
 
