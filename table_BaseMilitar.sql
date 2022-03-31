@@ -54,8 +54,8 @@ Create Table executa_servico (
 );
 
 Create Table Quadrante ( 
-    Coordenadas VARCHAR2, 
-    Terreno VARCHAR2,    
+    Coordenadas VARCHAR2(300), 
+    Terreno VARCHAR2(300),    
     CONSTRAINT Quadrante_pkey PRIMARY KEY(coordenadas)
     
 );
