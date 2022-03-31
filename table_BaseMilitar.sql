@@ -27,7 +27,7 @@ CREATE TABLE Telefone_da_pessoa ( --multivalorado
     CONSTRAINT Telefone_da_pessoa_const unique (Numero_telefone)
 );
 
-CREATE TABLE Prestador_de_serviço(
+CREATE TABLE Prestador_de_servico(
     CPF VARCHAR2 (14),
     Especialidade VARCHAR2 (255),
     CONSTRAINT Prestador_de_servico_pkey PRIMARY KEY(CPF),
@@ -44,13 +44,13 @@ Create Table servico ( --entidade
     CONSTRAINT servico_pkey PRIMARY KEY(id_servico_seq)
 );
 
-Create Table executa_servico ( 
+Create Table executa_servico (
     Prestador_de_servico VARCHAR2(14),
     Servico NUMBER,
     Cpf_militar varchar2(14),
-    CONSTRAINT executa_servico_fkey1 FOREIGN KEY (prestador_de_servico) REFERENCES Prestador_de_servico(cpf),
-    CONSTRAINT executa_servico_fkey2 FOREIGN key (servico) REFERENCES servico (id_servico_seq),
-    CONSTRAINT executa_servico_fkey3 FOREIGN KEY (cpf_militar) REFERENCES militar (cpf)
+    CONSTRAINT executa_servico_fkey1 FOREIGN KEY (Prestador_de_servico) REFERENCES Prestador_de_servico(cpf),
+    CONSTRAINT executa_servico_fkey2 FOREIGN key (Servico) REFERENCES servico (id_servico_seq),
+    CONSTRAINT executa_servico_fkey3 FOREIGN KEY (Cpf_militar) REFERENCES militar (cpf)
 );
 
 Create Table Quadrante ( 
