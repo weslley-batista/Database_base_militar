@@ -118,14 +118,14 @@ INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('219.548.474-83',
 INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('575.283.272-12', 'Tecnologia militar');
 
 -- Inserindo serviço
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Treinamento', 'Treinamentos de Coaching, Instruções gerais');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Limpeza', 'Serviço de limpeza geral');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Entregas', 'Entregas de mantimentos, peças, etc.');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Quimico', 'Serviços Quimico em geral');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Exposição', 'Exposições externas');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Esteticas e Cuidados', 'Serviços de cabelo, unhas encravadas, cuidados em geral');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Saúde', 'Serviços de saude, vacina, dentista, operações, coleta de sangue, etc');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Tecnologia', 'Serviços de Tecnologia');
+INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Treinamento', 'Treinamentos de Coaching, Instruções gerais');
+INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Limpeza', 'Serviço de limpeza geral');
+INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Entregas', 'Entregas de mantimentos, peças, etc.');
+INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Quimico', 'Serviços Quimico em geral');
+INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Exposição', 'Exposições externas');
+INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Esteticas e Cuidados', 'Serviços de cabelo, unhas encravadas, cuidados em geral');
+INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Saúde', 'Serviços de saude, vacina, dentista, operações, coleta de sangue, etc');
+INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Tecnologia', 'Serviços de Tecnologia');
 
 -- Inserindo Executa serviço - quandos as 3 tabelas tiverem com os dados
 INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,); 
