@@ -35,6 +35,7 @@ INSERT INTO pessoa (nome,cpf) VALUES ('Pedro Silveira','980.354.916-02');
 INSERT INTO pessoa (nome,cpf) VALUES ('Guilherme Britto','423.752.036-91');
 INSERT INTO pessoa (nome,cpf) VALUES ('Bruna Pereira','356.680.380-17');
 INSERT INTO pessoa (nome,cpf) VALUES ('Ednaldo Pereira','717.919.369-17');
+INSERT INTO pessoa (nome,cpf) VALUES ('Flávia Sarah','810.535.778-00');
 
 
 
@@ -63,6 +64,8 @@ INSERT INTO militar(cpf, patente) VALUES ('980.354.916-02', 1);
 INSERT INTO militar(cpf, patente) VALUES ('423.752.036-91', 1);
 INSERT INTO militar(cpf, patente) VALUES ('356.680.380-17', 1);
 INSERT INTO militar(cpf, patente) VALUES ('717.919.369-17', 1);
+
+INSERT INTO militar(cpf, patente) VALUES ('810.535.778-00', 5);
 
 -- Inserindo endereco_da_pessoa
 
@@ -98,6 +101,7 @@ INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUE
 INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('423.752.036-91','Rua Estrela de Davi', 686,'Residencial Ana Caroline','69076-000');
 INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('356.680.380-17','Quadra 801 Sul Alameda 2', 47,'Plano Diretor Sul','66558-456');
 INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('717.919.369-17','Rua B 11', 128,'Japiim','78513-669');
+INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('810.535.778-00','Rua Bruno Pholl', 224,'Santos Dumont','79621-050');
 
 -- Inserindo telefone_da_pessoa
 
@@ -133,6 +137,7 @@ INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('980.354.916
 INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('423.752.036-91', '(63) 98575-0151');
 INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('356.680.380-17', '(47) 98537-6880');
 INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('717.919.369-17', '(82) 99309-5880');
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('810.535.778-00', '(67) 99733-6008');
 
 
 -- Inserindo prestador_de_servico
@@ -232,11 +237,11 @@ INSERT INTO endereco_base(nome_base, cep, rua, numero, complemento) VALUES('BIM'
 INSERT INTO endereco_base(nome_base, cep, rua, numero, complemento) VALUES('BC', 50930000, 'BR-101', NULL, 'Km 73');
 
 -- Inserindo Militar Comandado
-INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('219.548.474-83', '384.627.718-54','50° 0’36.30″N, 110° 6’46.82″W',  1);
-INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('219.548.474-83', '632.481.319-34','50° 0’36.30″N, 110° 6’46.82″W',  1);
-INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('219.548.474-83', '977.827.224-70','50° 0’36.30″N, 110° 6’46.82″W',  1);
-INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('219.548.474-83', '134.177.826-60','50° 0’36.30″N, 110° 6’46.82″W',  1);
-INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('219.548.474-83', '474.020.744-39','50° 0’36.30″N, 110° 6’46.82″W',  1);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('810.535.778-00', '384.627.718-54','50° 0’36.30″N, 110° 6’46.82″W',  1);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('810.535.778-00', '632.481.319-34','50° 0’36.30″N, 110° 6’46.82″W',  1);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('810.535.778-00', '977.827.224-70','50° 0’36.30″N, 110° 6’46.82″W',  1);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('810.535.778-00', '134.177.826-60','50° 0’36.30″N, 110° 6’46.82″W',  1);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('810.535.778-00', '474.020.744-39','50° 0’36.30″N, 110° 6’46.82″W',  1);
 INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('335.206.930-11', '413.372.547-62','40°27’28.56″N, 93°23’34.42″E',  2);
 INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('335.206.930-11', '606.862.377-73','40°27’28.56″N, 93°23’34.42″E',  2);
 INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('335.206.930-11', '644.718.711-88','40°27’28.56″N, 93°23’34.42″E',  2);
@@ -247,9 +252,9 @@ INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, qua
 -- Inserindo Visistante
 
 INSERT INTO Visitante(nome , cpf_militar) VALUES ('luffy', '474.020.744-39');
-INSERT INTO Visitante(nome , cpf_militar) VALUES ('zoro', '219.548.474-83');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('zoro', '810.535.778-00');
 INSERT INTO Visitante(nome , cpf_militar) VALUES ('sanji', '632.481.319-34');
-INSERT INTO Visitante(nome , cpf_militar) VALUES ('usopp', '977.827.224-74');
+INSERT INTO Visitante(nome , cpf_militar) VALUES ('usopp', '308.175.745-22');
 INSERT INTO Visitante(nome , cpf_militar) VALUES ('nami', '134.177.826-60');
 INSERT INTO Visitante(nome , cpf_militar) VALUES ('chopper', '413.372.547-62');
 INSERT INTO Visitante(nome , cpf_militar) VALUES ('robin', '606.862.377-73');
