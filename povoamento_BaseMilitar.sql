@@ -128,7 +128,7 @@ INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL
 INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Tecnologia', 'Serviços de Tecnologia');
 
 -- Inserindo Executa serviço - quandos as 3 tabelas tiverem com os dados
-INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,); 
+INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
 INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
 INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);
 INSERT INTO executa_servico (Prestador_de_servico, Servico, Cpf_militar) VALUES (,,);

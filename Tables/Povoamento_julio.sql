@@ -5,8 +5,8 @@ INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL
 INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Quimico', 'Serviços Quimico em geral');
 INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Exposição', 'Exposições externas');
 INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Esteticas e Cuidados', 'Serviços de cabelo, unhas encravadas, cuidados em geral');
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Saúde', 'Serviços de saude, vacina, dentista, operações, coleta de sangue, etc')
-INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Tecnologia', 'Serviços de Tecnologia')
+INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Saúde', 'Serviços de saude, vacina, dentista, operações, coleta de sangue, etc');
+INSERT INTO servico (id_servico, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Tecnologia', 'Serviços de Tecnologia');
 
 
 -- Inserindo Quadrantes
