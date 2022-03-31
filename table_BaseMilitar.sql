@@ -1,15 +1,15 @@
 DROP TABLE Pessoa;
-DROP TABLE militar;
+DROP TABLE Militar;
 DROP TABLE Endereco_da_pessoa;
 DROP TABLE Telefone_da_pessoa;
 DROP TABLE Prestador_de_servico;
-DROP TABLE servico;
-DROP TABLE executa_servico;
+DROP TABLE Servico;
+DROP TABLE Executa_servico;
 DROP TABLE Quadrante;
-DROP TABLE condecoracoes;
-DROP TABLE base_militar;
-DROP TABLE telefone_base;
-DROP TABLE endereco_base;
+DROP TABLE Condecoracoes;
+DROP TABLE Base_militar;
+DROP TABLE Telefone_base;
+DROP TABLE Endereco_base;
 DROP TABLE Militar_comandado;
 DROP TABLE Visitante;
 DROP TABLE Comunicacao_entre_bases;
@@ -23,7 +23,7 @@ CREATE TABLE Pessoa ( --entidade
     CONSTRAINT Pessoa_pkey PRIMARY KEY(CPF)
 );
 
-CREATE TABLE militar (
+CREATE TABLE Militar (
     cpf VARCHAR2(14),
     patente NUMBER NOT NULL,
     CONSTRAINT militar_pkey PRIMARY KEY (cpf),
@@ -42,6 +42,7 @@ CREATE TABLE Endereco_da_pessoa ( --composto
 CREATE TABLE Telefone_da_pessoa ( --multivalorado
     Cpf_pessoa VARCHAR2 (14),
     Numero_telefone VARCHAR2 (15),
+    CONSTRAINT numero_telefone_PK PRIMARY KEY (Cpf_pessoa, Numero_telefone),
     CONSTRAINT Telefone_da_pessoa_fkey FOREIGN KEY (Cpf_pessoa) REFERENCES Pessoa (CPF),
     CONSTRAINT Telefone_da_pessoa_const UNIQUE (Numero_telefone)
 );
@@ -56,20 +57,20 @@ CREATE TABLE Prestador_de_servico(
 CREATE SEQUENCE id_servico_seq
     INCREMENT BY 1 START WITH 1;
 
-CREATE TABLE servico ( --entidade   
+CREATE TABLE Servico ( --entidade   
     id_servico_seq NUMBER, 
     Nome VARCHAR2(300),
     Descricao VARCHAR2(300),    
     CONSTRAINT servico_pkey PRIMARY KEY(id_servico_seq)
 );
 
-CREATE TABLE executa_servico (
+CREATE TABLE Executa_servico (
     Prestador_de_servico VARCHAR2(14),
     Servico NUMBER,
     Cpf_militar VARCHAR2(14),
     CONSTRAINT executa_servico_fkey1 FOREIGN KEY (Prestador_de_servico) REFERENCES Prestador_de_servico(cpf),
-    CONSTRAINT executa_servico_fkey2 FOREIGN key (Servico) REFERENCES servico (id_servico_seq),
-    CONSTRAINT executa_servico_fkey3 FOREIGN KEY (Cpf_militar) REFERENCES militar (cpf)
+    CONSTRAINT executa_servico_fkey2 FOREIGN key (Servico) REFERENCES Servico (id_servico_seq),
+    CONSTRAINT executa_servico_fkey3 FOREIGN KEY (Cpf_militar) REFERENCES Militar (cpf)
 );
 
 CREATE TABLE Quadrante ( 
@@ -79,35 +80,34 @@ CREATE TABLE Quadrante (
     
 );
 
-CREATE TABLE condecoracoes (
+CREATE TABLE Condecoracoes (
     cpf VARCHAR2(14),
     condecoracao VARCHAR2(30),
-    CONSTRAINT condecoracoes_pkey PRIMARY KEY (cpf),
-    CONSTRAINT condecoracoes_fkey FOREIGN KEY (cpf) REFERENCES militar(cpf)
+    CONSTRAINT condecoracoes_pkey PRIMARY KEY (cpf, condecoracao),
+    CONSTRAINT condecoracoes_fkey FOREIGN KEY (cpf) REFERENCES Militar(cpf)
 );
 
-CREATE TABLE base_militar (
+CREATE TABLE Base_militar (
     nome VARCHAR2(30),
     especialidade VARCHAR2(30) NOT NULL,
     CONSTRAINT base_militar_pkey PRIMARY KEY (nome)
 );
 
-CREATE TABLE telefone_base (
+CREATE TABLE Telefone_base (
     nome_base VARCHAR2(30),
-    ddd NUMBER NOT NULL,
-    numero NUMBER NOT NULL,
-    CONSTRAINT telefone_base_pkey PRIMARY KEY (nome_base),
-    CONSTRAINT telefone_base_fkey FOREIGN KEY (nome_base) REFERENCES base_militar(nome)
+    numero VARCHAR2(15) NOT NULL,
+    CONSTRAINT telefone_base_pkey PRIMARY KEY (nome_base, numero),
+    CONSTRAINT telefone_base_fkey FOREIGN KEY (nome_base) REFERENCES Base_militar(nome)
 );
 
-CREATE TABLE endereco_base (
+CREATE TABLE Endereco_base (
     nome_base VARCHAR2(30),
     cep NUMBER NOT NULL,
     rua VARCHAR2(30) NOT NULL,
     numero NUMBER,
     complemento VARCHAR2(10),
     CONSTRAINT endereco_base_pkey PRIMARY KEY (nome_base),
-    CONSTRAINT endereco_base_fkey FOREIGN KEY (nome_base) REFERENCES base_militar(nome)
+    CONSTRAINT endereco_base_fkey FOREIGN KEY (nome_base) REFERENCES Base_militar(nome)
 );
 
 CREATE TABLE Militar_comandado(

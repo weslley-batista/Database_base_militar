@@ -64,7 +64,6 @@ INSERT INTO militar(cpf, patente) VALUES ('980.354.916-02', 1);
 INSERT INTO militar(cpf, patente) VALUES ('423.752.036-91', 1);
 INSERT INTO militar(cpf, patente) VALUES ('356.680.380-17', 1);
 INSERT INTO militar(cpf, patente) VALUES ('717.919.369-17', 1);
-
 INSERT INTO militar(cpf, patente) VALUES ('810.535.778-00', 5);
 
 -- Inserindo endereco_da_pessoa
@@ -191,14 +190,12 @@ INSERT INTO Quadrante (Coordenadas, Terreno) VALUES ('50°48’49.00″N, 2°28�
 -- Inserindo Condecoracoes
 INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('474.020.744-39', 'Limpador de latrinas');
 INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('384.627.718-54', 'Heroi de guerra');
-INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('632.481.319-34', NULL);
 INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('977.827.224-70', 'Auxilio essencial');
 INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('134.177.826-60', 'Dorminhoco');
 INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('308.175.745-22', 'Ciber sombra');
-INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('413.372.547-62', NULL);
-INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('606.862.377-73', 'Grande senhor do mundo');
+INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('606.862.377-73', 'Presença Imponente');
+INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('606.862.377-73', 'Dama de Ferro');
 INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('644.718.711-88', 'Cortador de grama');
-INSERT INTO condecoracoes(cpf, condecoracao) VALUES ('415.332.550-32', NULL);
 
 -- Inserindo Bases Militares
 INSERT INTO base_militar(nome, especialidade) VALUES('BAAN', 'Combate');
@@ -213,16 +210,17 @@ INSERT INTO base_militar(nome, especialidade) VALUES('BIM', 'Veiculos');
 INSERT INTO base_militar(nome, especialidade) VALUES('BC', 'Comunicacoes');
 
 --Inserindo Telefones de bases
-INSERT INTO telefone_base(nome_base, ddd, numero) VALUES('BAAN', 62, 33297000);
-INSERT INTO telefone_base(nome_base, ddd, numero) VALUES('BACO', 53, 31406000);
-INSERT INTO telefone_base(nome_base, ddd, numero) VALUES('BAFZ', 85, 32163000);
-INSERT INTO telefone_base(nome_base, ddd, numero) VALUES('BANT', 84, 36447100);
-INSERT INTO telefone_base(nome_base, ddd, numero) VALUES('BARF', 81, 21297000);
-INSERT INTO telefone_base(nome_base, ddd, numero) VALUES('BAST', 11, 33417113);
-INSERT INTO telefone_base(nome_base, ddd, numero) VALUES('BAAF', 21, 21572500);
-INSERT INTO telefone_base(nome_base, ddd, numero) VALUES('AREA51', 02, 89120456);
-INSERT INTO telefone_base(nome_base, ddd, numero) VALUES('BIM', 81, 32510355);
-INSERT INTO telefone_base(nome_base, ddd, numero) VALUES('BC', 81, 34552252);
+INSERT INTO telefone_base(nome_base, numero) VALUES('BAAN', '(62)33297000');
+INSERT INTO telefone_base(nome_base, numero) VALUES('BACO', '(53)31406000');
+INSERT INTO telefone_base(nome_base, numero) VALUES('BAFZ', '(85)32163000');
+INSERT INTO telefone_base(nome_base, numero) VALUES('BANT', '(84)36447100');
+INSERT INTO telefone_base(nome_base, numero) VALUES('BARF', '(81)21297000');
+INSERT INTO telefone_base(nome_base, numero) VALUES('BAST', '(11)33417113');
+INSERT INTO telefone_base(nome_base, numero) VALUES('BAAF', '(21)21572500');
+INSERT INTO telefone_base(nome_base, numero) VALUES('AREA51', '(02)89120456');
+INSERT INTO telefone_base(nome_base, numero) VALUES('AREA51', '(02)89120555');
+INSERT INTO telefone_base(nome_base, numero) VALUES('BIM', '(81)32510355');
+INSERT INTO telefone_base(nome_base, numero) VALUES('BC', '(81)34552252');
 
 --Inseriindo Endereco das bases
 INSERT INTO endereco_base(nome_base, cep, rua, numero, complemento) VALUES('BAAN', 75024970, 'BR-414', NULL, 'Km 4');
