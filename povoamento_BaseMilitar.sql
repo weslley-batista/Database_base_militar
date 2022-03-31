@@ -29,7 +29,7 @@ INSERT INTO pessoa (nome,cpf) VALUES ('Cláudio Brites','877.119.269-79');
 INSERT INTO pessoa (nome,cpf) VALUES ('Liany Veloso','147.114.791-82');
 INSERT INTO pessoa (nome,cpf) VALUES ('Ary Veloso','243.832.546-16');
 INSERT INTO pessoa (nome,cpf) VALUES ('Raquel Laura','892.653.058-27');
-INSERT INTO pessoa (nome,cpf) VALUES ('Rosa Flávia','328.267.558-54');
+INSERT INTO pessoa (nome,cpf) VALUES ('Rosa Flávia','328.267.558-54'); --
 INSERT INTO pessoa (nome,cpf) VALUES ('Henrique Farias','367.109.270-71');
 INSERT INTO pessoa (nome,cpf) VALUES ('Pedro Silveira','980.354.916-02');
 INSERT INTO pessoa (nome,cpf) VALUES ('Guilherme Britto','423.752.036-91');
@@ -93,6 +93,11 @@ INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUE
 INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('243.832.546-16','Rua Tenente Guimarães', 934, 'Liberdade','69309-109');
 INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('892.653.058-27','Avenida Bráulio', 357, 'Curuzu','40366-340');
 INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('328.267.558-54','Rua Padre Silvestre', 794, 'Trapiche da Barra','57010-490');
+INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('367.109.270-71','Rua Pardal', 53,'Jardim das Aves','13903-421')
+INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('980.354.916-02','Avenida Contorno', 23,'Vila Couto Magalhães','77825-010')
+INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('423.752.036-91','Rua Estrela de Davi', 686,'Residencial Ana Caroline','69076-000')
+INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('356.680.380-17','Quadra 801 Sul Alameda 2', 47,'Plano Diretor Sul','66558-456')
+INSERT INTO endereco_da_pessoa (cpf_pessoa, rua, numero, complemento, cep) VALUES ('717.919.369-17','Rua B 11', 128,'Japiim','78513-669')
 
 -- Inserindo telefone_da_pessoa
 
@@ -123,6 +128,12 @@ INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('147.114.791
 INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('243.832.546-16', '(81) 2486-2634');
 INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('892.653.058-27', '(87) 3127-7145');
 INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('328.267.558-54', '(88) 3838-8276');
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('367.109.270-71', '(63) 98957-1197')
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('980.354.916-02', '(47) 98544-2018')
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('423.752.036-91', '(63) 98575-0151')
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('356.680.380-17', '(47) 98537-6880')
+INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('717.919.369-17', '(82) 99309-5880')
+
 
 -- Inserindo prestador_de_servico
 
