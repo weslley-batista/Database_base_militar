@@ -1,3 +1,22 @@
+DROP TABLE Pessoa;
+DROP TABLE militar;
+DROP TABLE Endereco_da_pessoa;
+DROP TABLE Telefone_da_pessoa;
+DROP TABLE Prestador_de_servico;
+DROP TABLE servico;
+DROP TABLE executa_servico;
+DROP TABLE Quadrante;
+DROP TABLE condecoracoes;
+DROP TABLE base_militar;
+DROP TABLE telefone_base;
+DROP TABLE endereco_base;
+DROP TABLE Militar_comandado;
+DROP TABLE Visitante;
+DROP TABLE Comunicacao_entre_bases;
+DROP TABLE Arsenal;
+DROP TABLE Arma;
+DROP TABLE Fornecer_armamento;
+
 CREATE TABLE Pessoa ( --entidade
     Nome VARCHAR2 (255),
     CPF VARCHAR2 (14),
