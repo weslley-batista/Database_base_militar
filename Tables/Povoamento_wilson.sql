@@ -27,15 +27,26 @@ INSERT INTO Visitante(nome , cpf_militar) VALUES ('jinbe', '415.332.550-32');
 -----------------------------------------------------------------
 
 
-INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('base 1', 'base 2');
-INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('base 2', 'base 3');
-INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('base 3', 'base 4');
-INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('base 4', 'base 5');
-INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('base 5', 'base 6');
-INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('base 6', 'base 7');
-INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('base 7', 'base 8');
-INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('base 8', 'base 9');
-INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('base 9', 'base 10');
-INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('base 10', 'base 11');
+INSERT INTO base_militar(nome, especialidade) VALUES('BAAN', 'Combate');
+INSERT INTO base_militar(nome, especialidade) VALUES('BACO', 'Cavalaria');
+INSERT INTO base_militar(nome, especialidade) VALUES('BAFZ', 'Apoio');
+INSERT INTO base_militar(nome, especialidade) VALUES('BANT', 'Observacao');
+INSERT INTO base_militar(nome, especialidade) VALUES('BARF', 'Aviacao');
+INSERT INTO base_militar(nome, especialidade) VALUES('BAST', 'Reparo');
+INSERT INTO base_militar(nome, especialidade) VALUES('BAAF', 'Paraquedismo');
+INSERT INTO base_militar(nome, especialidade) VALUES('AREA51', 'ETs');
+INSERT INTO base_militar(nome, especialidade) VALUES('BIM', 'Veiculos');
+INSERT INTO base_militar(nome, especialidade) VALUES('BC', 'Comunicacoes');
+
+INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BAAN', 'BACO');
+INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BACO', 'BAFZ');
+INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BAAN', 'BAFZ');
+INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BAFZ', 'BANT');
+INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BAAN', 'BANT');
+INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BARF', 'BACO');
+INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BAST', 'BAAF');
+INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BAAF', 'BAFZ');
+INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BAFZ', 'BACO');
+INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BAAN', 'BAST');
 
 
