@@ -15,7 +15,7 @@ CREATE TABLE Visitante(
     nome VARCHAR2(100) NOT NULL,
     cpf_militar VARCHAR2(11) NOT NULL,
     CONSTRAINT Visitante_pk PRIMARY KEY (nome),
-    CONSTRAINT Visitante_pk_fk FOREIGN KEY (cpf_militar) REFERENCES Militar(cpf)
+    CONSTRAINT Visitante_fk FOREIGN KEY (cpf_militar) REFERENCES Militar(cpf)
 );
 
 
