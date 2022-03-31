@@ -1,13 +1,14 @@
-INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('00000000001', '00000000002','5444',  1);
-INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('00000000001', '00000000003','5444',  1);
-INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('00000000001', '00000000004','5444',  1);
-INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('00000000001', '00000000005','5444',  1);
-INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('00000000006', '00000000007','5443',  2);
-INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('00000000006', '00000000008','5443',  2);
-INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('00000000006', '00000000009','5443',  2);
-INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('00000000006', '00000000010','5443',  2);
-INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('00000000006', '00000000011','5443',  2);
-INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('00000000006', '00000000012','5443',  2);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('474.020.744-39', '384.627.718-54','5444',  1);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('474.020.744-39', '632.481.319-34','5444',  1);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('474.020.744-39', '977.827.224-70','5444',  1);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('474.020.744-39', '134.177.826-60','5444',  1);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('474.020.744-39 ', '00000000012','5443',  2);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('308.175.745-22', '413.372.547-62','5443',  2);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('308.175.745-22', '606.862.377-73','5443',  2);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('308.175.745-22', '644.718.711-88','5443',  2);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('308.175.745-22', '415.332.550-32','5443',  2);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('308.175.745-22', '00000000011','5443',  2);
+
 
 -----------------------------------------------------------------
 
