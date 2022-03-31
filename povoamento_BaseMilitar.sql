@@ -29,7 +29,7 @@ INSERT INTO pessoa (nome,cpf) VALUES ('Cláudio Brites','877.119.269-79');
 INSERT INTO pessoa (nome,cpf) VALUES ('Liany Veloso','147.114.791-82');
 INSERT INTO pessoa (nome,cpf) VALUES ('Ary Veloso','243.832.546-16');
 INSERT INTO pessoa (nome,cpf) VALUES ('Raquel Laura','892.653.058-27');
-INSERT INTO pessoa (nome,cpf) VALUES ('Rosa Flávia','328.267.558-54'); --
+INSERT INTO pessoa (nome,cpf) VALUES ('Rosa Flávia','328.267.558-54');
 INSERT INTO pessoa (nome,cpf) VALUES ('Henrique Farias','367.109.270-71');
 INSERT INTO pessoa (nome,cpf) VALUES ('Pedro Silveira','980.354.916-02');
 INSERT INTO pessoa (nome,cpf) VALUES ('Guilherme Britto','423.752.036-91');
