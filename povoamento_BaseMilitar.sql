@@ -104,18 +104,18 @@ INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('243.832.546
 INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('892.653.058-27', '(87) 3127-7145');
 INSERT INTO telefone_da_pessoa (cpf_pessoa,numero_telefone) VALUES ('328.267.558-54', '(88) 3838-8276');
 
--- Inserindo prestador_de_serviço
+-- Inserindo prestador_de_servico
 
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('266.873.194-18', 'Coaching');
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('060.718.346-27', 'Instruções de etiqueta');    
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('730.774.348-57', 'Limpeza de bolsa de gordura');
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('407.436.138-80', 'Entrega de alimentos');
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('923.676.914-44', 'Maneabilidade de produtos quimicos');
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('439.509.231-44', 'Exposição de arte');
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('050.365.042-08', 'Cortes de cabelos');
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('028.271.834-63', 'Renovação de vacinas');
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('219.548.474-83', 'Coaching');
-INSERT INTO prestador_de_serviço (cpf, especialidade) VALUES ('575.283.272-12', 'Tecnologia militar');
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('266.873.194-18', 'Coaching');
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('060.718.346-27', 'Instruções de etiqueta');    
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('730.774.348-57', 'Limpeza de bolsa de gordura');
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('407.436.138-80', 'Entrega de alimentos');
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('923.676.914-44', 'Maneabilidade de produtos quimicos');
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('439.509.231-44', 'Exposição de arte');
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('050.365.042-08', 'Cortes de cabelos');
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('028.271.834-63', 'Renovação de vacinas');
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('219.548.474-83', 'Coaching');
+INSERT INTO prestador_de_servico (cpf, especialidade) VALUES ('575.283.272-12', 'Tecnologia militar');
 
 -- Inserindo serviço
 INSERT INTO servico (id_servico_seq, nome, descricao) VALUES (id_servico_seq.NETXVAL, 'Treinamento', 'Treinamentos de Coaching, Instruções gerais');
@@ -226,16 +226,16 @@ INSERT INTO Visitante(nome , cpf_militar) VALUES ('jinbe', '415.332.550-32');
 
 -- Inserindo Comunicação entre bases
 
-INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BAAN', 'BACO');
-INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BACO', 'BAFZ');
-INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BAAN', 'BAFZ');
-INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BAFZ', 'BANT');
-INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BAAN', 'BANT');
-INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BARF', 'BACO');
-INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BAST', 'BAAF');
-INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BAAF', 'BAFZ');
-INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BAFZ', 'BACO');
-INSERT INTO Comunicação_entre_bases(base_inicia_cominicação , base_recebe_comunicação) VALUES ('BAAN', 'BAST');
+INSERT INTO Comunicacao_entre_bases(base_inicia_cominicacao , base_recebe_comunicacao) VALUES ('BAAN', 'BACO');
+INSERT INTO Comunicacao_entre_bases(base_inicia_cominicacao , base_recebe_comunicacao) VALUES ('BACO', 'BAFZ');
+INSERT INTO Comunicacao_entre_bases(base_inicia_cominicacao , base_recebe_comunicacao) VALUES ('BAAN', 'BAFZ');
+INSERT INTO Comunicacao_entre_bases(base_inicia_cominicacao , base_recebe_comunicacao) VALUES ('BAFZ', 'BANT');
+INSERT INTO Comunicacao_entre_bases(base_inicia_cominicacao , base_recebe_comunicacao) VALUES ('BAAN', 'BANT');
+INSERT INTO Comunicacao_entre_bases(base_inicia_cominicacao , base_recebe_comunicacao) VALUES ('BARF', 'BACO');
+INSERT INTO Comunicacao_entre_bases(base_inicia_cominicacao , base_recebe_comunicacao) VALUES ('BAST', 'BAAF');
+INSERT INTO Comunicacao_entre_bases(base_inicia_cominicacao , base_recebe_comunicacao) VALUES ('BAAF', 'BAFZ');
+INSERT INTO Comunicacao_entre_bases(base_inicia_cominicacao , base_recebe_comunicacao) VALUES ('BAFZ', 'BACO');
+INSERT INTO Comunicacao_entre_bases(base_inicia_cominicacao , base_recebe_comunicacao) VALUES ('BAAN', 'BAST');
 
 
 -- Inserindo arsenal
