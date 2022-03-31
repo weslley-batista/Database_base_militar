@@ -111,8 +111,8 @@ CREATE TABLE Visitante(
 CREATE TABLE Comunicacao_entre_bases(
     base_inicia_cominicacao VARCHAR2(100) NOT NULL,
     base_recebe_comunicacao VARCHAR2(100) NOT NULL,
-    CONSTRAINT Comunicação_entre_bases_fk1 FOREIGN KEY (base_inicia_cominicacao) REFERENCES Base_militar(nome),
-    CONSTRAINT Comunicação_entre_bases_fk2 FOREIGN KEY (base_recebe_comunicacao) REFERENCES Base_militar(nome)
+    CONSTRAINT Comunicacao_entre_bases_fk1 FOREIGN KEY (base_inicia_cominicacao) REFERENCES Base_militar(nome),
+    CONSTRAINT Comunicacao_entre_bases_fk2 FOREIGN KEY (base_recebe_comunicacao) REFERENCES Base_militar(nome)
 );
 
 CREATE SEQUENCE Id
