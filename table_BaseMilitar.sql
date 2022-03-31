@@ -4,6 +4,13 @@ CREATE TABLE Pessoa ( --entidade
     CONSTRAINT Pessoa_pkey PRIMARY KEY(CPF)
 );
 
+Create Table militar (
+    cpf VARCHAR2(14),
+    patente NUMBER NOT NULL,
+    CONSTRAINT militar_pk PRIMARY KEY (cpf),
+    CONSTRAINT militar_cpf FOREIGN KEY (cpf) REFERENCES pessoa (cpf)
+);
+
 CREATE TABLE Endereco_da_pessoa ( --composto
     Cpf_pessoa VARCHAR2 (14),
     Rua VARCHAR2 (255),
@@ -52,12 +59,7 @@ Create Table Quadrante (
     
 );
 
-Create Table militar (
-    cpf VARCHAR2(14),
-    patente NUMBER NOT NULL,
-    CONSTRAINT militar_pk PRIMARY KEY (cpf),
-    CONSTRAINT militar_cpf FOREIGN KEY (cpf) REFERENCES pessoa (cpf)
-);
+
 
 Create Table condecoracoes (
     cpf VARCHAR2(14),
