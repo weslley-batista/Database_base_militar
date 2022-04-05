@@ -25,7 +25,7 @@ BEGIN
                     END IF;
             END CASE;
         END LOOP;
-    dbms_output dbms_output.put_line put_line (RespostaBusca);
+    dbms_output.put_line put_line (RespostaBusca);
 END;
 /
 -----------------------------------------------------------------------------------------------------
