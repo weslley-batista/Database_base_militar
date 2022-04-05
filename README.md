@@ -23,11 +23,11 @@ Desenvolvimento de banco de dados SQL oracle de um base militar ficticia
 - SUBCONSULTA COM IN ```OK```
 - SUBCONSULTA COM ANY ```OK```
 - SUBCONSULTA COM ALL ```OK```
-- ORDER BY
-- GROUP BY
-- HAVING
-- UNION ou INTERSECT ou MINUS
-- CREATE VIEW
+- ORDER BY ```OK```
+- GROUP BY ```OK```
+- HAVING ```OK```
+- UNION ou INTERSECT ou MINUS ```OK```
+- CREATE VIEW ```OK```
 - GRANT / REVOKE
 
 ## CHECKLIST PL
