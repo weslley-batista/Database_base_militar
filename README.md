@@ -1,7 +1,7 @@
 ## Database_base_militar 🎲
 Desenvolvimento de banco de dados SQL oracle de um base militar ficticia
 
-###CHECKLIST SQL
+## CHECKLIST SQL 
 
 - ALTER TABLE ```OK```
 - CREATE INDEX ```OK```
@@ -11,18 +11,18 @@ Desenvolvimento de banco de dados SQL oracle de um base militar ficticia
 - SELECT-FROM-WHERE ```OK```
 - BETWEEN ```OK```
 - IN ```OK```
-- LIKE
-- IS NULL ou IS NOT NULL
-- INNER JOIN
-- MAX
-- MIN
-- AVG
-- COUNT
-- LEFT ou RIGHT ou FULL OUTER JOIN 
-- SUBCONSULTA COM OPERADOR RELACIONAL
-- SUBCONSULTA COM IN
-- SUBCONSULTA COM ANY
-- SUBCONSULTA COM ALL
+- LIKE ```OK```
+- IS NULL ou IS NOT NULL ```OK```
+- INNER JOIN ```OK```
+- MAX ```OK```
+- MIN ```OK```
+- AVG ```OK```
+- COUNT ```OK```
+- LEFT ou RIGHT ou FULL OUTER JOIN  ```OK```
+- SUBCONSULTA COM OPERADOR RELACIONAL ```OK```
+- SUBCONSULTA COM IN ```OK```
+- SUBCONSULTA COM ANY ```OK```
+- SUBCONSULTA COM ALL ```OK```
 - ORDER BY
 - GROUP BY
 - HAVING
