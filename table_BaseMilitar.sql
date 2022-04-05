@@ -18,7 +18,7 @@ DROP TABLE Arma;
 DROP TABLE Fornecer_armamento;
 
 CREATE TABLE Pessoa ( --entidade
-    Nome VARCHAR2 (255),
+    Nome VARCHAR2 (100),
     CPF VARCHAR2 (14),
     CONSTRAINT Pessoa_pkey PRIMARY KEY(CPF)
 );
