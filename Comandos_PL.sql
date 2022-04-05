@@ -48,3 +48,4 @@ BEGIN
     dbms_output.put_line('O serviço foi inserido com sucesso');
 END;
 
+-- (select-into, trigger-linha, exception when)
