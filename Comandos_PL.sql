@@ -2,28 +2,49 @@
 CREATE TYPE REG_PESSOA IS RECORD (Nome VARCHAR2 (100), CPF VARCHAR2 (14)); --RECORD
 T_PESSOA REG_PESSOA;
 
--- validando visita (TIPO TABLE, BLOCO ANONIMO, %TYPE, %ROWTYPE, IF-ELSIF, CASE-WHEN, FOR-IN-LOOP,  )
+-- Procurando visita (TIPO TABLE, BLOCO ANONIMO, %TYPE, %ROWTYPE, IF-ELSIF, CASE-WHEN, FOR-IN-LOOP)
+Set serveroutput on;
 DECLARE
     TYPE Type_listaVisitantes IS TABLE Visitante%ROWTYPE;
     listaVisitantes Type_listaVisitantes;
 
-    buscaCpfMilitar Pessoa.Nome%type; --varchar2
-    buscaNomeVisitante Pessoa.Nome%type; --varchar2
+    RespostaBusca Pessoa.Nome%type; --varchar2
+   
 
 BEGIN
     
     FOR VISITA IN (SELECT * FROM VISITANTE) LOOP
             CASE VISITA.cpf_militar
                 WHEN '000.000.000-00' THEN
-                    buscaCpfMilitar := 'Militar nao encontrado';
+                    RespostaBusca := 'Militar não encontrado';
                 ELSE;
-                    IF VISITA.nome <> 'luffy' THEN
-                        buscaNomeVisitante := 'Visitante não valido';
-                    ELSIF VISITA.nome <> 'zoro' THEN
-                        buscaNomeVisitante := 'Visitante não valido';
+                    IF VISITA.nome ='luffy' THEN
+                        RespostaBusca := 'Visitante encontrado';
+                    ELSIF VISITA.nome <> 'luffy' THEN
+                        RespostaBusca := 'O militar existe, porem,o visitante não foi encontrado';
                     END IF;
             END CASE;
         END LOOP;
+    dbms_output dbms_output.put_line put_line (RespostaBusca);
+END;
+/
+-----------------------------------------------------------------------------------------------------
+-- INSERIR NOVO SERVIÇO (procedure, in)
+
+CREATE OR REPLACE PROCEDURE InserirSevico (
+    P_id_servico_seq Servico.id_servico_seq%TYPE
+    P_Nome Servico.Nome%TYPE
+    P_Descricao Servico.Descricao%TYPE
+) IS
+INSERT INTO Servico (id_servico_seq, Nome, Descricao) VALUES (P_id_servico_seq, P_Nome, P_Descricao);
+COMMIT;
+END InserirSevico;
+-- uso -> InserirSevico (id_servico_seq.NEXTVAL ,  limpeza, limpeza de fungos)
+
+-- INSERIR NOVO SERVIÇO (Trigger comando)
+CREATE OR REPLACE TRIGGER confirmacaoInsertServico 
+AFTER ON Servico
+BEGIN
+    dbms_output.put_line('O serviço foi inserido com sucesso');
 END;
 
---------------------------------------------------------------------
