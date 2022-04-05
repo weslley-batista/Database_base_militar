@@ -42,10 +42,27 @@ END InserirSevico;
 -- uso -> InserirSevico (id_servico_seq.NEXTVAL ,  limpeza, limpeza de fungos)
 
 -- INSERIR NOVO SERVIÇO (Trigger comando)
-CREATE OR REPLACE TRIGGER confirmacaoInsertServico 
+CREATE OR REPLACE TRIGGER ConfirmacaoInsertServico 
 AFTER ON Servico
 BEGIN
     dbms_output.put_line('O serviço foi inserido com sucesso');
 END;
 
--- (select-into, trigger-linha, exception when)
+-- (select-into, trigger-linha, exception when) [new indica o dado que esta sendo inserido]
+Set serveroutput on;
+CREATE OR REPLACE TRIGGER ControlePessoaMilitar BEFORE INSERT ON Militar
+FOR EACH ROW
+
+DECLARE
+    militar Pessoa.CPF%TYPE;
+
+BEGIN
+    SELECT cpf INTO militar FROM Pessoa WHERE cpf =: NEW.cpf;
+
+    IF militar IS NOT NULL THEN
+        RAISE_APPLICATION_ERROR(1122,'Este militar já é cadastrado');
+    END IF;
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            dbms_output.put_line('Novo militar aceito');
+END;
