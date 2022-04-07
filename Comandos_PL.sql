@@ -1,7 +1,32 @@
 -- Tipo RECORD (RECORD)
 CREATE TYPE REG_PESSOA IS RECORD (Nome VARCHAR2 (100), CPF VARCHAR2 (14)); --RECORD
-T_PESSOA REG_PESSOA;
+V_PESSOA REG_PESSOA;
 
+--Listar pessoas (CURSOR (OPEN, FETCH e CLOSE), LOOP-EXIT-WHEN) [USANDO O RECORD AQUI]
+SET serveroutput ON;
+DECLARE
+    V_nome Pessoa.Nome%TYPE;
+    V_CPF Pessoa.CPF%TYPE;
+
+    CURSOR C_Pessoa IS
+    SELECT Nomen, CPF
+    FROM Pessoa;
+BEGIN
+    OPEN C_Pessoa;
+
+    LOOP
+        FETCH C_Pessoa INTO V_PESSOA;
+        EXIT WHEN C_Pessoa%NOTFOUND;
+
+        dbms_output.put_line (
+            'Nome: '|| TO_CHAR (V_nome) ||
+            'CPF: ' || TO_CHAR (V_CPF)
+        );
+    END LOOP;
+    
+    CLOSE C_Pessoa;
+END
+/
 -- Procurando visita (TIPO TABLE, BLOCO ANONIMO, %TYPE, %ROWTYPE, IF-ELSIF, CASE-WHEN, FOR-IN-LOOP)
 Set serveroutput on;
 DECLARE
@@ -28,19 +53,25 @@ BEGIN
     dbms_output.put_line put_line (RespostaBusca);
 END;
 /
------------------------------------------------------------------------------------------------------
--- INSERIR NOVO SERVIÇO (procedure, in)
-
-CREATE OR REPLACE PROCEDURE InserirSevico (
+-- INSERIR NOVO SERVIÇO (procedure, in, package, package body)
+CREATE OR REPLACE PACKAGE CadastroPackage
+AS
+CREATE OR REPLACE PROCEDURE InserirSevico(
     P_id_servico_seq Servico.id_servico_seq%TYPE
     P_Nome Servico.Nome%TYPE
     P_Descricao Servico.Descricao%TYPE
-) IS
-INSERT INTO Servico (id_servico_seq, Nome, Descricao) VALUES (P_id_servico_seq, P_Nome, P_Descricao);
-COMMIT;
-END InserirSevico;
--- uso -> InserirSevico (id_servico_seq.NEXTVAL ,  limpeza, limpeza de fungos)
-
+);
+CREATE OR REPLACE PACKAGE BODY CadastroPackage
+AS
+    CREATE OR REPLACE PROCEDURE InserirSevico (
+        P_id_servico_seq Servico.id_servico_seq%TYPE
+        P_Nome Servico.Nome%TYPE
+        P_Descricao Servico.Descricao%TYPE
+    ) IS
+    INSERT INTO Servico (id_servico_seq, Nome, Descricao) VALUES (P_id_servico_seq, P_Nome, P_Descricao);
+    COMMIT;
+    END InserirSevico; -- uso -> InserirSevico (id_servico_seq.NEXTVAL ,  limpeza, limpeza de fungos)
+END CadastroPackage;
 -- INSERIR NOVO SERVIÇO (Trigger comando)
 CREATE OR REPLACE TRIGGER ConfirmacaoInsertServico 
 AFTER ON Servico
