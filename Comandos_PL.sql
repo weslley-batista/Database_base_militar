@@ -125,4 +125,5 @@ auxCount INTEGER := 1;
 SET serveroutput ON;
 WHILE auxCount > 0 LOOP
     dbms_output.put_line('Você está em um DataBase referente a uma base militar');
+    auxCount := auxCount-1;
 END LOOP;
