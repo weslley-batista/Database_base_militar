@@ -28,7 +28,7 @@ BEGIN
 END
 /
 -- Procurando visita (TIPO TABLE, BLOCO ANONIMO, %TYPE, %ROWTYPE, IF-ELSIF, CASE-WHEN, FOR-IN-LOOP)
-Set serveroutput on;
+Set serveroutput ON;
 DECLARE
     TYPE Type_listaVisitantes IS TABLE Visitante%ROWTYPE;
     listaVisitantes Type_listaVisitantes;
@@ -72,15 +72,16 @@ AS
     COMMIT;
     END InserirSevico; -- uso -> InserirSevico (id_servico_seq.NEXTVAL ,  limpeza, limpeza de fungos)
 END CadastroPackage;
--- INSERIR NOVO SERVIÇO (Trigger comando)
+
+-- CONFIRMAÇÃO APOS INSERIR NOVO SERVIÇO (Trigger comando)
 CREATE OR REPLACE TRIGGER ConfirmacaoInsertServico 
 AFTER ON Servico
 BEGIN
     dbms_output.put_line('O serviço foi inserido com sucesso');
 END;
 
--- (select-into, trigger-linha, exception when) [new indica o dado que esta sendo inserido]
-Set serveroutput on;
+-- CADASTRAR UM NOVO MILITAR (select-into, trigger-linha, exception when) [new indica o dado que esta sendo inserido]
+Set serveroutput ON;
 CREATE OR REPLACE TRIGGER ControlePessoaMilitar BEFORE INSERT ON Militar
 FOR EACH ROW
 
@@ -97,3 +98,31 @@ BEGIN
         WHEN NO_DATA_FOUND THEN
             dbms_output.put_line('Novo militar aceito');
 END;
+
+-- RETORNA A ESPECIALIDADE Do PRESTADOR DE SERVIÇO(CPF) QUE FOI PASSADO COMO PARAMETRO(FUNCTION)
+    CREATE OR REPLACE FUNCTION EspecialidadePrestadorDeServico
+    (Entrada_cpf Pessoa.CPF%TYPE)
+    RETURN Prestador_de_servico.Especialidade%TYPE
+    IS
+        V_especialidade Prestador_de_servico.Especialidade%TYPE;
+    BEGIN
+        IF Entrada_cpf IS NULL THEN
+             RETURN V_especialidade := 'Especialidade não encontrada';
+        ELSE
+            SELECT PS.Especialidade INTO V_especialidade
+            FROM Prestador_de_servico PS
+            WHERE PS.CPF = Entrada_cpf;
+        END IF;
+
+        IF V_especialidade THEN
+            RETURN V_especialidade := 'O prestador de serviço não existe';
+        END IF;
+        RETURN V_especialidade;
+    END EspecialidadePrestadorDeServico;
+/
+-- (WHILE-LOOP)
+auxCount INTEGER := 1;
+SET serveroutput ON;
+WHILE auxCount > 0 LOOP
+    dbms_output.put_line('Você está em um DataBase referente a uma base militar');
+END LOOP;

@@ -34,13 +34,13 @@ Desenvolvimento de banco de dados SQL oracle de um base militar ficticia
 - USO DE ESTRUTURA DE DADOS DO TIPO TABLE```OK```
 - BLOCO ANÔNIMO ```OK```
 - CREATE PROCEDURE```OK```
-- CREATE FUNCTION
+- CREATE FUNCTION```OK```
 - %TYPE ```OK```
 - %ROWTYPE ```OK```
 - IF ELSIF ```OK```
 - CASE WHEN```OK```
 - LOOP EXIT WHEN ```OK```
-- WHILE LOOP
+- WHILE LOOP```OK```
 - FOR IN LOOP ```OK```
 - SELECT … INTO```OK```
 - CURSOR (OPEN, FETCH e CLOSE)```OK```
