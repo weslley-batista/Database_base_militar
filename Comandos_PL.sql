@@ -114,10 +114,13 @@ END;
         RETURN V_especialidade;
     END EspecialidadePrestadorDeServico;
 /
--- (WHILE-LOOP)
-auxCount INTEGER := 1;
+-- (WHILE-LOOP) CHECK !!
 SET serveroutput ON;
+declare
+    auxCount Executa_servico.Servico%type := 1;
+begin
 WHILE auxCount > 0 LOOP
     dbms_output.put_line('Você está em um DataBase referente a uma base militar');
     auxCount := auxCount-1;
 END LOOP;
+END;
