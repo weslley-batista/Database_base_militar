@@ -101,15 +101,15 @@ END;
         V_especialidade Prestador_de_servico.Especialidade%TYPE;
     BEGIN
         IF Entrada_cpf IS NULL THEN
-             RETURN V_especialidade := 'Especialidade não encontrada';
+             V_especialidade := 'Especialidade não encontrada';
         ELSE
             SELECT PS.Especialidade INTO V_especialidade
             FROM Prestador_de_servico PS
             WHERE PS.CPF = Entrada_cpf;
-        END IF;
 
-        IF V_especialidade THEN
-            RETURN V_especialidade := 'O prestador de serviço não existe';
+            IF V_especialidade IS NULL THEN
+            V_especialidade := 'O prestador de serviço não existe';
+            END IF;
         END IF;
         RETURN V_especialidade;
     END EspecialidadePrestadorDeServico;
