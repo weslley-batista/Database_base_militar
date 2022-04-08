@@ -47,7 +47,7 @@ BEGIN
     dbms_output.put_line put_line (RespostaBusca);
 END;
 /
--- INSERIR NOVO SERVIÇO (procedure, in, package, package body)
+-- INSERIR NOVO SERVIÇO (procedure, in, package, package body) CHECK!!!!!!!
 CREATE OR REPLACE PACKAGE CadastroPackage
 AS 
  PROCEDURE InserirSevico(
@@ -97,7 +97,7 @@ BEGIN
             dbms_output.put_line('Novo militar aceito');
 END;
 
--- RETORNA A ESPECIALIDADE Do PRESTADOR DE SERVIÇO(CPF) QUE FOI PASSADO COMO PARAMETRO(FUNCTION)
+-- RETORNA A ESPECIALIDADE Do PRESTADOR DE SERVIÇO(CPF) QUE FOI PASSADO COMO PARAMETRO(FUNCTION) CHECK!!!
     CREATE OR REPLACE FUNCTION EspecialidadePrestadorDeServico
     (Entrada_cpf Pessoa.CPF%TYPE)
     RETURN Prestador_de_servico.Especialidade%TYPE
