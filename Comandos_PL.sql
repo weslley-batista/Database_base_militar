@@ -67,9 +67,9 @@ AS
     END InserirSevico; -- uso -> InserirSevico (id_servico_seq.NEXTVAL ,  limpeza, limpeza de fungos)
 END CadastroPackage;
 
--- CONFIRMAÇÃO APOS INSERIR NOVO SERVIÇO (Trigger comando)
+-- CONFIRMAÇÃO APOS INSERIR NOVO SERVIÇO (Trigger comando) CHECK!!!
 CREATE OR REPLACE TRIGGER ConfirmacaoInsertServico 
-AFTER ON Servico
+AFTER INSERT ON Servico
 BEGIN
     dbms_output.put_line('O serviço foi inserido com sucesso');
 END;
