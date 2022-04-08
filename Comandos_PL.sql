@@ -49,23 +49,27 @@ END;
 /
 -- INSERIR NOVO SERVIÇO (procedure, in, package, package body)
 CREATE OR REPLACE PACKAGE CadastroPackage
-AS
-CREATE OR REPLACE PROCEDURE InserirSevico(
-    P_id_servico_seq Servico.id_servico_seq%TYPE
-    P_Nome Servico.Nome%TYPE
+AS 
+ PROCEDURE InserirSevico(
+    P_id_servico_seq Servico.id_servico_seq%TYPE,
+    P_Nome Servico.Nome%TYPE,
     P_Descricao Servico.Descricao%TYPE
 );
+END CadastroPackage;
+/
 CREATE OR REPLACE PACKAGE BODY CadastroPackage
 AS
-    CREATE OR REPLACE PROCEDURE InserirSevico (
-        P_id_servico_seq Servico.id_servico_seq%TYPE
-        P_Nome Servico.Nome%TYPE
+    PROCEDURE InserirSevico (
+         P_id_servico_seq Servico.id_servico_seq%TYPE,
+        P_Nome Servico.Nome%TYPE,
         P_Descricao Servico.Descricao%TYPE
     ) IS
-    INSERT INTO Servico (id_servico_seq, Nome, Descricao) VALUES (P_id_servico_seq, P_Nome, P_Descricao);
+    BEGIN
+    INSERT INTO servico (id_servico_seq, Nome, Descricao) VALUES (P_id_servico_seq, P_Nome, P_Descricao);
     COMMIT;
     END InserirSevico; -- uso -> InserirSevico (id_servico_seq.NEXTVAL ,  limpeza, limpeza de fungos)
 END CadastroPackage;
+/
 
 -- CONFIRMAÇÃO APOS INSERIR NOVO SERVIÇO (Trigger comando) CHECK!!!
 CREATE OR REPLACE TRIGGER ConfirmacaoInsertServico 
