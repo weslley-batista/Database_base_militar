@@ -1,15 +1,10 @@
--- Tipo RECORD (RECORD)
-CREATE TYPE REG_PESSOA IS RECORD (Nome VARCHAR2 (100), CPF VARCHAR2 (14)); --RECORD
-V_PESSOA REG_PESSOA;
-
 --Listar pessoas (CURSOR (OPEN, FETCH e CLOSE), LOOP-EXIT-WHEN) [USANDO O RECORD AQUI]
 SET serveroutput ON;
 DECLARE
-    V_nome Pessoa.Nome%TYPE;
-    V_CPF Pessoa.CPF%TYPE;
-
+    TYPE REG_PESSOA IS record (Nome VARCHAR2 (100), CPF VARCHAR2 (14)); 
+    V_PESSOA REG_PESSOA;
     CURSOR C_Pessoa IS
-    SELECT Nomen, CPF
+    SELECT Nome, CPF
     FROM Pessoa;
 BEGIN
     OPEN C_Pessoa;
@@ -19,13 +14,12 @@ BEGIN
         EXIT WHEN C_Pessoa%NOTFOUND;
 
         dbms_output.put_line (
-            'Nome: '|| TO_CHAR (V_nome) ||
-            'CPF: ' || TO_CHAR (V_CPF)
+            'Nome: ' || TO_CHAR (V_PESSOA.NOME) ||
+            ' CPF: ' || TO_CHAR (V_PESSOA.CPF)
         );
     END LOOP;
-    
     CLOSE C_Pessoa;
-END
+END;
 /
 -- Procurando visita (TIPO TABLE, BLOCO ANONIMO, %TYPE, %ROWTYPE, IF-ELSIF, CASE-WHEN, FOR-IN-LOOP)
 Set serveroutput ON;
