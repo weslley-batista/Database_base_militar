@@ -22,29 +22,25 @@ BEGIN
 END;
 /
 -- Procurando visita (TIPO TABLE, BLOCO ANONIMO, %TYPE, %ROWTYPE, IF-ELSIF, CASE-WHEN, FOR-IN-LOOP)
-DECLARE
-    TYPE Type_listaVisitantes IS TABLE Visitante%ROWTYPE;
-    listaVisitantes Type_listaVisitantes;
-
-    RespostaBusca Pessoa.Nome%type; --varchar2
-   
-
-BEGIN
-    
-    FOR VISITA IN (SELECT * FROM VISITANTE) LOOP
-            CASE VISITA.cpf_militar
-                WHEN '000.000.000-00' THEN
-                    RespostaBusca := 'Militar não encontrado';
-                ELSE;
-                    IF VISITA.nome ='luffy' THEN
-                        RespostaBusca := 'Visitante encontrado';
-                    ELSIF VISITA.nome <> 'luffy' THEN
-                        RespostaBusca := 'O militar existe, porem,o visitante não foi encontrado';
-                    END IF;
-            END CASE;
-        END LOOP;
-    dbms_output.put_line put_line (RespostaBusca);
-END;
+CREATE OR REPLACE FUNCTION procura_visita(nome_visita visitante.nome%TYPE)
+RETURN visitante.nome%TYPE IS 
+    RespostaBusca visitante.nome%TYPE;
+    BEGIN
+        SELECT cpf FROM MILITAR INTO militares_cpf;
+        FOR VISITA IN visitante LOOP
+                CASE VISITA.nome
+                    WHEN 'luffy' THEN
+                    ELSE
+                        IF VISITA.nome = nome_visita THEN
+                            RespostaBusca := 'Visitante encontrado';
+                        ELSIF
+                            VISITA.nome <> nome_visita THEN
+                            RespostaBusca := 'Visitante não encontrado';
+                        END IF;
+                END CASE;
+            END LOOP;
+        RETURN RespostaBusca;
+    END;    
 /
 -- INSERIR NOVO SERVIÇO (procedure, in, package, package body) CHECK!!!!!!!
 CREATE OR REPLACE PACKAGE CadastroPackage
