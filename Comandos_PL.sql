@@ -1,4 +1,4 @@
---Listar pessoas (CURSOR (OPEN, FETCH e CLOSE), LOOP-EXIT-WHEN) [USANDO O RECORD AQUI]
+--Listar pessoas (CURSOR (OPEN, FETCH e CLOSE), LOOP-EXIT-WHEN) [USANDO O RECORD AQUI] CHECK
 SET serveroutput ON;
 DECLARE
     TYPE REG_PESSOA IS record (Nome VARCHAR2 (100), CPF VARCHAR2 (14)); 
@@ -78,7 +78,7 @@ BEGIN
     dbms_output.put_line('O serviço foi inserido com sucesso');
 END;
 
--- CADASTRAR UM NOVO MILITAR (select-into, trigger-linha, exception when) [new indica o dado que esta sendo inserido]
+-- CADASTRAR UM NOVO MILITAR (select-into, trigger-linha, exception when) [new indica o dado que esta sendo inserido] CHECK!!
 Set serveroutput ON;
 CREATE OR REPLACE TRIGGER ControlePessoaMilitar BEFORE INSERT ON Militar
 FOR EACH ROW
