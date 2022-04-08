@@ -22,7 +22,6 @@ BEGIN
 END;
 /
 -- Procurando visita (TIPO TABLE, BLOCO ANONIMO, %TYPE, %ROWTYPE, IF-ELSIF, CASE-WHEN, FOR-IN-LOOP)
-Set serveroutput ON;
 DECLARE
     TYPE Type_listaVisitantes IS TABLE Visitante%ROWTYPE;
     listaVisitantes Type_listaVisitantes;
@@ -78,24 +77,25 @@ BEGIN
     dbms_output.put_line('O serviço foi inserido com sucesso');
 END;
 
--- CADASTRAR UM NOVO MILITAR (select-into, trigger-linha, exception when) [new indica o dado que esta sendo inserido] CHECK!!
-Set serveroutput ON;
+-- CADASTRAR UM NOVO MILITAR (select-into, trigger-linha, exception when) [new indica o dado que esta sendo inserido]  --CHECK
 CREATE OR REPLACE TRIGGER ControlePessoaMilitar BEFORE INSERT ON Militar
 FOR EACH ROW
 
 DECLARE
-    militar Pessoa.CPF%TYPE;
+    militar_NOVO Pessoa.CPF%TYPE;
 
 BEGIN
-    SELECT cpf INTO militar FROM Pessoa WHERE cpf =: NEW.cpf;
+    SELECT cpf INTO militar_NOVO FROM MILITAR WHERE cpf =: NEW.cpf;
 
-    IF militar IS NOT NULL THEN
+    IF militar_NOVO IS NOT NULL THEN
         RAISE_APPLICATION_ERROR(1122,'Este militar já é cadastrado');
     END IF;
     EXCEPTION
         WHEN NO_DATA_FOUND THEN
             dbms_output.put_line('Novo militar aceito');
 END;
+/
+
 
 -- RETORNA A ESPECIALIDADE Do PRESTADOR DE SERVIÇO(CPF) QUE FOI PASSADO COMO PARAMETRO(FUNCTION) CHECK!!!
     CREATE OR REPLACE FUNCTION EspecialidadePrestadorDeServico
@@ -119,7 +119,6 @@ END;
     END EspecialidadePrestadorDeServico;
 /
 -- (WHILE-LOOP) CHECK !!
-SET serveroutput ON;
 declare
     auxCount Executa_servico.Servico%type := 1;
 begin
