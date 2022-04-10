@@ -12,19 +12,6 @@ INSERT INTO pessoa (nome,cpf) VALUES ('Gabriel','644.718.711-88');
 INSERT INTO pessoa (nome,cpf) VALUES ('Valentina','415.332.550-32');
 INSERT INTO pessoa (nome,cpf) VALUES ('Evandro Malta','335.206.930-11');
 INSERT INTO pessoa (nome,cpf) VALUES ('Zoé Caldeira','247.298.232-14');
--- militares acima ⬆
-INSERT INTO pessoa (nome,cpf) VALUES ('Bernardo','266.873.194-18');
-INSERT INTO pessoa (nome,cpf) VALUES ('Samuel','060.718.346-27');
-INSERT INTO pessoa (nome,cpf) VALUES ('João Miguel','730.774.348-57');
-INSERT INTO pessoa (nome,cpf) VALUES ('Heloísa','407.436.138-80');
-INSERT INTO pessoa (nome,cpf) VALUES ('Isabela','923.676.914-44');
-INSERT INTO pessoa (nome,cpf) VALUES ('Raquel Maranhão','439.509.231-44');
-INSERT INTO pessoa (nome,cpf) VALUES ('Edir Carneiro','050.365.042-08');
-INSERT INTO pessoa (nome,cpf) VALUES ('Lola Lisboa','028.271.834-63');
-INSERT INTO pessoa (nome,cpf) VALUES ('Artyom Carmona','219.548.474-83');
-INSERT INTO pessoa (nome,cpf) VALUES ('Carla Guerra','575.283.272-12');
--- Prestadores de serviço acima ⬆
-
 INSERT INTO pessoa (nome,cpf) VALUES ('Cláudio Brites','877.119.269-79');
 INSERT INTO pessoa (nome,cpf) VALUES ('Liany Veloso','147.114.791-82');
 INSERT INTO pessoa (nome,cpf) VALUES ('Ary Veloso','243.832.546-16');
@@ -36,7 +23,19 @@ INSERT INTO pessoa (nome,cpf) VALUES ('Guilherme Britto','423.752.036-91');
 INSERT INTO pessoa (nome,cpf) VALUES ('Bruna Pereira','356.680.380-17');
 INSERT INTO pessoa (nome,cpf) VALUES ('Ednaldo Pereira','717.919.369-17');
 INSERT INTO pessoa (nome,cpf) VALUES ('Flávia Sarah','810.535.778-00');
+-- militares acima ⬆
 
+INSERT INTO pessoa (nome,cpf) VALUES ('Bernardo','266.873.194-18');
+INSERT INTO pessoa (nome,cpf) VALUES ('Samuel','060.718.346-27');
+INSERT INTO pessoa (nome,cpf) VALUES ('João Miguel','730.774.348-57');
+INSERT INTO pessoa (nome,cpf) VALUES ('Heloísa','407.436.138-80');
+INSERT INTO pessoa (nome,cpf) VALUES ('Isabela','923.676.914-44');
+INSERT INTO pessoa (nome,cpf) VALUES ('Raquel Maranhão','439.509.231-44');
+INSERT INTO pessoa (nome,cpf) VALUES ('Edir Carneiro','050.365.042-08');
+INSERT INTO pessoa (nome,cpf) VALUES ('Lola Lisboa','028.271.834-63');
+INSERT INTO pessoa (nome,cpf) VALUES ('Artyom Carmona','219.548.474-83');
+INSERT INTO pessoa (nome,cpf) VALUES ('Carla Guerra','575.283.272-12');
+-- Prestadores de serviço acima ⬆
 
 
 -- Inserindo Militar
@@ -240,6 +239,7 @@ INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, qua
 INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('810.535.778-00', '977.827.224-70','50° 0’36.30″N, 110° 6’46.82″W',  1);
 INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('810.535.778-00', '134.177.826-60','50° 0’36.30″N, 110° 6’46.82″W',  1);
 INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('810.535.778-00', '474.020.744-39','50° 0’36.30″N, 110° 6’46.82″W',  1);
+INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('335.206.930-11', '474.020.744-39','50° 0’36.30″N, 110° 6’46.82″W',  1);
 INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('335.206.930-11', '413.372.547-62','40°27’28.56″N, 93°23’34.42″E',  2);
 INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('335.206.930-11', '606.862.377-73','40°27’28.56″N, 93°23’34.42″E',  2);
 INSERT INTO Militar_comandado(militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas, numero_agrupamento) VALUES ('335.206.930-11', '644.718.711-88','40°27’28.56″N, 93°23’34.42″E',  2);

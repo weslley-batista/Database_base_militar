@@ -27,7 +27,7 @@ CREATE TABLE Militar (
     cpf VARCHAR2(14),
     patente NUMBER NOT NULL,
     CONSTRAINT militar_pkey PRIMARY KEY (cpf),
-    CONSTRAINT militar_fkey FOREIGN KEY (cpf) REFERENCES pessoa (CPF)
+    CONSTRAINT militar_fkey FOREIGN KEY (cpf) REFERENCES pessoa (CPF) ON DELETE CASCADE
 );
 
 CREATE TABLE Endereco_da_pessoa ( --composto
@@ -36,14 +36,14 @@ CREATE TABLE Endereco_da_pessoa ( --composto
     Numero NUMBER (38),
     Complemento VARCHAR2 (255),
     CEP VARCHAR2 (14),
-    CONSTRAINT Endereco_da_pessoa_fkey FOREIGN KEY (Cpf_pessoa) REFERENCES Pessoa (CPF)
+    CONSTRAINT Endereco_da_pessoa_fkey FOREIGN KEY (Cpf_pessoa) REFERENCES Pessoa (CPF) ON DELETE CASCADE
 );
 
 CREATE TABLE Telefone_da_pessoa ( --multivalorado
     Cpf_pessoa VARCHAR2 (14),
     Numero_telefone VARCHAR2 (15),
     CONSTRAINT numero_telefone_PK PRIMARY KEY (Cpf_pessoa, Numero_telefone),
-    CONSTRAINT Telefone_da_pessoa_fkey FOREIGN KEY (Cpf_pessoa) REFERENCES Pessoa (CPF),
+    CONSTRAINT Telefone_da_pessoa_fkey FOREIGN KEY (Cpf_pessoa) REFERENCES Pessoa (CPF) ON DELETE CASCADE,
     CONSTRAINT Telefone_da_pessoa_const UNIQUE (Numero_telefone)
 );
 
@@ -51,7 +51,7 @@ CREATE TABLE Prestador_de_servico(
     CPF VARCHAR2 (14),
     Especialidade VARCHAR2 (255),
     CONSTRAINT Prestador_de_servico_pkey PRIMARY KEY(CPF),
-    CONSTRAINT Prestador_de_servico_fkey FOREIGN KEY (CPF) REFERENCES Pessoa (CPF)
+    CONSTRAINT Prestador_de_servico_fkey FOREIGN KEY (CPF) REFERENCES Pessoa (CPF) ON DELETE SET NULL
 );
 
 CREATE SEQUENCE id_servico_seq
@@ -68,9 +68,9 @@ CREATE TABLE Executa_servico (
     Prestador_de_servico VARCHAR2(14),
     Servico NUMBER,
     Cpf_militar VARCHAR2(14),
-    CONSTRAINT executa_servico_fkey1 FOREIGN KEY (Prestador_de_servico) REFERENCES Prestador_de_servico(cpf),
-    CONSTRAINT executa_servico_fkey2 FOREIGN key (Servico) REFERENCES Servico (id_servico_seq),
-    CONSTRAINT executa_servico_fkey3 FOREIGN KEY (Cpf_militar) REFERENCES Militar (cpf)
+    CONSTRAINT executa_servico_fkey1 FOREIGN KEY (Prestador_de_servico) REFERENCES Prestador_de_servico(cpf) ON DELETE CASCADE,
+    CONSTRAINT executa_servico_fkey2 FOREIGN key (Servico) REFERENCES Servico (id_servico_seq) ON DELETE SET NULL,
+    CONSTRAINT executa_servico_fkey3 FOREIGN KEY (Cpf_militar) REFERENCES Militar (cpf) ON DELETE SET NULL
 );
 
 CREATE TABLE Quadrante ( 
@@ -84,7 +84,7 @@ CREATE TABLE Condecoracoes (
     cpf VARCHAR2(14),
     condecoracao VARCHAR2(30),
     CONSTRAINT condecoracoes_pkey PRIMARY KEY (cpf, condecoracao),
-    CONSTRAINT condecoracoes_fkey FOREIGN KEY (cpf) REFERENCES Militar(cpf)
+    CONSTRAINT condecoracoes_fkey FOREIGN KEY (cpf) REFERENCES Militar(cpf) ON DELETE CASCADE
 );
 
 CREATE TABLE Base_militar (
@@ -97,7 +97,7 @@ CREATE TABLE Telefone_base (
     nome_base VARCHAR2(30),
     numero VARCHAR2(15) NOT NULL,
     CONSTRAINT telefone_base_pkey PRIMARY KEY (nome_base, numero),
-    CONSTRAINT telefone_base_fkey FOREIGN KEY (nome_base) REFERENCES Base_militar(nome)
+    CONSTRAINT telefone_base_fkey FOREIGN KEY (nome_base) REFERENCES Base_militar(nome) ON DELETE CASCADE
 );
 
 CREATE TABLE Endereco_base (
@@ -107,7 +107,7 @@ CREATE TABLE Endereco_base (
     numero NUMBER,
     complemento VARCHAR2(10),
     CONSTRAINT endereco_base_pkey PRIMARY KEY (nome_base),
-    CONSTRAINT endereco_base_fkey FOREIGN KEY (nome_base) REFERENCES Base_militar(nome)
+    CONSTRAINT endereco_base_fkey FOREIGN KEY (nome_base) REFERENCES Base_militar(nome) ON DELETE CASCADE
 );
 
 CREATE TABLE Militar_comandado(
@@ -116,23 +116,24 @@ CREATE TABLE Militar_comandado(
     quadrante_coordenadas VARCHAR2(100),
     numero_agrupamento INTEGER NOT NULL,
     CONSTRAINT militar_comandado_pkey PRIMARY KEY (militar_comandante_cpf, militar_comandado_cpf, quadrante_coordenadas),
-    CONSTRAINT militar_comandado_fk1 FOREIGN KEY (militar_comandante_cpf) REFERENCES Militar(cpf),
-    CONSTRAINT militar_comandado_fk2 FOREIGN KEY (militar_comandado_cpf) REFERENCES Militar(cpf),
-    CONSTRAINT militar_comandado_fk3 FOREIGN KEY (quadrante_coordenadas) REFERENCES Quadrante(coordenadas)
+    CONSTRAINT militar_comandado_fk1 FOREIGN KEY (militar_comandante_cpf) REFERENCES Militar(cpf) ON DELETE CASCADE,
+    CONSTRAINT militar_comandado_fk2 FOREIGN KEY (militar_comandado_cpf) REFERENCES Militar(cpf) ON DELETE CASCADE,
+    CONSTRAINT militar_comandado_fk3 FOREIGN KEY (quadrante_coordenadas) REFERENCES Quadrante(coordenadas) ON DELETE CASCADE
 );
 
 CREATE TABLE Visitante(
     nome VARCHAR2(100) NOT NULL,
     cpf_militar VARCHAR2(14) NOT NULL,
     CONSTRAINT Visitante_pk PRIMARY KEY (nome),
-    CONSTRAINT Visitante_fk FOREIGN KEY (cpf_militar) REFERENCES Militar(cpf)
+    CONSTRAINT Visitante_fk FOREIGN KEY (cpf_militar) REFERENCES Militar(cpf) ON DELETE CASCADE,
+    CONSTRAINT Nome_visitante UNIQUE (nome, cpf_militar)
 );
 
 CREATE TABLE Comunicacao_entre_bases(
     base_inicia_cominicacao VARCHAR2(100) NOT NULL,
     base_recebe_comunicacao VARCHAR2(100) NOT NULL,
-    CONSTRAINT Comunicacao_entre_bases_fk1 FOREIGN KEY (base_inicia_cominicacao) REFERENCES Base_militar(nome),
-    CONSTRAINT Comunicacao_entre_bases_fk2 FOREIGN KEY (base_recebe_comunicacao) REFERENCES Base_militar(nome)
+    CONSTRAINT Comunicacao_entre_bases_fk1 FOREIGN KEY (base_inicia_cominicacao) REFERENCES Base_militar(nome) ON DELETE CASCADE,
+    CONSTRAINT Comunicacao_entre_bases_fk2 FOREIGN KEY (base_recebe_comunicacao) REFERENCES Base_militar(nome) ON DELETE CASCADE
 );
 
 CREATE SEQUENCE Id
@@ -145,7 +146,7 @@ CREATE TABLE Arsenal ( -- entidade
     Capacidade_maxima NUMBER NOT NULL,
     Nome_base_militar VARCHAR2(300) NOT NULL,
     CONSTRAINT Arsenal_pkey PRIMARY KEY (Id),
-    CONSTRAINT Arsenal_fkey FOREIGN KEY (Nome_base_militar) REFERENCES Base_militar (Nome),
+    CONSTRAINT Arsenal_fkey FOREIGN KEY (Nome_base_militar) REFERENCES Base_militar (Nome) ON DELETE CASCADE,
     CONSTRAINT Arsenal_check CHECK (Id>=0)
 );
 
@@ -156,7 +157,7 @@ CREATE TABLE Arma ( -- entidade
     Fabricacao VARCHAR2(50) NOT NULL,
     Nome_do_armamento VARCHAR2(60) NOT NULL,
     CONSTRAINT Arma_pkey PRIMARY KEY (Numero_de_registro),
-    CONSTRAINT Arma_fkey FOREIGN KEY (Id_arsenal) REFERENCES Arsenal (Id)
+    CONSTRAINT Arma_fkey FOREIGN KEY (Id_arsenal) REFERENCES Arsenal (Id) ON DELETE SET NULL
 );
 
 CREATE TABLE Fornecer_armamento ( -- relacionamento triplo temporal
@@ -164,7 +165,7 @@ CREATE TABLE Fornecer_armamento ( -- relacionamento triplo temporal
     Cpf_militar VARCHAR2 (14) NOT NULL, -- 000.000.000-00
     Registro_arma VARCHAR2(9) NOT NULL,
     Id_arsenal NUMBER NOT NULL,
-    CONSTRAINT Fornecer_armamento_fkey1 FOREIGN KEY (Cpf_militar) REFERENCES Militar (Cpf),
-    CONSTRAINT Fornecer_armamento_fkey2 FOREIGN KEY (Registro_arma) REFERENCES Arma (Numero_de_registro),
-    CONSTRAINT Fornecer_armamento_fkey3 FOREIGN KEY (Id_arsenal) REFERENCES Arsenal (Id)
+    CONSTRAINT Fornecer_armamento_fkey1 FOREIGN KEY (Cpf_militar) REFERENCES Militar (Cpf) ON DELETE CASCADE,
+    CONSTRAINT Fornecer_armamento_fkey2 FOREIGN KEY (Registro_arma) REFERENCES Arma (Numero_de_registro) ON DELETE CASCADE,
+    CONSTRAINT Fornecer_armamento_fkey3 FOREIGN KEY (Id_arsenal) REFERENCES Arsenal (Id) ON DELETE CASCADE
 );
