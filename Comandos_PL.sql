@@ -29,7 +29,7 @@ RETURN visitante.nome%TYPE IS
         FOR VISITA IN (SELECT * FROM Visitante) LOOP
                 CASE VISITA.nome
                     WHEN 'luffy' THEN
-                        RespostaBusca := 'foi';
+                        RespostaBusca := 'luffy encontrado';
                     ELSE
                         IF VISITA.nome = nome_visita THEN
                             RespostaBusca := 'Visitante encontrado';
