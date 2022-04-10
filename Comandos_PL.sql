@@ -26,10 +26,10 @@ CREATE OR REPLACE FUNCTION procura_visita(nome_visita visitante.nome%TYPE)
 RETURN visitante.nome%TYPE IS 
     RespostaBusca visitante.nome%TYPE;
     BEGIN
-        SELECT cpf FROM MILITAR INTO militares_cpf;
-        FOR VISITA IN visitante LOOP
+        FOR VISITA IN (SELECT * FROM Visitante) LOOP
                 CASE VISITA.nome
                     WHEN 'luffy' THEN
+                        RespostaBusca := 'foi';
                     ELSE
                         IF VISITA.nome = nome_visita THEN
                             RespostaBusca := 'Visitante encontrado';
