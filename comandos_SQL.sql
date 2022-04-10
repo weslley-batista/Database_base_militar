@@ -4,15 +4,17 @@ ADD (CACHORRO VARCHAR2(10));
 CREATE INDEX pais_fabricacao --CREATE INDEX
 on ARMA(Fabricacao);
 
-INSERT INTO pessoa(nome, cpf) VALUES ('Valmir', '082.220.724-19'); -- INSERT INTO
+-- INSERT INTO
+INSERT INTO pessoa(nome, cpf) VALUES ('Valmir', '082.220.724-19');
 
 UPDATE arma -- UPDATE
 SET Fabricacao = 'EUA'
 WHERE Fabricacao = 'Estados Unidos';
-
-DELETE --DELETE
-FROM Pessoa
-WHERE cpf_pessoa = '082.220.724-19';
+ 
+--DELETE
+DELETE
+FROM PESSOA P
+WHERE P.cpf = '082.220.724-19';
 
 SELECT P.NOME, P.CPF, PR.patente -- BETWEEN, SELECT, FROM, WHERE
 FROM PESSOA P, MILITAR PR
