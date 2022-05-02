@@ -26,6 +26,7 @@ CREATE TABLE Pessoa ( --entidade
 CREATE TABLE Militar (
     cpf VARCHAR2(14),
     patente NUMBER NOT NULL,
+    -- criar um salario para usar nos tipos OR
     CONSTRAINT militar_pkey PRIMARY KEY (cpf),
     CONSTRAINT militar_fkey FOREIGN KEY (cpf) REFERENCES pessoa (CPF) ON DELETE CASCADE
 );
@@ -102,9 +103,9 @@ CREATE TABLE Telefone_base (
 
 CREATE TABLE Endereco_base (
     nome_base VARCHAR2(30),
-    cep NUMBER NOT NULL,
+    cep NUMBER (10) NOT NULL,
     rua VARCHAR2(30) NOT NULL,
-    numero NUMBER,
+    numero NUMBER (10),
     complemento VARCHAR2(10),
     CONSTRAINT endereco_base_pkey PRIMARY KEY (nome_base),
     CONSTRAINT endereco_base_fkey FOREIGN KEY (nome_base) REFERENCES Base_militar(nome) ON DELETE CASCADE
