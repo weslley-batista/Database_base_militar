@@ -14,6 +14,7 @@ CREATE TABLE tb_pessoa OF tp_pessoa(
 /
 CREATE TABLE tb_militar OF tp_militar(
     CPF PRIMARY KEY,
-    -- salario????
-    Patente NOT NULL
-);
+    Salario NOT NULL,
+    Patente NOT NULL,
+    lista_telefone tp_nt_telefone
+) NESTED TABLE lista_telefone STORE AS tb_lista_telefone;
