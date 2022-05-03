@@ -75,6 +75,14 @@ CREATE OR REPLACE TYPE BODY tp_militar AS
     );
 END;
 /
+CREATE OR REPLACE TYPE tp_endereco_base AS OBJECT(
+    Nome PRIMARY KEY,
+    CEP NOT NULL,
+    Rua NOT NULL,
+    Numero NOT NULL,
+    Complemento NOT NULL
+);
+/
 -- Base os telefones são uma varray que vai ser utilizada posteriormente para fazer um MAP MEMBER
 CREATE OR REPLACE TYPE tp_base AS OBJECT (
     Nome VARCHAR2(30) NOT NULL,
@@ -89,6 +97,8 @@ CREATE OR REPLACE TYPE tp_telefone_base AS OBJECT (
 );
 /
 CREATE OR REPLACE TYPE tp_arr_telefone_base AS VARRAY (10) OF tp_telefone_base;
+/
+CREATE OR REPLACE TYPE tp_nt_telefone_base AS TABLE tp_telefone_base;
 /
 CREATE OR REPLACE TYPE BODY tp_base AS FINAL MAP MEMBER FUNCTION quantidade_telefone RETURN NUMBER IS selfbase NUMBER;
     BEGIN
