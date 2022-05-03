@@ -75,14 +75,13 @@ CREATE OR REPLACE TYPE BODY tp_militar AS
     );
 END;
 /
--- 
-CREATE OR REPLACE TYPE tp_endereco_base AS OBJECT (
-    Nome VARCHAR2(30),
-    Cep NUMBER (10) NOT NULL,
-    Rua VARCHAR2(30) NOT NULL,
-    Numero NUMBER (10),
-    Complemento VARCHAR2(10),
-    Endereco
+-- Base os telefones são uma varray que vai ser utilizada posteriormente para fazer um MAP MEMBER
+CREATE OR REPLACE TYPE tp_base AS OBJECT (
+    Nome VARCHAR2(30) NOT NULL,
+    Especialidade VARCHAR2 (30) NOT NULL,
+    Endereco tp_endereco_base,
+    telefone tp_arr_telefone_base,
+    FINAL MAP MEMBER FUNCTION quantidade_telefone RETURN MEMBER
 );
 /
 CREATE OR REPLACE TYPE tp_telefone_base AS OBJECT (
@@ -91,9 +90,27 @@ CREATE OR REPLACE TYPE tp_telefone_base AS OBJECT (
 /
 CREATE OR REPLACE TYPE tp_arr_telefone_base AS VARRAY (10) OF tp_telefone_base;
 /
-CREATE OR REPLACE TYPE tp_nt_telefone_base AS TABLE tp_telefone_base;
+CREATE OR REPLACE TYPE BODY tp_base AS FINAL MAP MEMBER FUNCTION quantidade_telefone RETURN NUMBER IS selfbase NUMBER;
+    BEGIN
+        SELECT COUNT(*) INTO selfbase FROM TABLE (self.telefone_base);
+        RETURN selfbase;
+    END;
+END;
 /
-
+-- ORDER MEMBER FUNCTION que vai comparar a patente dos militares
+CREATE OR REPLACE TYPE BODY tp_militar AS
+ORDER MEMBER FUNCTION compara_patente (SELF IN OUT NOCOPY tp_militar, m tp_militar) RETURN NUMBER IS
+    BEGIN
+        IF SELF.patente < m.patente THEN 
+            RETURN -1;
+        ELSIF SELF.patente > m.patente THEN 
+            RETURN 1;
+        ELSE 
+            RETURN 0;
+        END IF;
+    END;
+END;
+/
 
 /*
 
@@ -101,8 +118,8 @@ CREATE OR REPLACE TYPE tp_nt_telefone_base AS TABLE tp_telefone_base;
 2. CREATE OR REPLACE TYPE BODY ✅
 3. MEMBER PROCEDURE ✅
 4. MEMBER FUNCTION ✅
-5. ORDER MEMBER FUNCTION
-6. MAP MEMBER FUNCTION
+5. ORDER MEMBER FUNCTION ✅
+6. MAP MEMBER FUNCTION✅
 7. CONSTRUCTOR FUNCTION✅
 8. OVERRIDING MEMBER ✅
 9. FINAL MEMBER ✅
