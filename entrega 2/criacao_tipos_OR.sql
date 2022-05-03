@@ -25,7 +25,7 @@ CREATE OR REPLACE TYPE tp_nt_telefone AS TABLE tp_telefone_pessoa;
 -- MILITAR HERDA DE PESSOA
 CREATE OR REPLACE TYPE tp_militar UNDER tp_pessoa (
     Patente NUMBER NOT NULL,
-    -- Salario NUMBER NOT NULL,
+    Salario NUMBER NOT NULL,
     MEMBER FUNCTION promocao_patente RETURN NUMBER, --membemr function
     CONSTRUCTOR FUNCTION tp_militar (militar tp_militar) RETURN SELF AS RESULT, -- contructor funcion
     OVERRIDING MEMBER PROCEDURE imprimir_informacao,    
@@ -47,6 +47,7 @@ CREATE OR REPLACE TYPE BODY tp_militar AS
             CPF := militar.CPF;
             Nome := militar.Nome;
             Patente := militar.Patente;
+            Salario := militar.Salario;
             Telefone := militar.Telefone;
             Endereco := militar.Endereco;
            
@@ -74,6 +75,25 @@ CREATE OR REPLACE TYPE BODY tp_militar AS
     );
 END;
 /
+-- 
+CREATE OR REPLACE TYPE tp_endereco_base AS OBJECT (
+    Nome VARCHAR2(30),
+    Cep NUMBER (10) NOT NULL,
+    Rua VARCHAR2(30) NOT NULL,
+    Numero NUMBER (10),
+    Complemento VARCHAR2(10),
+    Endereco
+);
+/
+CREATE OR REPLACE TYPE tp_telefone_base AS OBJECT (
+    Numero VARCHAR2 (15)
+);
+/
+CREATE OR REPLACE TYPE tp_arr_telefone_base AS VARRAY (10) OF tp_telefone_base;
+/
+CREATE OR REPLACE TYPE tp_nt_telefone_base AS TABLE tp_telefone_base;
+/
+
 
 /*
 
