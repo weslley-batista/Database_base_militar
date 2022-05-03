@@ -7,7 +7,8 @@ CREATE OR REPLACE TYPE tp_endereco AS OBJECT (
 );
 /
 CREATE OR REPLACE TYPE tp_telefone AS OBJECT (
-    Numero VARCHAR2 (15)
+    ddd VARCHAR2(2)
+    Numero VARCHAR2 (10)
 );
 /
 CREATE OR REPLACE TYPE tp_arr_telefone AS VARRAY (10) OF tp_telefone;
@@ -16,7 +17,7 @@ CREATE OR REPLACE TYPE tp_pessoa AS OBJECT (
     Nome VARCHAR2 (100),
     CPF VARCHAR2 (14),
     Telefone tp_arr_telefone,
-    Endereco tp_endereco,
+    Endereco REF tp_endereco,
     MEMBER PROCEDURE imprimir_informacao
 ) NOT FINAL NOT INSTANTIABLE;
 /
