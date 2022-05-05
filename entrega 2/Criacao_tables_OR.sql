@@ -1,35 +1,23 @@
-CREATE TABLE tb_endereco_pessoa OF tp_endereco_pessoa(
-    CEP NOT NULL
+CREATE TABLE tb_endereco OF tp_endereco(
+    CEP PRIMARY KEY
 );
 /
-CREATE TABLE tb_telefone_pessoa OF tp_telefone_pessoa(
-    Numero tp_arr_telefone NOT NULL
-);
+CREATE TABLE tb_telefone OF tp_telefone(
+    Numero PRIMARY KEY
+); 
 /
 CREATE TABLE tb_pessoa OF tp_pessoa(
     Nome PRIMARY KEY,
-    Telefone WITH ROWID REFERENCES tb_telefone_pessoa,
-    Endereco WITH ROWID REFERENCES tb_endereco_pessoa
+    Endereco WITH ROWID REFERENCES tb_endereco
 );
 /
 CREATE TABLE tb_militar OF tp_militar(
-    CPF PRIMARY KEY,
-    Salario NOT NULL,
-    Patente NOT NULL,
-    lista_telefone tp_nt_telefone
-) NESTED TABLE lista_telefone STORE AS tb_lista_telefone;
-/
-CREATE TABLE tp_telefone_base OF tp_telefone_base(
-    Numero tp_arr_telefone_base NOT NULL
-);
-/
-CREATE TABLE tp_endereco_base OF tp_endereco_base(
-    Nome NOT NULL,
-    CEP NOT NULL
-);
-/
-CREATE TABLE tp_base OF tp_base(
     Nome PRIMARY KEY,
-    Especialidade NOT NULL,
-    lista_telefone_base tp_nt_telefone_base
-) NESTED TABLE lista_telefone_base STORE AS tb_lista_telefone_base;
+    Patente NOT NULL
+) NESTED TABLE descricao STORE AS tb_descricao_militar;
+/
+CREATE TABLE tb_base OF tp_base(
+    Nome PRIMARY KEY,
+    Especialidade NOT NULL
+);
+/

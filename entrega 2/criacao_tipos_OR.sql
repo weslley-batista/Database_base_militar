@@ -13,6 +13,12 @@ CREATE OR REPLACE TYPE tp_telefone AS OBJECT (
 /
 CREATE OR REPLACE TYPE tp_arr_telefone AS VARRAY (10) OF tp_telefone;
 /
+CREATE OR REPLACE TYPE tp_descricao_militar AS OBJECT (
+    Numero VARCHAR2 (100)
+);
+/
+CREATE OR REPLACE TYPE tp_nt_descricao AS TABLE OF tp_descricao_militar;
+/
 CREATE OR REPLACE TYPE tp_pessoa AS OBJECT (
     Nome VARCHAR2 (100),
     CPF VARCHAR2 (14),
@@ -41,6 +47,10 @@ CREATE OR REPLACE TYPE tp_militar UNDER tp_pessoa (
     MEMBER PROCEDURE calculo_salario(valor NUMBER)
 
 );
+/
+ALTER TYPE tp_militar ADD ATTRIBUTE (Salario float) CASCADE;
+/
+ALTER TYPE tp_militar ADD ATTRIBUTE (descricao tp_nt_descricao) CASCADE;
 /
 
 CREATE OR REPLACE TYPE BODY tp_militar AS
@@ -92,8 +102,6 @@ CREATE OR REPLACE TYPE BODY tp_militar AS
         END;
 
 END;
-/
-ALTER TYPE tp_militar ADD ATTRIBUTE (Salario float) CASCADE;
 /
 -- Base os telefones são uma varray que vai ser utilizada posteriormente para fazer um MAP MEMBER
 CREATE OR REPLACE TYPE tp_base AS OBJECT (
