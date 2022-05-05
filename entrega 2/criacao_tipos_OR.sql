@@ -7,7 +7,7 @@ CREATE OR REPLACE TYPE tp_endereco AS OBJECT (
 );
 /
 CREATE OR REPLACE TYPE tp_telefone AS OBJECT (
-    ddd VARCHAR2(2)
+    ddd VARCHAR2(2),
     Numero VARCHAR2 (10)
 );
 /
@@ -22,16 +22,12 @@ CREATE OR REPLACE TYPE tp_pessoa AS OBJECT (
 ) NOT FINAL NOT INSTANTIABLE;
 /
 CREATE OR REPLACE TYPE BODY tp_pessoa AS
-    MEMBER PROCEDURE imprimir_informacao IS
-        BEGIN
-            RETURN 
-                'Nome: ' || DBMS_OUTPUT.PUT_LINE(militar.Nome) ||
-                'CPF: ' || DBMS_OUTPUT.PUT_LINE(militar.CPF) ||
-                'Telefone: ' || DBMS_OUTPUT.PUT_LINE(militar.Telefone.Numero) ||
-                'Endereco: ' || DBMS_OUTPUT.PUT_LINE(militar.Endereco.Rua) ||
-                ' ' || DBMS_OUTPUT.PUT_LINE(militar.Endereco.Numero) ||
-                ' ' || DBMS_OUTPUT.PUT_LINE(militar.Endereco.Complemento) ||
-                ' ' || DBMS_OUTPUT.PUT_LINE(militar.Endereco.CEP);
+    MEMBER PROCEDURE imprimir_informacao (SELF IN OUT NOCOPY tp_pessoa) IS
+        BEGIN 
+            DBMS_OUTPUT.PUT_LINE('Nome: ' || Nome);
+            DBMS_OUTPUT.PUT_LINE('CPF: ' || CPF);
+            DBMS_OUTPUT.PUT_LINE('Telefone: ' || telefone.ddd || telefone.Numero);
+            DBMS_OUTPUT.PUT_LINE('Endereco: ' || Endereco.Rua || Endereco.Numero || endereço.Complemento ||  Endereco.CEP);
         END;
 
 END;
