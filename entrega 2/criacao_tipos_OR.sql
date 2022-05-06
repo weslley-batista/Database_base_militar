@@ -1,8 +1,8 @@
 -- Informações relacionada ao endereço, sendo o tipo que estará em pessoa, no qual militar e prestador de serviço herdam
 CREATE OR REPLACE TYPE tp_endereco AS OBJECT (
-    Rua VARCHAR2 (255),
+    Rua VARCHAR2 (80),
     Numero NUMBER (38),
-    Complemento VARCHAR2 (255),
+    Complemento VARCHAR2 (100),
     CEP VARCHAR2 (10)
 );
 /
@@ -20,7 +20,7 @@ CREATE OR REPLACE TYPE tp_descricao_militar AS OBJECT (
 CREATE OR REPLACE TYPE tp_nt_descricao AS TABLE OF tp_descricao_militar;
 /
 CREATE OR REPLACE TYPE tp_pessoa AS OBJECT (
-    Nome VARCHAR2 (100),
+    Nome VARCHAR2 (80),
     CPF VARCHAR2 (14),
     Telefone tp_arr_telefone,
     Endereco REF tp_endereco,
@@ -32,7 +32,7 @@ CREATE OR REPLACE TYPE BODY tp_pessoa AS
         BEGIN 
             DBMS_OUTPUT.PUT_LINE('Nome: ' || Nome);
             DBMS_OUTPUT.PUT_LINE('CPF: ' || CPF);
-            DBMS_OUTPUT.PUT_LINE('Telefone: ' || telefone.ddd || telefone.Numero);
+            DBMS_OUTPUT.PUT_LINE('Telefone: ' || telefone(0).ddd || telefone(0).Numero);
             DBMS_OUTPUT.PUT_LINE('Endereco: ' || Endereco.Rua || Endereco.Numero || endereço.Complemento ||  Endereco.CEP);
         END;
 
@@ -113,10 +113,11 @@ CREATE OR REPLACE TYPE tp_base AS OBJECT (
 );
 /
 
-CREATE OR REPLACE TYPE BODY tp_base AS FINAL MAP MEMBER FUNCTION quantidade_telefone RETURN NUMBER IS selfbase NUMBER;
+CREATE OR REPLACE TYPE BODY tp_base AS FINAL MAP MEMBER FUNCTION quantidade_telefone RETURN NUMBER IS
+    telefones_base NUMBER := 0;
     BEGIN
-        SELECT COUNT(*) INTO selfbase FROM TABLE (self.telefone_base);
-        RETURN selfbase;
+        SELECT COUNT(*) INTO telefones_base FROM TABLE (self.telefone);
+        RETURN telefones_base;
     END;
 END;
 /
