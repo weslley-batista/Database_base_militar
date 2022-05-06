@@ -23,7 +23,7 @@ CREATE OR REPLACE TYPE tp_pessoa AS OBJECT (
     Nome VARCHAR2 (80),
     CPF VARCHAR2 (14),
     Telefone tp_arr_telefone,
-    Endereco REF tp_endereco,
+    Endereco tp_endereco,
     MEMBER PROCEDURE imprimir_informacao
 ) NOT FINAL NOT INSTANTIABLE;
 /
