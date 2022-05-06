@@ -45,6 +45,7 @@ CREATE OR REPLACE TYPE tp_militar UNDER tp_pessoa (
     CONSTRUCTOR FUNCTION tp_militar (militar tp_militar) RETURN SELF AS RESULT, 
     OVERRIDING MEMBER PROCEDURE imprimir_informacao,    
     MEMBER PROCEDURE calculo_salario(valor NUMBER)
+    -- Acho que precisa colocar a Nested Table da descricao dele nessa parte, para no povoamento referenciar aqui. by: Pedro
 
 );
 /
