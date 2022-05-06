@@ -93,7 +93,7 @@ INSERT INTO tb_arsenal VALUES (
     )
 );
 INSERT INTO tb_arsenal VALUES (
-    tb_arsenal(
+    tp_arsenal(
         'Veiculos',
         to_date('01/07/2022', 'dd/mm/yy'),
         100,
@@ -102,7 +102,7 @@ INSERT INTO tb_arsenal VALUES (
     )
 );
 INSERT INTO tb_arsenal VALUES (
-    tb_arsenal(
+    tp_arsenal(
         'Armas',
         to_date('01/07/2022', 'dd/mm/yy'),
         100,
