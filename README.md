@@ -6,8 +6,8 @@ Desenvolvimento de banco de dados SQL oracle de um base militar ficticia
 - CREATE OR REPLACE TYPE BODY ✅
 - MEMBER PROCEDURE ✅
 - MEMBER FUNCTION ✅
-- ORDER MEMBER FUNCTION
-- MAP MEMBER FUNCTION
+- ORDER MEMBER FUNCTION ✅
+- MAP MEMBER FUNCTION ✅
 - CONSTRUCTOR FUNCTION✅
 - OVERRIDING MEMBER ✅
 - FINAL MEMBER ✅
@@ -17,7 +17,7 @@ Desenvolvimento de banco de dados SQL oracle de um base militar ficticia
 - CREATE TABLE OF ✅
 - WITH ROWID REFERENCES ✅
 - REF ✅
-- SCOPE IS
+- SCOPE IS ✅
 - INSERT INTO
 - VALUE
 - VARRAY ✅
