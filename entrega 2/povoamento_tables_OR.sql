@@ -84,29 +84,25 @@ INSERT INTO tb_base VALUES (
 
 -- Inserindo Arsenais
 INSERT INTO tb_arsenal VALUES (
-    tp_arsenal(
         'Comunicação',
         to_date('05/06/2022', 'dd/mm/yy'),
         10,
         'Comunicação 1',
         'Pedro'
-    )
+    
 );
-INSERT INTO tb_base VALUES (
-    tp_base(
+INSERT INTO tb_arsenal VALUES (
+
         'Veiculos',
         to_date('01/07/2022', 'dd/mm/yy'),
         100,
         'Veiculos 1',
         'Weslley'
-    )
 );
-INSERT INTO tb_base VALUES (
-    tp_base(
+INSERT INTO tb_arsenal VALUES (
         'Armas',
         to_date('01/07/2022', 'dd/mm/yy'),
         100,
         'Armas 1',
         'João'
-    )
 );
