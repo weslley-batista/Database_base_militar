@@ -31,8 +31,8 @@ INSERT INTO tb_base VALUES (
                 tp_telefone(
                 '81',
                 '98888-7777'
-                )
             )
+        )
     )
 );
 
@@ -43,18 +43,21 @@ INSERT INTO tb_base VALUES (
         'Veiculos',
         tp_endereco(
             'Rua 2',
-            '2',
+            2,
             'Quadra 2',
             '99999-123',
         ),
-        tp_arr_telefone(tp_telefone(
-            '81',
-            '98888-6666'
+        tp_arr_telefone(
+            tp_telefone(
+                '81',
+                '98888-6666'
             ),
             tp_telefone(
-            '82',
-            '98888-5555'
+                '82',
+                '98888-5555'
             )
+        )
+    )
 );
 INSERT INTO tb_base VALUES (
     tp_base(
@@ -62,18 +65,21 @@ INSERT INTO tb_base VALUES (
         'Armamento',
         tp_endereco(
             'Rua Pistolinha',
-            '122',
+            122,
             'Quadra 777',
             '12345-000'
         ),
-        tp_arr_telefone(tp_telefone(
-            '81',
-            '98888-4444'
+        tp_arr_telefone(
+            tp_telefone(
+                '81',
+                '98888-4444'
             ),
             tp_telefone(
-            '81',
-            '98888-3333'
+                '81',
+                '98888-3333'
             ) 
+        )
+    )
 );
 
 -- Inserindo Arsenais
