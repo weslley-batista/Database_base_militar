@@ -33,7 +33,6 @@ CREATE OR REPLACE TYPE BODY tp_pessoa AS
             DBMS_OUTPUT.PUT_LINE('Nome: ' || Nome);
             DBMS_OUTPUT.PUT_LINE('CPF: ' || CPF);
             DBMS_OUTPUT.PUT_LINE('Telefone: ' || telefone(0).ddd || telefone(0).Numero);
-            DBMS_OUTPUT.PUT_LINE('Endereco: ' || Endereco.Rua || Endereco.Numero || endereço.Complemento ||  Endereco.CEP);
         END;
 
 END;
@@ -44,7 +43,8 @@ CREATE OR REPLACE TYPE tp_militar UNDER tp_pessoa (
     MEMBER FUNCTION promocao_patente RETURN NUMBER, 
     CONSTRUCTOR FUNCTION tp_militar (militar tp_militar) RETURN SELF AS RESULT, 
     OVERRIDING MEMBER PROCEDURE imprimir_informacao,    
-    MEMBER PROCEDURE calculo_salario(valor NUMBER)
+    MEMBER PROCEDURE calculo_salario(valor NUMBER),
+    ORDER MEMBER FUNCTION compara_patente(tp_militar, m tp_militar) RETURN NUMBER
     -- Acho que precisa colocar a Nested Table da descricao dele nessa parte, para no povoamento referenciar aqui. by: Pedro
 
 );
@@ -75,16 +75,11 @@ CREATE OR REPLACE TYPE BODY tp_militar AS
 
     OVERRIDING MEMBER PROCEDURE imprimir_informacao IS
         BEGIN
-            RETURN 
-                'Nome: ' || DBMS_OUTPUT.PUT_LINE(militar.Nome) ||
-                 'CPF: ' || DBMS_OUTPUT.PUT_LINE(militar.CPF) ||
-                 'Patente: ' || DBMS_OUTPUT.PUT_LINE(militar.Patente) ||
-                 'Salario: ' || DBMS_OUTPUT.PUT_LINE(militar.Salario) || 
-                 'Telefone: ' || DBMS_OUTPUT.PUT_LINE(militar.Telefone.Numero) ||
-                 'Endereco: ' || DBMS_OUTPUT.PUT_LINE(militar.Endereco.Rua) ||
-                 ' ' || DBMS_OUTPUT.PUT_LINE(militar.Endereco.Numero) ||
-                 ' ' || DBMS_OUTPUT.PUT_LINE(militar.Endereco.Complemento) ||
-                 ' ' || DBMS_OUTPUT.PUT_LINE(militar.Endereco.CEP);
+            DBMS_OUTPUT.PUT_LINE('Nome: ' || Nome);
+            DBMS_OUTPUT.PUT_LINE('CPF: ' || CPF);
+            DBMS_OUTPUT.PUT_LINE('Patente: ' || patente);
+            DBMS_OUTPUT.PUT_LINE('Telefone: ' || telefone(0).ddd || telefone(0).Numero);
+            DBMS_OUTPUT.PUT_LINE('Salario: ' || salario);
         END;
     MEMBER PROCEDURE calculo_salario_semestral(valor NUMBER) IS 
         BEGIN
