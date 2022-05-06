@@ -120,3 +120,12 @@ CREATE OR REPLACE TYPE BODY tp_base AS FINAL MAP MEMBER FUNCTION quantidade_tele
     END;
 END;
 /
+-- testar o isso, faz parte do SCOPE IS
+CREATE OR REPLACE TYPE tp_arsenal AS OBJECT(
+    Categoria_armazem VARCHAR2(300),
+    Data_de_manutencao DATE,
+    Capacidade_maxima NUMBER,
+    Nome_base_militar VARCHAR2(300),
+    Nome_armeiro REF tp_militar
+);
+/

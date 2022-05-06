@@ -21,3 +21,12 @@ CREATE TABLE tb_base OF tp_base(
     Especialidade NOT NULL
 );
 /
+-- testar o isso, faz parte do SCOPE IS
+CREATE TABLE tb_arsenal OF tp_arsenal(
+    Categoria_armazem PRIMARY KEY,
+    Data_de_manutencao NOT NULL,
+    Capacidade_maxima NOT NULL,
+    Nome_base_militar NOT NULL,
+    Nome_armeiro SCOPE IS tb_militar
+);
+/
