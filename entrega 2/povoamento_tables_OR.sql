@@ -12,25 +12,30 @@ INSERT INTO TABLE(SELECT (M.descricao_militar or M.descricao) FROM tb_militar R 
     VALUES (tp_descricao_militar('22 CM NA REGUA'));
 
 -- Povoando bases
+-- Povoando bases
 INSERT INTO tb_base VALUES (
     tp_base(
         'Comunicação 1',
         'Comunicação',
         tp_endereco(
             'Rua 1',
-            '1',
+            1,
             'Quadra 1',
             '12345-123'
         ),
-        tp_arr_telefone(tp_telefone(
-            '81',
-            '98888-8888'
-            ),
+        tp_arr_telefone(
             tp_telefone(
-            '81',
-            '98888-7777'
+                '81',
+                '98888-8888'
+                ),
+                tp_telefone(
+                '81',
+                '98888-7777'
+                )
             )
-    );
+    )
+);
+
 
 INSERT INTO tb_base VALUES (
     tp_base(
