@@ -1,12 +1,67 @@
 ALTER SESSION SET NLS_TIMESTAMP_FORMAT='DD-MON-YY HH24:MI';
--- Povoando militar
-/*INSERT INTO tb_militar VALUES (
-    tp_militar(
-        'Pedro',
+-- Povoando endereço
+INSERT INTO tb_endereco VALUES ( 
+    tp_endereco( 
+        'rua girosvaldo itanhaem',
+        82,
+        'em frente ao bompreço',
+        '50620-036'
+    ) 
+);
 
+
+INSERT INTO tb_militar VALUES ( 
+    tp_militar(
+        'carlos santana',
+        '78965432156',
+        tp_arr_telefone (tp_telefone  (
+        '81',
+        '40028922'
+        )),
+        (SELECT REF(M) FROM tb_endereco M WHERE M.CEP = '50620036'),
+        1,
+        900,
+    	tp_nt_descricao(tp_descricao_militar('22'))
     )
-)
-*/
+);
+
+
+
+INSERT INTO tb_endereco VALUES ( 
+    tp_endereco( 
+        'rua fonte nova',
+        12,
+        'em frente a livraria cultura',
+        '50810-036'
+            ) 
+    );
+
+
+INSERT INTO tb_militar VALUES ( 
+    tp_militar(
+        'joão pedro',
+        '12345678956',
+        tp_arr_telefone (tp_telefone  (
+        '81',
+        '41128922'
+        )),
+        (SELECT REF(M) FROM tb_endereco M WHERE M.CEP = '50810-036'),
+        2,
+        905,
+    	tp_nt_descricao(tp_descricao_militar('lutou bravamente contra os comunistas'))
+    )
+);
+
+
+
+INSERT INTO tb_endereco VALUES ( 
+    tp_endereco( 
+        'rua bandoquim brasiliense',
+        97,
+        'em frente a pastelaria do beiçola',
+        '77777-777'
+            ) 
+    );
 ----- Inserindo na NESTED TABLE descrição o militar
 INSERT INTO TABLE(SELECT (M.descricao_militar or M.descricao) FROM tb_militar R WHERE M.nome = 'Pedro') -- Verificar se vai ficar M.descricao_militar or M.descricao 
     VALUES (tp_descricao_militar('22 CM NA REGUA'));
