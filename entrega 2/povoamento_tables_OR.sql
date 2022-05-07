@@ -79,8 +79,8 @@ INSERT INTO tb_militar VALUES (
     )
 );
 ----- Inserindo na NESTED TABLE descrição o militar
-INSERT INTO TABLE(SELECT (M.descricao_militar or M.descricao) FROM tb_militar R WHERE M.nome = 'Pedro') -- Verificar se vai ficar M.descricao_militar or M.descricao 
-    VALUES (tp_descricao_militar('22 CM NA REGUA'));
+INSERT INTO TABLE(SELECT M.descricao FROM tb_militar M WHERE M.nome = 'Raffael Moreira') -- Verificar se vai ficar M.descricao_militar or M.descricao 
+    VALUES (tp_descricao_militar('condecorado como melhor militar musicista do mundo'));
 
 -- Povoando bases
 -- Povoando bases
