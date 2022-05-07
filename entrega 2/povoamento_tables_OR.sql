@@ -110,8 +110,8 @@ INSERT INTO tb_base VALUES (
 
 INSERT INTO tb_base VALUES (
     tp_base(
-        'Veiculos 1',
-        'Veiculos',
+        '4º BIB',
+        'Blindados',
         tp_endereco(
             'Rua 2',
             2,
@@ -132,8 +132,8 @@ INSERT INTO tb_base VALUES (
 );
 INSERT INTO tb_base VALUES (
     tp_base(
-        'Armas 1',
-        'Armamento',
+        '3º BC',
+        'Caça',
         tp_endereco(
             'Rua Pistolinha',
             122,
@@ -155,7 +155,7 @@ INSERT INTO tb_base VALUES (
 
 INSERT INTO tb_base VALUES ( 
     tp_base(
-        '7º bcom',
+        '7º BCOM',
         'artilharia',
         tp_endereco( 
             'rua carlos xavier',
@@ -169,7 +169,7 @@ INSERT INTO tb_base VALUES (
 -- Inserindo Arsenais
 INSERT INTO tb_arsenal VALUES (
     tp_arsenal(
-        'Comunicação',
+        'Bombas',
         to_date('05/06/2022', 'dd/mm/yy'),
         10,
         'Comunicação 1',
@@ -178,7 +178,7 @@ INSERT INTO tb_arsenal VALUES (
 );
 INSERT INTO tb_arsenal VALUES (
     tp_arsenal(
-        'Veiculos',
+        'Armas de alto calibre',
         to_date('01/07/2022', 'dd/mm/yy'),
         100,
         'Veiculos 1',
@@ -187,7 +187,7 @@ INSERT INTO tb_arsenal VALUES (
 );
 INSERT INTO tb_arsenal VALUES (
     tp_arsenal(
-        'Armas',
+        'Armas médio/baixo calibre',
         to_date('01/07/2022', 'dd/mm/yy'),
         100,
         'Armas 1',
