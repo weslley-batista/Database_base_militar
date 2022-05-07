@@ -3,8 +3,23 @@ CREATE OR REPLACE TYPE tp_endereco AS OBJECT (
     Rua VARCHAR2 (80),
     Numero NUMBER (38),
     Complemento VARCHAR2 (100),
-    CEP VARCHAR2 (10)
+    CEP VARCHAR2 (10),
+    ORDER MEMBER FUNCTION compara_numero_endereco(SELF IN OUT NOCOPY tp_endereco, e tp_endereco) RETURN NUMBER
 );
+/
+
+CREATE OR REPLACE TYPE BODY tp_endereco AS
+    ORDER MEMBER FUNCTION compara_numero_endereco (SELF IN OUT NOCOPY tp_endereco, e tp_endereco) RETURN NUMBER IS
+        BEGIN
+            IF SELF.numero < e.numero THEN 
+                RETURN -1;
+            ELSIF SELF.numero > e.numero THEN 
+                RETURN 1;
+            ELSE 
+                RETURN 0;
+            END IF;
+        END;
+END;
 /
 CREATE OR REPLACE TYPE tp_telefone AS OBJECT (
     ddd VARCHAR2(2),
@@ -43,9 +58,7 @@ CREATE OR REPLACE TYPE tp_militar UNDER tp_pessoa (
     MEMBER FUNCTION promocao_patente RETURN NUMBER, 
     CONSTRUCTOR FUNCTION tp_militar (militar tp_militar) RETURN SELF AS RESULT, 
     OVERRIDING MEMBER PROCEDURE imprimir_informacao,    
-    MEMBER PROCEDURE calculo_salario(valor NUMBER),
-    ORDER MEMBER FUNCTION compara_patente(tp_militar, m tp_militar) RETURN NUMBER
-    -- Acho que precisa colocar a Nested Table da descricao dele nessa parte, para no povoamento referenciar aqui. by: Pedro
+    MEMBER PROCEDURE calculo_salario_semestral(valor NUMBER)
 
 );
 /
@@ -85,16 +98,6 @@ CREATE OR REPLACE TYPE BODY tp_militar AS
         BEGIN
             SELF.Salario := Salario*6;
             DBMS_OUTPUT.PUT_LINE(SELF.Salario);
-        END;
-    ORDER MEMBER FUNCTION compara_patente (SELF IN OUT NOCOPY tp_militar, m tp_militar) RETURN NUMBER IS
-        BEGIN
-            IF SELF.patente < m.patente THEN 
-                RETURN -1;
-            ELSIF SELF.patente > m.patente THEN 
-                RETURN 1;
-            ELSE 
-                RETURN 0;
-            END IF;
         END;
 
 END;
