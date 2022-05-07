@@ -62,6 +62,22 @@ INSERT INTO tb_endereco VALUES (
         '77777-777'
             ) 
     );
+    
+    
+INSERT INTO tb_militar VALUES ( 
+    tp_militar(
+        'Raffael Moreira',
+        '77777777777',
+        tp_arr_telefone (tp_telefone  (
+        '21',
+        '777777777'
+        )),
+        (SELECT REF(M) FROM tb_endereco M WHERE M.CEP = '77777-777'),
+        3,
+        905,
+    	tp_nt_descricao(tp_descricao_militar('condecorado como melhor militar musicista brasileiro'))
+    )
+);
 ----- Inserindo na NESTED TABLE descrição o militar
 INSERT INTO TABLE(SELECT (M.descricao_militar or M.descricao) FROM tb_militar R WHERE M.nome = 'Pedro') -- Verificar se vai ficar M.descricao_militar or M.descricao 
     VALUES (tp_descricao_militar('22 CM NA REGUA'));
@@ -100,7 +116,7 @@ INSERT INTO tb_base VALUES (
             'Rua 2',
             2,
             'Quadra 2',
-            '99999-123',
+            '99999-123'
         ),
         tp_arr_telefone(
             tp_telefone(
@@ -137,6 +153,19 @@ INSERT INTO tb_base VALUES (
     )
 );
 
+INSERT INTO tb_base VALUES ( 
+    tp_base(
+        '7º bcom',
+        'artilharia',
+        tp_endereco( 
+            'rua carlos xavier',
+            17,
+            'na frente do shopping tapuaim',
+            '50620566'
+            ),
+        tp_arr_telefone (tp_telefone ('81','34556306'))
+    )
+);
 -- Inserindo Arsenais
 INSERT INTO tb_arsenal VALUES (
     tp_arsenal(
@@ -144,7 +173,7 @@ INSERT INTO tb_arsenal VALUES (
         to_date('05/06/2022', 'dd/mm/yy'),
         10,
         'Comunicação 1',
-        'Pedro'
+        (SELECT REF(M) FROM tb_militar M WHERE M.cpf = '78965432156')
     )
 );
 INSERT INTO tb_arsenal VALUES (
@@ -153,7 +182,7 @@ INSERT INTO tb_arsenal VALUES (
         to_date('01/07/2022', 'dd/mm/yy'),
         100,
         'Veiculos 1',
-        'Weslley'
+        (SELECT REF(M) FROM tb_militar M WHERE M.cpf = '12345678956')
     )
 );
 INSERT INTO tb_arsenal VALUES (
@@ -162,6 +191,6 @@ INSERT INTO tb_arsenal VALUES (
         to_date('01/07/2022', 'dd/mm/yy'),
         100,
         'Armas 1',
-        'João'
+        (SELECT REF(M) FROM tb_militar M WHERE M.cpf = '77777777777')
     )
 );
