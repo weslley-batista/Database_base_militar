@@ -91,7 +91,7 @@ CREATE OR REPLACE TYPE BODY tp_militar AS
             DBMS_OUTPUT.PUT_LINE('Nome: ' || Nome);
             DBMS_OUTPUT.PUT_LINE('CPF: ' || CPF);
             DBMS_OUTPUT.PUT_LINE('Patente: ' || patente);
-            DBMS_OUTPUT.PUT_LINE('Telefone: ' || telefone(0).ddd || telefone(0).Numero);
+            DBMS_OUTPUT.PUT_LINE('Telefone: ' || telefone(1).ddd || telefone(1).Numero);
             DBMS_OUTPUT.PUT_LINE('Salario: ' || salario);
         END;
     MEMBER PROCEDURE calculo_salario_semestral(valor NUMBER) IS 
