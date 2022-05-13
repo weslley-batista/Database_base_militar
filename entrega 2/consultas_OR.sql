@@ -9,6 +9,10 @@ SELECT NOME, ESPECIALIDADE, B.endereco.Rua FROM tb_base B;
 -- Arsenal
 SELECT CATEGORIA_ARMAZEM, NOME_BASE_MILITAR, CAPACIDADE_MAXIMA FROM tb_arsenal;
 
+-- JOIN Base Arsenal
+SELECT B.NOME,  ESPECIALIDADE, arsenal.CAPACIDADE_MAXIMA FROM tb_base B
+INNER JOIN tb_arsenal Arsenal ON B.nome=Arsenal.NOME_BASE_MILITAR;
+
 -- Consulta REF/DEREF
 INSERT INTO tb_endereco VALUES ( 
     tp_endereco( 
