@@ -64,3 +64,22 @@ SELECT * FROM TABLE(SELECT M.descricao FROM tb_militar M WHERE M.Patente = 3);
 -- Consulta MAP FUNCTION
 SELECT B.quantidade_telefone() FROM tb_base B WHERE B.Especialidade = 'Comunicação';
 
+--- ORDER MEMBER FUNCTION ---
+DECLARE 
+    aux NUMBER;
+    endereco1 tp_endereco;
+    endereco2 tp_endereco;
+BEGIN
+    SELECT VALUE(E) INTO endereco1 FROM tb_endereco E WHERE cep = '50810-036';
+    SELECT VALUE(E) INTO endereco2 FROM tb_endereco E WHERE cep = '77777-777';
+    aux := endereco1.compara_numero_endereco(endereco2);
+    IF aux = 1 THEN
+        DBMS_OUTPUT.PUT_LINE('O numero do endereço cujo cep é ' || TO_CHAR(endereco1.cep) 
+                    || ' é maior que o numero do endereço cujo cep é ' || TO_CHAR(endereco2.cep));
+    ELSIF aux = -1 THEN 
+        DBMS_OUTPUT.PUT_LINE('O numero do endereço cujo cep é ' || TO_CHAR(endereco2.cep) 
+                    || ' é maior que o numero do endereço cujo cep é ' || TO_CHAR(endereco1.cep));            
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('O numero dos dois endereços é igual.');
+    END IF;
+END;
