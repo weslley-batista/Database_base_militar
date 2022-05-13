@@ -1,6 +1,7 @@
 -- Consultas primárias para OR
 -- Militar
 SELECT NOME, CPF, PATENTE, M.endereco.CEP FROM tb_militar M;
+SELECT NOME, CPF, PATENTE, M.endereco.CEP FROM tb_militar M WHERE CPF='77777777777' OR CPF='12345678956';
 
 -- Base
 SELECT NOME, ESPECIALIDADE, B.endereco.Rua FROM tb_base B;
